@@ -13,7 +13,7 @@ Portable static portfolio for Jeremiah Leow.
 Most portfolio content lives in `portfolio-data.js`. Add a new website, campaign, collaboration or certification there and it will render automatically.
 
 ## Hosting
-The site is plain HTML/CSS/JS and has no Vercel dependency. It can be hosted on ChatGPT/Codex Sites (when available in the account), GitHub Pages, Cloudflare Pages, Netlify, or any static web host.
+The site is plain HTML/CSS/JS and has no Vercel dependency. A GitHub Pages deployment workflow is included as the current no-custom-domain host. The same codebase remains portable to ChatGPT/Codex Sites, Cloudflare Pages, Netlify, or another static host later.
 
 ## Privacy / NDA
 Confidential Shopify and Squarespace work is intentionally referenced generically. Do not add client names or assets without approval.
