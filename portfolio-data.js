@@ -20,7 +20,8 @@ window.PORTFOLIO_DATA = {
     },
     {
       name: "Hayma Singapore",
-      url: "https://www.hayma.sg",
+      url: "",
+      status: "Site currently offline",
       label: "Built from scratch",
       type: "B2B Website",
       description: "Created the Singapore website for an electronic components distributor and shaped the digital presentation of its supply-chain services.",
@@ -29,23 +30,90 @@ window.PORTFOLIO_DATA = {
     }
   ],
   websitesManaged: [
-    { name: "Singapore International Cyber Week", url: "https://www.sicw.gov.sg", platform: "Isomer", description: "Website content and campaign coordination for Singapore's flagship cybersecurity event." },
-    { name: "Constellar", url: "https://constellar.co", platform: "WordPress", description: "Managed and coordinated website content within a corporate MICE environment." },
-    { name: "InsourceAI", url: "https://www.insourceai.sg", platform: "Vercel + GitHub", description: "Ongoing product, content and deployment management across the public site and platform." },
-    { name: "Hayma Singapore", url: "https://www.hayma.sg", platform: "Wix", description: "Ongoing site management, content updates and commercial positioning." },
-    { name: "Confidential client work", url: "", platform: "Shopify + Squarespace", description: "Additional web projects managed under NDA; client names and campaign details withheld." }
+    {
+      name: "Singapore International Cyber Week",
+      url: "https://www.sicw.gov.sg",
+      platform: "Isomer",
+      description: "Content and campaign updates for Singapore's flagship cybersecurity event.",
+      logo: "https://www.google.com/s2/favicons?domain=sicw.gov.sg&sz=128",
+      logoText: "SICW"
+    },
+    {
+      name: "Constellar",
+      url: "https://constellar.co",
+      platform: "WordPress",
+      description: "Corporate MICE website content management and coordination.",
+      logo: "https://www.google.com/s2/favicons?domain=constellar.co&sz=128",
+      logoText: "Constellar"
+    },
+    {
+      name: "InsourceAI",
+      url: "https://www.insourceai.sg",
+      platform: "Vercel + GitHub",
+      description: "Ongoing content, product and deployment management.",
+      logo: "https://www.google.com/s2/favicons?domain=insourceai.sg&sz=128",
+      logoText: "InsourceAI"
+    },
+    {
+      name: "Hayma Singapore",
+      url: "",
+      status: "Site currently offline",
+      platform: "Wix",
+      description: "Site management, content updates and commercial positioning.",
+      logo: "https://www.google.com/s2/favicons?domain=hayma.sg&sz=128",
+      logoText: "HAYMA"
+    },
+    {
+      name: "Confidential client work",
+      url: "",
+      status: "NDA protected",
+      platform: "Shopify + Squarespace",
+      description: "Additional web projects managed under NDA.",
+      logo: "",
+      logoText: "NDA"
+    }
   ],
   publicCampaigns: [
-    { name: "CSA — Singapore International Cyber Week", platform: "LinkedIn", scope: "Social calendar · campaign content · reporting" },
-    { name: "SportSG — USF + SG 2024", platform: "Instagram", scope: "Campaign management · social creatives · reporting" },
-    { name: "HPB — Postpartum Depression Campaign", platform: "Instagram + LinkedIn", scope: "Content planning · campaign creatives · reporting" },
-    { name: "NECDC — Healthier Together", platform: "Instagram", scope: "Social calendar · creative coordination · campaign management" },
-    { name: "NECDC — Shaping Hearts", platform: "Instagram", scope: "Campaign content · key visual adaptation · reporting" },
-    { name: "ArtsEverywhere", platform: "Instagram", scope: "Social content · campaign coordination" },
-    { name: "Heart Bakers", platform: "Instagram", scope: "Social content · campaign coordination" },
-    { name: "CDC Vouchers", platform: "Instagram", scope: "Campaign content · social creatives" },
-    { name: "Jobs & Skills Fair", platform: "Instagram", scope: "Campaign management · content" },
-    { name: "NECDC Growth Fund", platform: "Instagram · 2024", scope: "Campaign content · management · reporting" }
+    {
+      organization: "Cyber Security Agency of Singapore",
+      shortName: "CSA",
+      platform: "LinkedIn",
+      logo: "https://www.google.com/s2/favicons?domain=csa.gov.sg&sz=128",
+      campaigns: ["Singapore International Cyber Week"],
+      scope: "Social calendar · campaign content · reporting"
+    },
+    {
+      organization: "Sport Singapore",
+      shortName: "SportSG",
+      platform: "Instagram",
+      logo: "https://www.google.com/s2/favicons?domain=sportsingapore.gov.sg&sz=128",
+      campaigns: ["USF + SG 2024"],
+      scope: "Campaign management · social creatives · reporting"
+    },
+    {
+      organization: "Health Promotion Board",
+      shortName: "HPB",
+      platform: "Instagram + LinkedIn",
+      logo: "https://www.google.com/s2/favicons?domain=hpb.gov.sg&sz=128",
+      campaigns: ["Postpartum Depression Campaign"],
+      scope: "Content planning · campaign creatives · reporting"
+    },
+    {
+      organization: "North East Community Development Council",
+      shortName: "NECDC",
+      platform: "Instagram · 2024",
+      logo: "https://www.google.com/s2/favicons?domain=cdc.gov.sg&sz=128",
+      campaigns: [
+        "Healthier Together",
+        "Shaping Hearts",
+        "ArtsEverywhere",
+        "Heart Bakers",
+        "CDC Vouchers",
+        "Jobs & Skills Fair",
+        "NECDC Growth Fund"
+      ],
+      scope: "Social calendar · campaign content · creative coordination · management · reporting"
+    }
   ],
   commercialSocial: [
     { name: "InsourceAI", platform: "LinkedIn", description: "Content strategy, brand building and audience growth for a B2B technology platform." },
