@@ -6,8 +6,8 @@ window.PORTFOLIO_DATA = {
   ],
   websitesManaged: [
     { name: "Singapore International Cyber Week", url: "https://www.sicw.gov.sg", platform: "Isomer", description: "Content and campaign updates for Singapore's flagship cybersecurity event.", logo: "https://www.google.com/s2/favicons?domain=sicw.gov.sg&sz=128", logoText: "SICW" },
-    { name: "Constellar", url: "https://constellar.co", platform: "WordPress", description: "Corporate MICE website content management and coordination.", logo: "https://constellar.co/wp-content/uploads/2025/07/logo-white.png", logoText: "Constellar" },
-    { name: "InsourceAI", url: "https://www.insourceai.sg", platform: "Vercel + GitHub", description: "Ongoing content, product and deployment management.", logo: "https://logo.clearbit.com/insourceai.sg", logoText: "InsourceAI" },
+    { name: "Constellar", url: "https://constellar.co", platform: "WordPress", description: "Corporate MICE website content management and coordination.", logo: "https://alep-p-001.sitecorecontenthub.cloud/api/public/content/249db554c2c24986b3026edaae5fcbbe?v=4be88719", logoText: "Constellar" },
+    { name: "InsourceAI", url: "https://www.insourceai.sg", platform: "Vercel + GitHub", description: "Ongoing content, product and deployment management.", logo: "assets/insourceai-official-logo.svg", logoText: "InsourceAI" },
     { name: "Hayma Singapore", url: "", status: "Site currently offline", platform: "Wix", description: "Site management, content updates and commercial positioning.", logo: "https://logo.clearbit.com/hayma.sg", logoText: "HAYMA" },
     { name: "Confidential client work", url: "", status: "NDA protected", platform: "Shopify + Squarespace", description: "Additional web projects managed under NDA.", logo: "", logoText: "NDA" }
   ],
