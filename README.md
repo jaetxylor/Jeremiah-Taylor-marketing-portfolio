@@ -20,3 +20,5 @@ Confidential Shopify and Squarespace work is intentionally referenced genericall
 
 ## Reference portfolio deck
 The original PDF portfolio is reference material only and is intentionally not included, linked, or distributed from this repository.
+
+<!-- deployment refresh -->
