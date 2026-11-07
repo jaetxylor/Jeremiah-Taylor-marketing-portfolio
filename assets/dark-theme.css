@@ -85,8 +85,7 @@
 .commercial-card .brand-art { margin-bottom: 20px; }
 
 .tiktok-picks { grid-column: 1 / -1; }
-.tiktok-picks h3, .running-group h3 { margin: 0 0 12px; font-size: 18px; }
-.running-group { margin-top: 28px; }
+.tiktok-picks h3 { margin: 0 0 12px; font-size: 18px; }
 .hobby-grid #running { grid-column: 1 / -1; }
 .hobby-stats-grid {
   display: grid;
@@ -96,7 +95,7 @@
   padding: 0;
   list-style: none;
 }
-.hobby-stats-grid a, .hobby-stats-grid > div {
+.hobby-stats-grid a {
   display: grid;
   gap: 5px;
   padding: 14px;
@@ -105,5 +104,90 @@
   border-radius: 12px;
 }
 .hobby-stats-grid img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 6px; }
-.hobby-stats-grid span, .hobby-stats-grid dt { color: var(--muted); font-size: 12px; }
-.hobby-stats-grid dd { margin: 0; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.hobby-stats-grid span { color: var(--muted); font-size: 12px; }
+
+.run-dashboard {
+  --run-orange: #ffae70;
+  --run-panel: #19191b;
+  --run-edge: #444449;
+  --run-muted: #c1bdb7;
+}
+.run-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.run-header .run-source { margin: 0; color: var(--run-muted); }
+.run-cluster {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 12px;
+}
+.run-dial, .run-trip, .run-timing {
+  min-width: 0;
+  background: var(--run-panel);
+  border: 1px solid var(--run-edge);
+  border-radius: 12px;
+}
+.run-dial {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 190px;
+  padding: 14px;
+}
+.run-dial svg { width: 100%; max-width: 250px; }
+.run-dial svg path { fill: none; }
+.run-dial-track { stroke: #39393d; stroke-width: 12; }
+.run-dial-ticks { stroke: #b1aaa1; stroke-width: 9; stroke-dasharray: .4 2.1; }
+.run-dial-redline { stroke: #fa624e; stroke-width: 12; stroke-dasharray: 13 100; stroke-dashoffset: -86; }
+.run-odometer {
+  position: absolute;
+  inset: 18% 8% 7%;
+  display: grid;
+  place-content: center;
+  gap: 7px;
+  text-align: center;
+}
+.run-odometer span, .run-trip h3 {
+  color: var(--run-muted);
+  font: 600 12px/1.4 ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: .075em;
+}
+.run-odometer strong {
+  color: var(--run-orange);
+  font: 700 clamp(23px, 3.2vw, 40px)/1 ui-monospace, monospace;
+  white-space: nowrap;
+}
+.run-trip { padding: 16px; }
+.run-trip h3, .run-timing-head h3 { margin: 0 0 10px; }
+.run-dashboard dl { margin: 0; }
+.run-dashboard dl > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  padding-block: 7px;
+  border-bottom: 1px solid var(--run-edge);
+}
+.run-dashboard dt { color: var(--run-muted); font-size: 13px; }
+.run-dashboard dd {
+  margin: 0;
+  color: var(--run-orange);
+  font: 700 14px/1.4 ui-monospace, monospace;
+  white-space: nowrap;
+}
+.run-timing { margin-top: 12px; padding: 16px; }
+.run-timing-head .eyebrow { margin: 0 0 6px; }
+.run-timing dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+@media (max-width: 760px) {
+  .run-cluster { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .run-dial { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  .run-cluster, .run-timing dl { grid-template-columns: 1fr; }
+}
