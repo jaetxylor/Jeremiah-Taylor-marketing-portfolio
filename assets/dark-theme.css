@@ -203,3 +203,54 @@
   font-size: clamp(32px, 5vw, 54px);
   letter-spacing: -.045em;
 }
+
+.works-overview { padding-bottom: clamp(32px, 6vw, 72px); }
+.works-overview .page-top { padding-block: 20px 28px; }
+.works-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 12px;
+}
+.works-links a { display: block; }
+.works-links a:hover { border-color: var(--ink); }
+.works-links h2 { margin: 0 0 8px; font-size: 20px; }
+.works-links p { margin: 0 0 12px; }
+.works-results { margin-top: 32px; }
+.works-results h2 { font-size: 20px; }
+.works-results ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  color: var(--muted);
+}
+.works-results li { padding: 14px 0; border-top: 1px solid var(--line); }
+.works-results strong { display: block; color: var(--ink); font-size: 24px; }
+.works-subpage-title h1 {
+  margin: 0;
+  padding: 12px 0 22px;
+  font-size: clamp(34px, 6vw, 60px);
+  letter-spacing: -.05em;
+}
+.works-subpage > section:first-of-type { padding-top: 14px; }
+
+body[data-page="about"] #resume { margin-top: clamp(32px, 6vw, 72px); }
+.education-section .education-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1px;
+}
+.education-section .education-grid article + article { border-left: 0; }
+.education-subheading { margin: 30px 0 14px; }
+.education-section .education-grid .education-dates { color: var(--ink); }
+
+.tiktok-profile-peek { position: relative; margin-top: 48px; }
+.umbreon-peek {
+  position: absolute;
+  inset: auto 22px 100% auto;
+  width: 112px;
+  height: 62px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.umbreon-peek img { display: block; width: 112px; height: auto; }
