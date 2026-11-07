@@ -19,10 +19,30 @@ export const mascotStage = `<div class="mascot-stage" data-mascot>
 
    <g class="mascot-queen">
     <path d="M205 218V114Q231 94 259 114V218M200 173H266M207 218H265" fill="none" stroke="#ae784c" stroke-width="8" stroke-linecap="round"/>
-    <path d="M217 150Q239 141 248 159L265 214H198Q202 185 217 150Z" fill="#a950c6" stroke="#dc91e9" stroke-width="4"/>
-    <circle cx="231" cy="135" r="18" fill="#ffe1ac" stroke="#d69b4a" stroke-width="5"/>
+    <g class="queen-long-hair" stroke="#b67a35" stroke-width="2.5" stroke-linejoin="round">
+     <path d="M211 126Q209 111 230 111Q253 109 253 134C251 147 261 153 255 165Q253 172 258 180Q247 184 241 174L218 176Q210 185 205 177C211 168 203 163 208 152Q213 141 211 126Z" fill="#e7b45f"/>
+     <path d="M215 143C209 153 218 158 212 169M247 142C254 154 244 160 251 174" fill="none" stroke="#ffda8d" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <g class="queen-gown" stroke-linejoin="round">
+     <path d="M222 174Q213 180 209 192L199 212Q230 220 265 212L254 192Q250 180 241 174Z" fill="#ae6ac8" stroke="#df9dea" stroke-width="3"/>
+     <path d="M227 178Q220 191 216 214Q232 217 249 214Q240 192 237 178Z" fill="#e6b3ec"/>
+     <path d="M222 175Q213 187 204 198Q215 198 229 180M241 175Q251 187 260 199Q248 197 234 180" fill="#814499" stroke="#ca83db" stroke-width="2"/>
+     <path d="M223 184Q215 202 212 211M240 184Q248 202 252 211M232 190V213" fill="none" stroke="#c98bdb" stroke-width="1.5" stroke-linecap="round"/>
+     <path d="M218 153Q224 150 230 154Q237 150 244 154L240 176Q231 181 222 176Z" fill="#9950b8" stroke="#df9dea" stroke-width="3"/>
+     <path d="M220 154Q225 161 231 157Q237 161 242 154" fill="none" stroke="#f5d28a" stroke-width="2"/>
+     <path d="M219 154Q210 152 212 163L218 166L223 157M243 154Q252 152 251 163L245 166L240 157" fill="#dca1e7" stroke="#ae6ac8" stroke-width="2"/>
+     <path d="M215 165Q215 173 225 174M248 165Q248 173 238 174" fill="none" stroke="#ffe1ac" stroke-width="4" stroke-linecap="round"/>
+     <path d="M222 176Q231 180 240 176" fill="none" stroke="#f6cd68" stroke-width="2.5"/>
+     <path d="M231 173L234 177L231 181L228 177Z" fill="#f9e5a5"/>
+     <path d="M202 212Q231 218 262 212" fill="none" stroke="#f5d28a" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <circle cx="231" cy="135" r="17.5" fill="#ffe1ac" stroke="#d69b4a" stroke-width="2"/>
+    <path d="M211 132Q210 116 230 115Q251 114 252 134Q245 132 241 123Q230 132 215 130L214 144Q208 140 211 132Z" fill="#e7b45f" stroke="#b67a35" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M219 124Q229 122 233 119" fill="none" stroke="#ffda8d" stroke-width="2" stroke-linecap="round"/>
     <path d="M214 121L209 102L220 109L230 96L241 109L253 102L247 121Z" fill="#f6cd68" stroke="#ad773a" stroke-width="3"/>
+    <path d="M230 106L233 111L230 116L227 111Z" fill="#a950c6"/>
     <path d="M219 136h3m12 0h3" stroke="#653c47" stroke-width="3" stroke-linecap="round"/>
+    <path d="M226 143Q230 146 234 143" fill="none" stroke="#b76d6a" stroke-width="1.5" stroke-linecap="round"/>
    </g>
    <g class="mascot-foreground">
    <path d="M28 229Q104 210 181 228" fill="none" stroke="#64ad24" stroke-width="7" stroke-linecap="round"/>
