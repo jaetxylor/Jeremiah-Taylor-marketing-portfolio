@@ -83,3 +83,27 @@
 .brand-art-insourceai { background: #fff; }
 .brand-art-cream img { width: 100%; height: 100%; object-fit: cover; }
 .commercial-card .brand-art { margin-bottom: 20px; }
+
+.tiktok-picks { grid-column: 1 / -1; }
+.tiktok-picks h3, .running-group h3 { margin: 0 0 12px; font-size: 18px; }
+.running-group { margin-top: 28px; }
+.hobby-grid #running { grid-column: 1 / -1; }
+.hobby-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hobby-stats-grid a, .hobby-stats-grid > div {
+  display: grid;
+  gap: 5px;
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.hobby-stats-grid img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 6px; }
+.hobby-stats-grid span, .hobby-stats-grid dt { color: var(--muted); font-size: 12px; }
+.hobby-stats-grid dd { margin: 0; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
