@@ -1,0 +1,42 @@
+/* Reserve real space beside the heading: the character never overlays copy. */
+.section-mascot-host{position:relative;padding-right:310px;min-height:310px}
+.section-mascot{position:absolute;right:0;top:48px;width:270px;line-height:0;isolation:isolate}
+.section-mascot-art{display:block;width:100%;height:auto;overflow:visible}
+:is(.section-head,.section-heading).section-mascot-host{min-height:250px;padding-right:300px}
+:is(.section-head,.section-heading).section-mascot-host>.section-mascot{top:0}
+.article-header.section-mascot-host{padding-right:240px;min-height:235px}
+.article-header>.section-mascot{width:210px;top:4px}
+.blog-intro.section-mascot-host{display:block}
+.blog-intro.section-mascot-host>.text-link{display:inline-block;margin-top:22px}
+.section-mascot-toggle{position:absolute;right:6px;bottom:-12px;display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;background:var(--bg);color:var(--muted);padding:0;cursor:pointer;line-height:1}
+.section-mascot-toggle:hover{color:var(--ink);border-color:var(--muted)}
+.section-mascot-toggle:focus-visible{outline:2px solid #bed9ff;outline-offset:4px}
+.mascot-play-icon{display:none}
+[data-mascot-paused] .mascot-pause-icon{display:none}
+[data-mascot-paused] .mascot-play-icon{display:block}
+.section-mascot .pose-head{transform-origin:115px 140px;animation:mascot-concentrate 4.8s ease-in-out infinite}
+.section-mascot .pose-eyes{transform-box:fill-box;transform-origin:center;animation:mascot-blink 5.4s ease-in-out infinite}
+.pose-point-arm{transform-origin:133px 151px;animation:mascot-point 3.6s ease-in-out infinite}
+.pose-type-left{transform-origin:94px 161px;animation:mascot-type .55s ease-in-out infinite}
+.pose-type-right{transform-origin:133px 160px;animation:mascot-type .55s ease-in-out -.275s infinite}
+.pose-write-arm{transform-origin:93px 159px;animation:mascot-write 2.8s ease-in-out infinite}
+.pose-ink{stroke-dasharray:24;animation:mascot-ink 2.8s ease-in-out infinite}
+[data-mascot-paused] .section-mascot-art *{animation-play-state:paused!important}
+@keyframes mascot-point{0%,100%{transform:rotate(0deg)}28%,48%{transform:rotate(-9deg)}65%,82%{transform:rotate(5deg)}}
+@keyframes mascot-type{0%,100%{transform:rotate(0deg)}50%{transform:rotate(5deg)}}
+@keyframes mascot-write{0%,12%,100%{transform:rotate(-2deg)}22%{transform:rotate(3deg)}32%{transform:rotate(0deg)}42%{transform:rotate(4deg)}52%{transform:rotate(1deg)}62%,82%{transform:rotate(5deg)}}
+@keyframes mascot-ink{0%,12%{stroke-dashoffset:24;opacity:0}22%{opacity:1}72%,90%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes mascot-concentrate{0%,100%{transform:rotate(0deg)}50%{transform:rotate(1.5deg)}}
+@keyframes mascot-blink{0%,43%,47%,100%{transform:scaleY(1)}45%{transform:scaleY(.12)}}
+@media(min-width:721px) and (max-width:1050px){.section-mascot-host{padding-right:235px}.section-mascot{width:215px}:is(.section-head,.section-heading).section-mascot-host{padding-right:235px}.article-header.section-mascot-host{padding-right:210px}.article-header>.section-mascot{width:190px}}
+@media(max-width:720px){
+ .section-mascot-host,:is(.section-head,.section-heading).section-mascot-host,.article-header.section-mascot-host{padding-right:0;padding-top:160px;min-height:0}
+ .section-mascot-host>.section-mascot,:is(.section-head,.section-heading).section-mascot-host>.section-mascot,.article-header>.section-mascot{top:8px;right:0;width:160px}
+ .section-mascot-host>.eyebrow,.section-mascot-host>div:not(.section-mascot)>.eyebrow{position:absolute;left:0;top:73px;max-width:calc(100% - 178px);line-height:1.7}
+ .section-mascot-host>.back-link{position:absolute;top:24px;left:0;max-width:calc(100% - 175px);margin:0}
+ .section-mascot-host .section-mascot-toggle{width:28px;height:28px;right:0;bottom:-3px}
+ :is(.section-head,.section-heading).section-mascot-host{gap:20px}
+ .blog-intro.section-mascot-host>.text-link{margin-top:20px}
+ .article-header.section-mascot-host h1{margin-top:16px}
+}
+@media(prefers-reduced-motion:reduce){.section-mascot-art *{animation:none!important}.section-mascot-toggle{display:none!important}.pose-ink{stroke-dashoffset:0}}
