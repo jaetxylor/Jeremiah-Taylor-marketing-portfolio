@@ -30,13 +30,13 @@ window.PORTFOLIO_DATA = {
   ],
   education: [
     { school: "Singapore Management University", credential: "MSc in Communication Management", dates: "Dec 2022 – Jul 2024", focus: "Strategic communication · branding · stakeholder engagement · business messaging" },
+    { school: "Singapore Management University", credential: "Graduate Diploma in Communication Management & Innovation", dates: "Jan 2022 – May 2022" },
     { school: "Curtin University", credential: "Bachelor of Commerce (Marketing)", dates: "2021 – 2022", focus: "Consumer behaviour · digital marketing · brand strategy · business management" },
     { school: "Temasek Polytechnic", credential: "Diploma in Business/Commerce", dates: "2016 – 2019" }
   ],
   professionalDevelopment: [
     { school: "SGInnovate × Google", credential: "Scholar", dates: "2026 – Present" },
     { school: "Northwestern University", credential: "Exchange Programme, MS Business/Corporate Communications", dates: "Jul 2023 – Aug 2023" },
-    { school: "Singapore Management University", credential: "Graduate Diploma in Communication Management & Innovation", dates: "Jan 2022 – May 2022" },
     { school: "Lee Kuan Yew School of Public Policy", credential: "Professional Certificate in Public Policy Administration", dates: "Nov 2021 – Feb 2022" },
     { school: "National University of Singapore", credential: "Executive Programme, Digital Marketing & Data Analytics", dates: "2020" }
   ],

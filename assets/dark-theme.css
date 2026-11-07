@@ -204,17 +204,6 @@
   letter-spacing: -.045em;
 }
 
-.works-overview { padding-bottom: clamp(32px, 6vw, 72px); }
-.works-overview .page-top { padding-block: 20px 28px; }
-.works-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-  gap: 12px;
-}
-.works-links a { display: block; }
-.works-links a:hover { border-color: var(--ink); }
-.works-links h2 { margin: 0 0 8px; font-size: 20px; }
-.works-links p { margin: 0 0 12px; }
 .works-results { margin-top: 32px; }
 .works-results h2 { font-size: 20px; }
 .works-results ul {
@@ -254,3 +243,15 @@ body[data-page="about"] #resume { margin-top: clamp(32px, 6vw, 72px); }
   pointer-events: none;
 }
 .umbreon-peek img { display: block; width: 112px; height: auto; }
+
+.works-subpage .works-results { margin: 12px 0 44px; }
+.pokemon-stream { grid-template-columns: minmax(0, 1fr); }
+.pokemon-stream .tiktok-profile-peek { margin-top: 34px; }
+.about-cartoon > img {
+  width: min(100%, 340px);
+  margin-inline: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 0;
+}
+.about-cartoon figcaption { text-align: center; }

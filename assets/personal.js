@@ -62,7 +62,7 @@ function followMovedSection() {
 function followMovedWorksSection() {
   if (!['/works/', '/experience.html'].includes(location.pathname)) return;
   const routes = {
-    '#web': '/works/websites/', '#campaigns': '/works/campaigns/',
+    '#campaigns': '/works/campaigns/',
     '#social': '/works/social/', '#creative': '/works/creative/',
     '#capabilities': '/works/creative/#capabilities', '#collaborations': '/works/collaborations/'
   };
