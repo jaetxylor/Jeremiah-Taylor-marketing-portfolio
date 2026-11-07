@@ -8,6 +8,12 @@ Run `node scripts/build.mjs` (Node 18+; no packages required). The generated web
 
 ## Content
 
+### Homepage character intro
+
+The homepage uses a 45-second silent cartoon film with baked-in captions. `assets/hero/` contains a 1920×1080 desktop MP4, a 960×1200 phone MP4, matching posters, the character sprite sheet, and playback controls. The player selects one video for the viewport, pauses outside the viewport or in background tabs, and waits for a click when reduced motion or data saving is enabled.
+
+`scripts/render-hero.mjs` renders the film offline with `@napi-rs/canvas`, FFmpeg and the Nimbus Sans/P052 system fonts. Run it normally and with `--mobile` to regenerate both formats. This renderer is not part of the website build. Copy is drawn from the public Projects, Works, Hobby and Blog pages; the film intentionally avoids changing collection counts and running statistics.
+
 - `content/site.json`: author, contact details and active site URL.
 - `content/projects.json`: project summaries, actual roles, contributions and links.
 - `content/posts/*.json`: dated blog posts.
