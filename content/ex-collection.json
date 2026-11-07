@@ -2,7 +2,7 @@
   "title": "The EX collection",
   "description": "i have been hunting down the Pokémon ex cards from my childhood. A little nostalgia, a growing binder and a few cards still to find.",
   "updatedAt": "2026-11-07",
-  "batchesReceived": 1,
+  "batchesReceived": 2,
   "batchesExpected": 3,
   "statusSource": "Pokellector screenshots supplied by Jae. Blue tick = collected; grey tick = still hunting. Cards outside the screenshots have unknown status.",
   "sets": [
@@ -464,7 +464,7 @@
       "year": 2005,
       "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/",
       "screenshot": "IMG_6392(1).jpeg",
-      "completeScreenshot": false,
+      "completeScreenshot": true,
       "cards": [
         {
           "id": "unseen-forces-101",
@@ -569,7 +569,7 @@
           "id": "unseen-forces-112",
           "number": 112,
           "name": "Umbreon ex",
-          "status": "unknown",
+          "status": "hunting",
           "imageUrl": "https://den-cards.pokellector.com/61/Umbreon-ex.UF.112.png",
           "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Umbreon-ex-Card-112",
           "catalogueId": "ex10-112"
@@ -578,7 +578,7 @@
           "id": "unseen-forces-116",
           "number": 116,
           "name": "Rocket’s Persian ex",
-          "status": "unknown",
+          "status": "collected",
           "imageUrl": "https://den-cards.pokellector.com/61/Rockets-Persian-ex.UF.116.png",
           "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Rockets-Persian-ex-Card-116",
           "catalogueId": "ex10-116"
@@ -587,14 +587,351 @@
           "id": "unseen-forces-117",
           "number": 117,
           "name": "Celebi ex",
-          "status": "unknown",
+          "status": "hunting",
           "imageUrl": "https://den-cards.pokellector.com/61/Celebi-ex.UF.117.png",
           "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Celebi-ex-Card-117",
           "catalogueId": "ex10-117"
         }
       ],
       "logoUrl": "https://den-media.pokellector.com/logos/EX-Unseen-Forces.logo.61.png",
-      "catalogueExCount": 14
+      "catalogueExCount": 14,
+      "screenshots": [
+        "IMG_6392(1).jpeg",
+        "IMG_6393(1).jpeg"
+      ]
+    },
+    {
+      "id": "emerald",
+      "name": "EX Emerald",
+      "year": 2005,
+      "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/",
+      "screenshots": [
+        "IMG_6394.jpeg",
+        "IMG_6395.jpeg"
+      ],
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "emerald-90",
+          "number": 90,
+          "name": "Altaria ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/60/Altaria-ex.EM.90.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Altaria-ex-Card-90",
+          "catalogueId": "ex9-90"
+        },
+        {
+          "id": "emerald-91",
+          "number": 91,
+          "name": "Cacturne ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/60/Cacturne-ex.EM.91.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Cacturne-ex-Card-91",
+          "catalogueId": "ex9-91"
+        },
+        {
+          "id": "emerald-92",
+          "number": 92,
+          "name": "Camerupt ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/60/Camerupt-ex.EM.92.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Camerupt-ex-Card-92",
+          "catalogueId": "ex9-92"
+        },
+        {
+          "id": "emerald-93",
+          "number": 93,
+          "name": "Deoxys ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/60/Deoxys-ex.EM.93.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Deoxys-ex-Card-93",
+          "catalogueId": "ex9-93"
+        },
+        {
+          "id": "emerald-94",
+          "number": 94,
+          "name": "Dusclops ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/60/Dusclops-ex.EM.94.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Dusclops-ex-Card-94",
+          "catalogueId": "ex9-94"
+        },
+        {
+          "id": "emerald-95",
+          "number": 95,
+          "name": "Medicham ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/60/Medicham-ex.EM.95.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Medicham-ex-Card-95",
+          "catalogueId": "ex9-95"
+        },
+        {
+          "id": "emerald-96",
+          "number": 96,
+          "name": "Milotic ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/60/Milotic-ex.EM.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Milotic-ex-Card-96",
+          "catalogueId": "ex9-96"
+        },
+        {
+          "id": "emerald-97",
+          "number": 97,
+          "name": "Raichu ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/60/Raichu-ex.EM.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Raichu-ex-Card-97",
+          "catalogueId": "ex9-97"
+        },
+        {
+          "id": "emerald-98",
+          "number": 98,
+          "name": "Regice ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/60/Regice-ex.EM.98.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Regice-ex-Card-98",
+          "catalogueId": "ex9-98"
+        },
+        {
+          "id": "emerald-99",
+          "number": 99,
+          "name": "Regirock ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/60/Regirock-ex.EM.99.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Regirock-ex-Card-99",
+          "catalogueId": "ex9-99"
+        },
+        {
+          "id": "emerald-100",
+          "number": 100,
+          "name": "Registeel ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/60/Registeel-ex.EM.100.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Emerald-Expansion/Registeel-ex-Card-100",
+          "catalogueId": "ex9-100"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Emerald.logo.60.png",
+      "catalogueExCount": 11
+    },
+    {
+      "id": "deoxys",
+      "name": "EX Deoxys",
+      "year": 2005,
+      "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/",
+      "screenshots": [
+        "IMG_6396.jpeg",
+        "IMG_6397.jpeg"
+      ],
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "deoxys-96",
+          "number": 96,
+          "name": "Crobat ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/59/Crobat-ex.DX.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Crobat-ex-Card-96",
+          "catalogueId": "ex8-96"
+        },
+        {
+          "id": "deoxys-97",
+          "number": 97,
+          "name": "Deoxys ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/59/Deoxys-ex.DX.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Deoxys-ex-Card-97",
+          "catalogueId": "ex8-97"
+        },
+        {
+          "id": "deoxys-98",
+          "number": 98,
+          "name": "Deoxys ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/59/Deoxys-ex.DX.98.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Deoxys-ex-Card-98",
+          "catalogueId": "ex8-98"
+        },
+        {
+          "id": "deoxys-99",
+          "number": 99,
+          "name": "Deoxys ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/59/Deoxys-ex.DX.99.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Deoxys-ex-Card-99",
+          "catalogueId": "ex8-99"
+        },
+        {
+          "id": "deoxys-100",
+          "number": 100,
+          "name": "Hariyama ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/59/Hariyama-ex.DX.100.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Hariyama-ex-Card-100",
+          "catalogueId": "ex8-100"
+        },
+        {
+          "id": "deoxys-101",
+          "number": 101,
+          "name": "Manectric ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/59/Manectric-ex.DX.101.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Manectric-ex-Card-101",
+          "catalogueId": "ex8-101"
+        },
+        {
+          "id": "deoxys-102",
+          "number": 102,
+          "name": "Rayquaza ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/59/Rayquaza-ex.DX.102.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Rayquaza-ex-Card-102",
+          "catalogueId": "ex8-102"
+        },
+        {
+          "id": "deoxys-103",
+          "number": 103,
+          "name": "Salamence ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/59/Salamence-ex.DX.103.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Salamence-ex-Card-103",
+          "catalogueId": "ex8-103"
+        },
+        {
+          "id": "deoxys-104",
+          "number": 104,
+          "name": "Sharpedo ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/59/Sharpedo-ex.DX.104.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Sharpedo-ex-Card-104",
+          "catalogueId": "ex8-104"
+        },
+        {
+          "id": "deoxys-108",
+          "number": 108,
+          "name": "Rocket’s Raikou ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/59/Rockets-Raikou-ex.DX.108.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Deoxys-Expansion/Rockets-Raikou-ex-Card-108",
+          "catalogueId": "ex8-108"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Deoxys.logo.59.png",
+      "catalogueExCount": 10
+    },
+    {
+      "id": "team-rocket-returns",
+      "name": "EX Team Rocket Returns",
+      "year": 2004,
+      "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/",
+      "screenshots": [
+        "IMG_6398.jpeg",
+        "IMG_6399.jpeg"
+      ],
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "team-rocket-returns-96",
+          "number": 96,
+          "name": "Rocket’s Articuno ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Articuno-ex.RR.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Articuno-ex-Card-96",
+          "catalogueId": "ex7-96"
+        },
+        {
+          "id": "team-rocket-returns-97",
+          "number": 97,
+          "name": "Rocket’s Entei ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Entei-ex.RR.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Entei-ex-Card-97",
+          "catalogueId": "ex7-97"
+        },
+        {
+          "id": "team-rocket-returns-98",
+          "number": 98,
+          "name": "Rocket’s Hitmonchan ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Hitmonchan-ex.RR.98.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Hitmonchan-ex-Card-98",
+          "catalogueId": "ex7-98"
+        },
+        {
+          "id": "team-rocket-returns-99",
+          "number": 99,
+          "name": "Rocket’s Mewtwo ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Mewtwo-ex.RR.99.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Mewtwo-ex-Card-99",
+          "catalogueId": "ex7-99"
+        },
+        {
+          "id": "team-rocket-returns-100",
+          "number": 100,
+          "name": "Rocket’s Moltres ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Moltres-ex.RR.100.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Moltres-ex-Card-100",
+          "catalogueId": "ex7-100"
+        },
+        {
+          "id": "team-rocket-returns-101",
+          "number": 101,
+          "name": "Rocket’s Scizor ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Scizor-ex.RR.101.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Scizor-ex-Card-101",
+          "catalogueId": "ex7-101"
+        },
+        {
+          "id": "team-rocket-returns-102",
+          "number": 102,
+          "name": "Rocket’s Scyther ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Scyther-ex.RR.102.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Scyther-ex-Card-102",
+          "catalogueId": "ex7-102"
+        },
+        {
+          "id": "team-rocket-returns-103",
+          "number": 103,
+          "name": "Rocket’s Sneasel ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Sneasel-ex.RR.103.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Sneasel-ex-Card-103",
+          "catalogueId": "ex7-103"
+        },
+        {
+          "id": "team-rocket-returns-104",
+          "number": 104,
+          "name": "Rocket’s Snorlax ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Snorlax-ex.RR.104.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Snorlax-ex-Card-104",
+          "catalogueId": "ex7-104"
+        },
+        {
+          "id": "team-rocket-returns-105",
+          "number": 105,
+          "name": "Rocket’s Suicune ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Suicune-ex.RR.105.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Suicune-ex-Card-105",
+          "catalogueId": "ex7-105"
+        },
+        {
+          "id": "team-rocket-returns-106",
+          "number": 106,
+          "name": "Rocket’s Zapdos ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/58/Rockets-Zapdos-ex.RR.106.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Rocket-Returns-Expansion/Rockets-Zapdos-ex-Card-106",
+          "catalogueId": "ex7-106"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Team-Rocket-Returns.logo.58.png",
+      "catalogueExCount": 11
     }
   ]
 }

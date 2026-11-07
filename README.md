@@ -32,7 +32,9 @@ The gallery lives at `/hobby/ex-collection/` and is linked from Hobby. `content/
 
 For another screenshot batch, match each card by expansion plus number (or `catalogueId`), merge into the existing records, and update `batchesReceived` and `updatedAt`. Blue ticks are recorded as `collected`; grey ticks as `hunting`. A card outside the screenshots stays `unknown` until Jae confirms it. Never infer ownership from the catalogue. Keep Energy, Gold Stars and normal Pokémon cards outside this original ex collection.
 
-The initial import covers seven sets, 21 collected and 31 hunting cards. Unseen Forces also has three catalogue entries awaiting an ownership update: Umbreon ex #112, Rocket’s Persian ex #116 and Celebi ex #117. Set catalogue pages and exact artwork URLs are attributed to Pokellector in the data and gallery. Displayed scans are reference artwork, not photographs of the owner’s physical cards.
+Two of three screenshot batches have been imported. The tracker now covers 10 sets and 87 original Pokémon ex cards: 41 collected and 46 still hunting, with no ownership statuses pending within these imported sets. Batch 2 added Emerald, Deoxys and Team Rocket Returns, and confirmed the previously unknown Unseen Forces entries: Rocket’s Persian ex #116 is collected; Umbreon ex #112 and Celebi ex #117 are still hunting. The three Deoxys ex cards #97, #98 and #99 remain separate records. Rocket’s Raikou ex #108 belongs to EX Deoxys.
+
+Set catalogue pages and exact artwork URLs are attributed to Pokellector in the data and gallery. Displayed scans are reference artwork, not photographs of the owner’s physical cards.
 
 `script` modules `scripts/collection.mjs` and `assets/ex-collection.js` render and enhance the collection; styles stay in `assets/ex-collection.css`. Run the normal build after changing the data.
 
