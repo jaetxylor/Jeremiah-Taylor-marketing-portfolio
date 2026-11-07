@@ -1,0 +1,67 @@
+/* Charcoal surfaces, with the portfolio's existing accent colours. */
+:root {
+  color-scheme: dark;
+  --bg: #242424;
+  --ink: #f3f0e8;
+  --muted: #b8b6b0;
+  --line: #494949;
+  --card: #2d2d2d;
+  --shadow: 0 18px 60px rgba(0, 0, 0, .18);
+}
+
+.brand-mark,
+.button.primary,
+.button-dark,
+.skip,
+.filter-button[aria-pressed=true] {
+  background: var(--ink);
+  color: var(--bg);
+}
+.site-header .nav-resume,
+.site-header .nav-cta {
+  background: var(--ink) !important;
+  color: var(--bg) !important;
+  border-color: var(--ink) !important;
+}
+.site-header .nav-resume:hover,
+.site-header .nav-cta:hover {
+  background: #ddd9d0 !important;
+}
+.button.secondary { background: transparent; }
+.menu-toggle { color: var(--ink); }
+
+.creative-section,
+.about-section { background: #292929; }
+.creative-grid-bg {
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+}
+.creative-card,
+.creative-card:nth-child(3),
+.cert-card,
+.education-card,
+.education-section .education-grid article,
+.project-note {
+  background: var(--card);
+  border-color: var(--line);
+}
+.creative-card:nth-child(2) { border-color: var(--line); }
+.creative-type,
+.creative-card p { color: var(--muted); opacity: 1; }
+.tool-marquee span { color: var(--muted); }
+.legacy-return {
+  background: var(--bg) !important;
+  border-color: var(--line) !important;
+}
+
+/* Keep dark lettering on the original light artwork and logo tiles. */
+.web-art,
+.web-browser,
+.managed-logo,
+.campaign-logo,
+.brand-logo,
+.personal-card,
+.collab-pill:nth-child(3n),
+.collab-pill:nth-child(4n) { color: #151515; }
+.personal-card .button.primary { background: #151515; color: #fff; }
+.personal-card .button.secondary { border-color: #151515; }
