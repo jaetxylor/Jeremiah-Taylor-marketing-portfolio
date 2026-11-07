@@ -1,8 +1,6 @@
 (() => {
   const video = document.querySelector('[data-intro-video]');
   if (!video) return;
-  const toggle = document.querySelector('[data-intro-toggle]');
-  const replay = document.querySelector('[data-intro-replay]');
   const note = document.querySelector('[data-intro-note]');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const compact = window.matchMedia('(max-width: 640px)').matches;
@@ -12,28 +10,33 @@
   let inView = true;
   let failed = false;
   const update = () => {
-    toggle.textContent = video.paused ? 'Play intro' : 'Pause intro';
-    toggle.setAttribute('aria-label', video.paused ? 'Play the 45-second site introduction' : 'Pause the site introduction');
-    replay.disabled = !video.currentSrc;
+    const action = video.paused ? 'Play' : 'Pause';
+    video.setAttribute('aria-label', action + ' the silent, captioned site introduction');
   };
   async function play() {
     if (failed || !inView || document.hidden) return;
     if (!video.getAttribute('src')) video.src = src;
-    try { await video.play(); } catch { /* Autoplay restrictions leave an explicit play button. */ }
+    try { await video.play(); } catch { /* Visitors can tap the video if autoplay is blocked. */ }
     update();
   }
-  toggle.addEventListener('click', () => {
+  function togglePlayback() {
+    if (failed) return;
     wantsPlayback = video.paused;
     if (wantsPlayback) play(); else video.pause();
+  }
+  video.addEventListener('click', togglePlayback);
+  video.addEventListener('keydown', event => {
+    if (event.repeat || !['Enter', ' '].includes(event.key)) return;
+    event.preventDefault();
+    togglePlayback();
   });
-  replay.addEventListener('click', () => { video.currentTime = 0; wantsPlayback = true; play(); });
   video.addEventListener('play', update);
   video.addEventListener('pause', update);
   video.addEventListener('loadedmetadata', update);
   video.addEventListener('error', () => {
-    failed = true; wantsPlayback = false; toggle.disabled = true; replay.disabled = true;
+    failed = true; wantsPlayback = false; video.setAttribute('aria-disabled', 'true');
     note.hidden = false;
-    note.textContent = 'The intro could not load. You can still explore every section below.';
+    note.textContent = 'The intro could not load. You can still browse the site from the menu.';
   });
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(entries => {

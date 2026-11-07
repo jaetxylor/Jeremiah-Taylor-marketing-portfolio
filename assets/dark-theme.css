@@ -255,3 +255,23 @@ body[data-page="about"] #resume { margin-top: clamp(32px, 6vw, 72px); }
   border-radius: 0;
 }
 .about-cartoon figcaption { text-align: center; }
+
+.home-latest .section-head { align-items: baseline; }
+.home-latest .section-head h2 { font-size: clamp(24px, 4vw, 38px); }
+.home-latest .post-row { grid-template-columns: minmax(0, 1fr); }
+.home-latest .post-number, .home-latest .post-row .circle-link { display: none; }
+.about-subsections { display: grid; gap: 12px; padding-bottom: 0; }
+.about-subsections details {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+}
+.about-subsections summary {
+  cursor: pointer;
+  padding: 16px 20px;
+  font-size: clamp(16px, 3vw, 22px);
+  font-weight: 650;
+}
+.about-subsections .education-grid, .about-subsections .tool-marquee {
+  margin: 0 12px 12px;
+}

@@ -116,3 +116,11 @@ document.querySelectorAll('img[data-logo]').forEach(img => {
   img.addEventListener('error', fallback, {once:true});
   if (img.complete && !img.naturalWidth) fallback();
 });
+
+function openAboutSubsection() {
+  if (document.body.dataset.page !== 'about') return;
+  const section = document.getElementById(location.hash.slice(1));
+  if (section instanceof HTMLDetailsElement) section.open = true;
+}
+openAboutSubsection();
+window.addEventListener('hashchange', openAboutSubsection);
