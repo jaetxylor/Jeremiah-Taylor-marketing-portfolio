@@ -33,6 +33,13 @@ window.PORTFOLIO_DATA = {
     { school: "Lee Kuan Yew School of Public Policy", credential: "Professional Certificate in Public Policy Administration", dates: "Nov 2021 – Feb 2022" },
     { school: "National University of Singapore", credential: "Executive Programme, Digital Marketing & Data Analytics", dates: "2020" }
   ],
-  collaborations: ["Yishion Singapore", "Meeth Global", "Gaston Luga", "Shopee", "Hide Out Place Singapore", "PA NDP Press Conference", "PA National Day Heartland Celebrations 2024 — North East", "Buangkok Community Centre Opening"],
+  collaborations: [
+    { name: "Yishion Singapore", logo: "/assets/collaborations/yishion.png" },
+    { name: "Meeth Global", logo: "/assets/collaborations/meeth.svg" },
+    { name: "Gaston Luga", logo: "/assets/collaborations/gaston-luga.svg" },
+    { name: "Shopee", logo: "/assets/collaborations/shopee.svg" },
+    { name: "Hide Out Place Singapore", logo: "/assets/collaborations/hideout.png", logoTheme: "dark" },
+    { name: "People’s Association", logo: "/assets/collaborations/pa-logo.png", events: ["PA NDP Press Conference", "PA National Day Heartland Celebrations 2024 — North East", "Buangkok Community Centre Opening"] }
+  ],
   certifications: ["Google Analytics", "Claude Code", "Claude 101", "Meta Business Manager", "Codex", "Google Prompting"]
 };

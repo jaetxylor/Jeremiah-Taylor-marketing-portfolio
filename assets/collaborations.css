@@ -1,0 +1,29 @@
+/* Official artwork keeps its original colour and proportions. */
+.collaboration-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px}
+.collaboration-card{min-width:0;text-align:center}
+.collaboration-logo{display:flex;align-items:center;justify-content:center;min-height:130px;padding:24px;background:#fff;border:1px solid var(--line);border-radius:18px}
+.collaboration-logo img{display:block;width:100%;height:72px;object-fit:contain}
+.collaboration-logo-dark{background:#000}
+.collaboration-logo-dark img{height:80px}
+.collaboration-card h3{font-size:14px;font-weight:650;line-height:1.5;margin:14px 0 0;color:var(--ink)}
+.collaboration-events{grid-column:1/-1;margin-top:22px;padding:30px;border:1px solid var(--line);border-radius:22px;background:var(--card)}
+.collaboration-events .collaboration-logo{width:180px;min-height:160px;padding:16px;margin:0 auto}
+.collaboration-events .collaboration-logo img{width:128px;height:128px}
+.collaboration-events h3{font-size:20px;margin-top:18px}
+.collaboration-events ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;list-style:none;margin:24px 0 0;padding:24px 0 0;border-top:1px solid var(--line)}
+.collaboration-events li{font-size:14px;line-height:1.65;color:var(--ink);padding:0 12px}
+.collaboration-events li+li{border-left:1px solid var(--line)}
+@media(max-width:900px){.collaboration-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}}
+@media(max-width:620px){
+ .collaboration-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}
+ .collaboration-logo{min-height:116px;padding:20px}
+ .collaboration-logo img{height:64px}
+ .collaboration-logo-dark img{height:78px}
+ .collaboration-card h3{font-size:13px;margin-top:11px}
+ .collaboration-events{margin-top:12px;padding:24px 20px}
+ .collaboration-events h3{font-size:19px;margin-top:18px}
+ .collaboration-events ul{grid-template-columns:1fr;gap:0;margin-top:20px;padding-top:0;text-align:left}
+ .collaboration-events li{padding:18px 0;font-size:14px}
+ .collaboration-events li+li{border-left:0;border-top:1px solid var(--line)}
+ .collaboration-events li:last-child{padding-bottom:0}
+}

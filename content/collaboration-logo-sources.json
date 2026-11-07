@@ -1,0 +1,30 @@
+{
+  "retrieved": "2026-11-08",
+  "note": "Unmodified logo files retrieved from the brands\u2019 official websites; displayed at their natural aspect ratios.",
+  "sources": {
+    "yishion.png": {
+      "page": "https://www.yishion.com/",
+      "asset": "https://www.yishion.com/web/static/web/img/logo.png"
+    },
+    "meeth.svg": {
+      "page": "https://www.meeth.co.jp/",
+      "asset": "https://d2w53g1q050m78.cloudfront.net/wwwmeethcojp/uploads/themes/swimmy_theme_20261104155231/ec_force/assets/images/meeth-navigations-tabs-meeth.svg"
+    },
+    "gaston-luga.svg": {
+      "page": "https://gastonluga.com/",
+      "asset": "https://gastonluga.com/media/ecom/default/GL_LOGO_2020_black_2.svg?logo=1"
+    },
+    "shopee.svg": {
+      "page": "https://careers.shopee.sg/",
+      "asset": "https://deo.shopeemobile.com/shopee/shopee-careers-live-sg/assets/img/footer-shopee.62760462.svg"
+    },
+    "hideout.png": {
+      "page": "https://www.hideoutplace.com.sg/contact-us/",
+      "asset": "https://www.hideoutplace.com.sg/wp-content/uploads/2023/03/cropped-cropped-Neon-Light-Glow-Film-Factory-Logo-180x180-1-270x270.png"
+    },
+    "pa-logo.png": {
+      "page": "https://www.pa.gov.sg/about-us/about-pa/",
+      "asset": "https://isomer-user-content.by.gov.sg/101/03bf3388-9935-4b5e-bf9c-d2fac7770010/PA%20Logo.png"
+    }
+  }
+}

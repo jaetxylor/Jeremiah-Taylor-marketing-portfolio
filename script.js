@@ -33,7 +33,9 @@ function renderEducation(){
 }
 
 function renderCollabs(){
-  document.getElementById('collab-cloud').innerHTML=D.collaborations.map(x=>`<span class="collab-pill">${esc(x)}</span>`).join('');
+  const el = document.getElementById('collab-cloud');
+  el.className = 'collaboration-grid';
+  el.innerHTML=D.collaborations.map(x=>`<article class="collaboration-card${x.events ? ' collaboration-events' : ''}"><div class="collaboration-logo${x.logoTheme === 'dark' ? ' collaboration-logo-dark' : ''}"><img src="${esc(x.logo)}" alt="${esc(x.name)} logo" loading="lazy" decoding="async"></div><h3>${esc(x.name)}</h3>${x.events ? `<ul>${x.events.map(event=>`<li>${esc(event)}</li>`).join('')}</ul>` : ''}</article>`).join('');
 }
 
 function renderCerts(){
