@@ -102,7 +102,11 @@
               "originalEntry": "Energon Universe #1 (3)",
               "identityPending": true,
               "notes": "Year and special edition to confirm.",
-              "matchConfidence": "unresolved"
+              "matchConfidence": "unresolved",
+              "imageUrl": "/assets/comic-covers/energon.webp",
+              "sourceUrl": "https://imagecomics.com/press-releases/skybound-image-hasbro-announce-energon-universe-special-2024-1",
+              "sourceName": "Image Comics",
+              "coverReference": "Reference cover from Energon Universe 2024 Special #1. The year and edition of my copies are still to confirm."
             }
           ]
         },
@@ -465,7 +469,11 @@
               "originalEntry": "Transformers and the Gijoe #3",
               "identityPending": true,
               "notes": "Exact series and edition to confirm from the cover. This entry remains separate from the other listed #3.",
-              "matchConfidence": "unresolved"
+              "matchConfidence": "unresolved",
+              "imageUrl": "/assets/comic-covers/joe-3.webp",
+              "sourceUrl": "https://www.glasscitycomics.com/products/g-i-joe-and-the-transformers-3",
+              "sourceName": "Glass City Comics",
+              "coverReference": "Possible match: Marvel’s G.I. Joe and the Transformers #3 (1987), shown with the newsstand cover. The series and edition of my copy are still to confirm."
             }
           ]
         },
@@ -482,7 +490,11 @@
               "originalEntry": "Transformers Marvel 25th anniversary 75c / #2, 3",
               "identityPending": true,
               "notes": "Exact series and edition to confirm from the cover.",
-              "matchConfidence": "unresolved"
+              "matchConfidence": "unresolved",
+              "imageUrl": "/assets/comic-covers/joe-2.webp",
+              "sourceUrl": "https://www.ebay.com/itm/195976938110",
+              "sourceName": "eBay cover photo",
+              "coverReference": "Likely match: Marvel’s G.I. Joe and the Transformers #2 (1987). The cover shows the 25th anniversary badge and 75¢ US price. My exact edition is still to confirm."
             },
             {
               "id": "tf-marvel-anniversary-3-unconfirmed",
@@ -491,7 +503,11 @@
               "originalEntry": "Transformers Marvel 25th anniversary 75c / #2, 3",
               "identityPending": true,
               "notes": "Exact series and edition to confirm from the cover. This entry remains separate from the other listed #3.",
-              "matchConfidence": "unresolved"
+              "matchConfidence": "unresolved",
+              "imageUrl": "/assets/comic-covers/joe-3.webp",
+              "sourceUrl": "https://www.glasscitycomics.com/products/g-i-joe-and-the-transformers-3",
+              "sourceName": "Glass City Comics",
+              "coverReference": "Likely match: Marvel’s G.I. Joe and the Transformers #3 (1987). The cover shows the 25th anniversary badge and 75¢ US price. My exact edition is still to confirm."
             }
           ]
         }
