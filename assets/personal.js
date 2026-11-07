@@ -1,15 +1,16 @@
+document.documentElement.classList.add('js');
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#primary-nav');
 if (toggle && nav) {
   const closeMenu = () => {
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.textContent = 'Menu +';
+    toggle.textContent = 'Menu';
     nav.classList.remove('is-open');
   };
   toggle.addEventListener('click', () => {
     const open = toggle.getAttribute('aria-expanded') !== 'true';
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.textContent = open ? 'Close −' : 'Menu +';
+    toggle.textContent = open ? 'Close' : 'Menu';
     nav.classList.toggle('is-open', open);
   });
   document.addEventListener('keydown', event => {
@@ -21,7 +22,7 @@ if (toggle && nav) {
   nav.addEventListener('click', event => {
     if (event.target.closest('a')) closeMenu();
   });
-  window.matchMedia('(min-width: 621px)').addEventListener('change', event => {
+  window.matchMedia('(min-width: 821px)').addEventListener('change', event => {
     if(event.matches) closeMenu();
   });
 }
@@ -46,26 +47,7 @@ if (filters) {
     if (count) count.textContent = `${visible} project${visible === 1 ? '' : 's'}`;
   });
 }
-// Content remains visible without JavaScript or when motion is reduced.
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-if ('IntersectionObserver' in window && !reducedMotion.matches) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.06 });
-  document.querySelectorAll('[data-reveal]').forEach(el => {
-    if (el.getBoundingClientRect().top > window.innerHeight) el.classList.add('reveal-ready');
-    observer.observe(el);
-  });
-  reducedMotion.addEventListener('change',event=>{
-    if(event.matches){observer.disconnect();document.querySelectorAll('.reveal-ready').forEach(el=>el.classList.add('is-visible'));}
-  });
-}
-// Preserve inbound links to the original single-page CV sections.
+// Existing homepage sections retain their original portfolio anchors.
 const legacySections = ['web', 'campaigns', 'creative', 'social', 'about', 'resume'];
 const hash = location.hash.slice(1);
 if (document.body.dataset.page === 'home' && legacySections.includes(hash) && !document.getElementById(hash)) {
