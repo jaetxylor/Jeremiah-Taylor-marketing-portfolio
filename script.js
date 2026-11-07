@@ -24,10 +24,6 @@ function renderCampaigns(){
   document.getElementById('campaign-grid').innerHTML=D.publicCampaigns.map(x=>`<article class="campaign-card campaign-group-card reveal"><div class="campaign-org">${logoMarkup({logo:x.logo,logoText:x.shortName},'campaign-logo')}<div><span class="campaign-platform">${esc(x.platform)}</span><h4>${esc(x.organization)}</h4></div></div><div class="campaign-list">${x.campaigns.map(c=>`<span>${esc(c)}</span>`).join('')}</div><p>${esc(x.scope)}</p></article>`).join('');
 }
 
-function renderCommercial(){
-  document.getElementById('commercial-grid').innerHTML=D.commercialSocial.map(x=>`<article class="commercial-card reveal"><span class="channel">${esc(x.platform)}</span><h3>${esc(x.name)}</h3><p>${esc(x.description)}</p></article>`).join('');
-}
-
 function renderCreative(){
   document.getElementById('creative-grid').innerHTML=D.creativeExecution.map((x,i)=>`<article class="creative-card reveal" data-delay="${i*60}"><div class="creative-card-top"><span class="creative-index">${esc(x.index)}</span><span class="creative-type">Selected discipline</span></div><h3>${esc(x.title)}</h3><p>${esc(x.description)}</p><div class="creative-list">${x.items.map(item=>`<span>${esc(item)}</span>`).join('')}</div></article>`).join('');
 }
@@ -44,7 +40,7 @@ function renderCerts(){
   document.getElementById('cert-grid').innerHTML=D.certifications.map((x,i)=>`<article class="cert-card"><span>0${i+1}</span><h3>${esc(x)}</h3></article>`).join('');
 }
 
-renderBuilt();renderManaged();renderCampaigns();renderCreative();renderCommercial();renderCollabs();renderCerts();renderEducation();
+renderBuilt();renderManaged();renderCampaigns();renderCreative();renderCollabs();renderCerts();renderEducation();
 
 document.getElementById('year').textContent=new Date().getFullYear();
 const reveals=document.querySelectorAll('.reveal');

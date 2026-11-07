@@ -47,10 +47,16 @@ export const mascotStage = `<div class="mascot-stage" data-mascot>
    <g class="mascot-foreground">
    <path d="M28 229Q104 210 181 228" fill="none" stroke="#64ad24" stroke-width="7" stroke-linecap="round"/>
    <g class="mascot-performer">
-    <path class="mascot-arm" d="M128 158Q158 150 172 130" fill="none" stroke="#70b7ea" stroke-width="17" stroke-linecap="round"/>
-    <path class="mascot-arm" d="M128 158Q158 150 172 130" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
-    <path d="M100 137Q86 155 62 157L64 171Q84 173 98 162Q91 207 101 218Q108 224 119 198Q128 226 139 216Q147 206 141 151L129 137Z" fill="#fff" stroke="#70b7ea" stroke-width="5" stroke-linejoin="round"/>
-    <g class="mascot-bouquet">${flowers}<circle cx="56" cy="164" r="8" fill="#fff" stroke="#70b7ea" stroke-width="5"/></g>
+    <g class="mascot-arm">
+     <path d="M128 158Q158 150 172 130" fill="none" stroke="#70b7ea" stroke-width="17" stroke-linecap="round"/>
+     <path d="M128 158Q158 150 172 130" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <g class="mascot-flower-arm">
+     <path d="M102 147Q83 167 56 164" fill="none" stroke="#70b7ea" stroke-width="19" stroke-linecap="round"/>
+     <path d="M102 147Q83 167 56 164" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+     ${flowers}<circle cx="56" cy="164" r="8" fill="#fff" stroke="#70b7ea" stroke-width="5"/>
+    </g>
+    <path d="M100 137Q93 158 96 175Q91 207 101 218Q108 224 119 198Q128 226 139 216Q147 206 141 151L129 137Z" fill="#fff" stroke="#70b7ea" stroke-width="5" stroke-linejoin="round"/>
     ${head}
    </g>
    </g>

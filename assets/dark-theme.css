@@ -310,11 +310,11 @@ body[data-page="about"] #resume { margin-top: clamp(32px, 6vw, 72px); }
 }
 .mascot-actions button:hover { border-color: var(--ink); }
 .mascot-reply { min-height: 1.4em; margin: 8px 0 0; color: var(--muted); font-size: 13px; }
-.mascot-arm { transform-origin: 128px 158px; }
+.mascot-arm { transform-box: view-box; transform-origin: 128px 158px; }
+.mascot-flower-arm { transform-box: view-box; transform-origin: 102px 147px; }
 .mascot-queen { opacity: 0; }
 .mascot-stage[data-reaction="wave"] .mascot-arm { animation: mascot-wave .32s ease-in-out 6 alternate; }
-.mascot-stage[data-reaction="flower"] .mascot-bouquet {
-  transform-origin: 56px 164px;
+.mascot-stage[data-reaction="flower"] .mascot-flower-arm {
   animation: mascot-give 1.65s ease-in-out both;
 }
 .mascot-stage[data-reaction="dance"] .mascot-queen { opacity: 1; }
@@ -325,7 +325,7 @@ body[data-page="about"] #resume { margin-top: clamp(32px, 6vw, 72px); }
 .mascot-stage[data-reaction="dance"] .mascot-arm { animation: mascot-wave .28s ease-in-out 8 alternate; }
 @keyframes mascot-wave { to { transform: rotate(-24deg); } }
 @keyframes mascot-give {
-  25%, 70% { transform: translate(-17px, -9px) rotate(-12deg) scale(1.24); }
+  25%, 70% { transform: rotate(16deg); }
 }
 @keyframes mascot-dance {
   25% { transform: translate(9px, -13px) rotate(-14deg); }
@@ -334,7 +334,7 @@ body[data-page="about"] #resume { margin-top: clamp(32px, 6vw, 72px); }
 @media (prefers-reduced-motion: reduce) {
   .mascot-stage[data-reaction] .mascot-art g, .mascot-stage[data-reaction] .mascot-art path { animation: none; }
   .mascot-stage[data-reaction="wave"] .mascot-arm { transform: rotate(-24deg); }
-  .mascot-stage[data-reaction="flower"] .mascot-bouquet { transform: translate(-17px, -9px); }
+  .mascot-stage[data-reaction="flower"] .mascot-flower-arm { transform: rotate(16deg); }
 }
 .mascot-foreground { transform: translateX(42px); }
 .mascot-stage[data-reaction="dance"] .mascot-foreground { transform: none; }
