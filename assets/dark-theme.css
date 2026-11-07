@@ -285,3 +285,56 @@ body[data-page="about"] #resume { margin-top: clamp(32px, 6vw, 72px); }
 .about-subsections .education-grid, .about-subsections .tool-marquee {
   margin: 0 12px 12px;
 }
+
+.mascot-mark { display: block; width: 56px; height: 43px; }
+.mascot-stage { text-align: center; }
+.mascot-trigger {
+  display: block;
+  width: min(100%, 360px);
+  margin-inline: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+.mascot-art { display: block; width: 100%; height: auto; }
+.mascot-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.mascot-actions button {
+  min-height: 44px;
+  padding: 8px 14px;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.mascot-actions button:hover { border-color: var(--ink); }
+.mascot-reply { min-height: 1.4em; margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+.mascot-arm { transform-origin: 128px 158px; }
+.mascot-queen { opacity: 0; }
+.mascot-stage[data-reaction="wave"] .mascot-arm { animation: mascot-wave .32s ease-in-out 6 alternate; }
+.mascot-stage[data-reaction="flower"] .mascot-bouquet {
+  transform-origin: 56px 164px;
+  animation: mascot-give 1.65s ease-in-out both;
+}
+.mascot-stage[data-reaction="dance"] .mascot-queen { opacity: 1; }
+.mascot-stage[data-reaction="dance"] .mascot-performer {
+  transform-origin: 115px 218px;
+  animation: mascot-dance .56s ease-in-out 4;
+}
+.mascot-stage[data-reaction="dance"] .mascot-arm { animation: mascot-wave .28s ease-in-out 8 alternate; }
+@keyframes mascot-wave { to { transform: rotate(-24deg); } }
+@keyframes mascot-give {
+  25%, 70% { transform: translate(-17px, -9px) rotate(-12deg) scale(1.24); }
+}
+@keyframes mascot-dance {
+  25% { transform: translate(9px, -13px) rotate(-14deg); }
+  65% { transform: translate(26px, -6px) rotate(13deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mascot-stage[data-reaction] .mascot-art g, .mascot-stage[data-reaction] .mascot-art path { animation: none; }
+  .mascot-stage[data-reaction="wave"] .mascot-arm { transform: rotate(-24deg); }
+  .mascot-stage[data-reaction="flower"] .mascot-bouquet { transform: translate(-17px, -9px); }
+}
+.mascot-foreground { transform: translateX(42px); }
+.mascot-stage[data-reaction="dance"] .mascot-foreground { transform: none; }

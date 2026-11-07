@@ -124,3 +124,24 @@ function openAboutSubsection() {
 }
 openAboutSubsection();
 window.addEventListener('hashchange', openAboutSubsection);
+
+const mascot = document.querySelector('[data-mascot]');
+if (mascot) {
+  const reply = mascot.querySelector('[data-mascot-reply]');
+  const surprises = ['wave', 'flower', 'dance'];
+  const replies = { wave: 'hey there!', flower: 'a flower for you.', dance: 'you found the court jester.' };
+  let taps = 0;
+  let reset;
+  mascot.addEventListener('click', event => {
+    const button = event.target.closest('[data-mascot-action]');
+    if (!button) return;
+    const action = button.dataset.mascotAction;
+    const reaction = action === 'surprise' ? surprises[taps++ % surprises.length] : action;
+    clearTimeout(reset);
+    delete mascot.dataset.reaction;
+    void mascot.offsetWidth;
+    mascot.dataset.reaction = reaction;
+    reply.textContent = replies[reaction];
+    reset = setTimeout(() => { delete mascot.dataset.reaction; }, 2300);
+  });
+}
