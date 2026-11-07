@@ -91,3 +91,27 @@ See `HOSTING.md`. The active site URL stays on GitHub Pages until the domain is 
 
 The original CV page is preserved at `portfolio.html`. Old section hashes redirect there from the homepage; the résumé file path is unchanged. Confidential Shopify and Squarespace client work stays unnamed. Do not add client names or assets without approval. The original reference portfolio deck is not distributed.
 
+
+## Travelling
+
+`/hobby/travelling/` contains a draggable orthographic globe, with blue visited destinations, red unvisited destinations, and Singapore as home. `content/travel.json` is the source of truth for the 16 visited places. Hong Kong and Taiwan have their own albums; country/region labels are used as travel destinations.
+
+### Add photos
+
+Open a country album and expand **Manage this album**, then select **Upload photos**. The link opens that exact folder in GitHub, where only repository editors can upload. Commit to `main`; the existing Pages workflow builds and publishes the album. Uploads are not stored in browser local storage and public visitors cannot publish photos.
+
+Photos belong in `assets/travel/<destination-slug>/`. JPG, JPEG, PNG, WebP, AVIF and GIF files are picked up automatically, including uppercase extensions. Convert HEIC/HEIF to JPG before uploading. Name files `01.jpg`, `02.jpg`, etc. to choose their order. No example travel photos are included.
+
+Optional `album.json` in the same folder supplies captions and alt text, keyed by exact filename:
+
+```json
+{
+  "01.jpg": {"alt": "Tokyo at night", "caption": "An evening walk in Tokyo."}
+}
+```
+
+Removing a photo from the folder removes it from the next published build; remove its caption entry too. New destinations can be added to `content/travel.json` with their three-digit Natural Earth/ISO numeric ID, slug, name, and `[longitude, latitude]` centre. Create the matching folder. The visited count, map colours and album pages are generated from this list.
+
+`assets/travel/world.json` derives from world-atlas 2.0.2 / Natural Earth 1:50m countries (public domain), simplified with topojson-simplify at the 0.65 quantile and rounded to three decimal places. Its dots are sampled from a raster of the same boundaries. The local `assets/vendor/d3-geo.mjs` bundle uses d3-geo 3.1.1; licence notices are retained in `assets/vendor/LICENSE.txt`. There are no runtime map/CDN dependencies. All map resources load only on the travel page. The albums remain usable when JavaScript or the globe fails.
+
+Run `node --test scripts/travel.test.mjs` and `node scripts/build.mjs` to validate uploads and build all pages.

@@ -1,0 +1,20 @@
+{
+  "destinations": [
+    {"id":"702","slug":"singapore","name":"Singapore","home":true,"center":[103.82,1.35]},
+    {"id":"458","slug":"malaysia","name":"Malaysia","center":[102,4]},
+    {"id":"360","slug":"indonesia","name":"Indonesia","center":[118,-3]},
+    {"id":"764","slug":"thailand","name":"Thailand","center":[101,15]},
+    {"id":"704","slug":"vietnam","name":"Vietnam","center":[106,16]},
+    {"id":"410","slug":"south-korea","name":"South Korea","center":[128,36]},
+    {"id":"392","slug":"japan","name":"Japan","center":[138,37]},
+    {"id":"158","slug":"taiwan","name":"Taiwan","center":[121,24]},
+    {"id":"156","slug":"china","name":"China","center":[104,35]},
+    {"id":"344","slug":"hong-kong","name":"Hong Kong","center":[114.17,22.32]},
+    {"id":"036","slug":"australia","name":"Australia","center":[134,-25]},
+    {"id":"756","slug":"switzerland","name":"Switzerland","center":[8.2,46.8]},
+    {"id":"250","slug":"france","name":"France","center":[2.2,46.6]},
+    {"id":"840","slug":"usa","name":"USA","center":[-99,39]},
+    {"id":"724","slug":"spain","name":"Spain","center":[-3.5,40]},
+    {"id":"380","slug":"italy","name":"Italy","center":[12.6,42.5]}
+  ]
+}

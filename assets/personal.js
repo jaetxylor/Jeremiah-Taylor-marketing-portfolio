@@ -73,7 +73,7 @@ followMovedWorksSection();
 window.addEventListener('hashchange', followMovedWorksSection);
 function followMovedHobbySection() {
   if (location.pathname !== '/hobby/' && location.pathname !== '/hobby/index.html') return;
-  const routes = { '#comics': '/hobby/comics/', '#running': '/hobby/running/' };
+  const routes = { '#comics': '/hobby/comics/', '#running': '/hobby/running/', '#travelling': '/hobby/travelling/', '#travel': '/hobby/travelling/' };
   const destination = routes[location.hash];
   if (destination) location.replace(destination);
 }
