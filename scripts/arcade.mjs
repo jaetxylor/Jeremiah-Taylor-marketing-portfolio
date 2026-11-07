@@ -9,12 +9,13 @@ export function renderArcade() {
  <div class="arcade-layout">
   <header class="arcade-intro"><p class="eyebrow">Hobby / Player one</p><h1>Welcome to <br><em>my arcade.</em></h1><p>A long-running hunt. A Cecilion main.<br>A Pokédex that is never quite finished.</p><p class="arcade-instruction"><span aria-hidden="true">↗</span> Pick a game on the screen<br>to see my stats and collection.</p><button class="arcade-motion" type="button" data-arcade-motion aria-pressed="false" hidden>Pause animation</button></header>
   <div class="arcade-scene">
-   <svg class="arcade-cabinet" viewBox="0 0 720 760" role="img" aria-label="Jae’s cartoon character, seen from behind in his red jester hat, playing at an arcade machine." focusable="false">
+   <svg class="arcade-cabinet" viewBox="0 0 720 760" role="img" aria-label="Jae’s cartoon character, seen from behind in his red jester hat with blue hydrangeas tucked into his back pocket, playing at an arcade machine." focusable="false">
     <defs>
      <linearGradient id="arcade-shell" x2=".8" y2="1"><stop stop-color="#434b53"/><stop offset="1" stop-color="#20272d"/></linearGradient>
      <linearGradient id="arcade-screen" x2="0" y2="1"><stop stop-color="#172c2c"/><stop offset="1" stop-color="#0e191b"/></linearGradient>
      <linearGradient id="arcade-deck" x2="0" y2="1"><stop stop-color="#8dbec7"/><stop offset="1" stop-color="#4c808e"/></linearGradient>
      <radialGradient id="arcade-halo"><stop stop-color="#71b6bc" stop-opacity=".15"/><stop offset="1" stop-color="#71b6bc" stop-opacity="0"/></radialGradient>
+     <g id="arcade-hydrangea-floret" stroke="#177bc0" stroke-width="1.6" stroke-linejoin="round"><path d="M0-3C-9-12-14-2-5 2C-14 9-3 15 1 6C6 16 16 7 7 2C16-5 5-12 0-3Z" fill="#b4dcff"/><circle cx="1" cy="2" r="2" fill="#f2faff" stroke="none"/></g>
     </defs>
     <ellipse cx="365" cy="360" rx="350" ry="350" fill="url(#arcade-halo)"/>
     <ellipse cx="372" cy="704" rx="259" ry="27" fill="#161819"/>
@@ -45,18 +46,24 @@ export function renderArcade() {
     <g class="arcade-player" stroke="#70b7ea" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
      <ellipse cx="302" cy="704" rx="75" ry="14" fill="#101719" stroke="none"/>
      <path d="M278 617Q264 658 266 690Q278 708 296 691L306 644L314 693Q332 710 344 693L334 615Z" fill="#edf5f4"/>
-     <path d="M326 551Q365 563 391 501" fill="none" stroke-width="21"/>
-     <path d="M326 551Q365 563 391 501" fill="none" stroke="#fff" stroke-width="12"/>
-     <g class="arcade-left-arm"><path d="M276 548Q235 525 217 431" fill="none" stroke-width="21"/><path d="M276 548Q235 525 217 431" fill="none" stroke="#fff" stroke-width="12"/><ellipse cx="214" cy="430" rx="12" ry="8" fill="#fff"/></g>
-     <path d="M280 520Q265 546 270 583L263 626Q301 644 343 626L336 584Q341 547 321 520Z" fill="#fff"/>
-     <path d="M275 619Q305 632 335 620" fill="none" stroke="#deedef" stroke-width="4"/>
+     <!-- The whole right arm moves with the grip. Its root stays behind the torso. -->
      <g class="arcade-grip">
       <path d="M451 438L445 409" stroke="#ccd8d6" stroke-width="9"/>
       <circle cx="445" cy="406" r="16" fill="#f34d47" stroke="#872c2b" stroke-width="3"/>
       <ellipse cx="440" cy="401" rx="5" ry="4" fill="#ffb1a0" stroke="none"/>
-      <path d="M391 501Q422 471 443 421" fill="none" stroke-width="21"/>
-      <path d="M391 501Q422 471 443 421" fill="none" stroke="#fff" stroke-width="12"/>
+      <path d="M302 553C356 575 385 521 399 489S430 449 443 421" fill="none" stroke-width="21"/>
+      <path d="M302 553C356 575 385 521 399 489S430 449 443 421" fill="none" stroke="#fff" stroke-width="12"/>
       <ellipse cx="443" cy="420" rx="12" ry="8" fill="#fff"/>
+     </g>
+     <g class="arcade-left-arm"><path d="M276 548Q235 525 217 431" fill="none" stroke-width="21"/><path d="M276 548Q235 525 217 431" fill="none" stroke="#fff" stroke-width="12"/><ellipse cx="214" cy="430" rx="12" ry="8" fill="#fff"/></g>
+     <path d="M280 520Q265 546 270 583L263 626Q301 644 343 626L336 584Q341 547 321 520Z" fill="#fff"/>
+     <path d="M275 619Q305 632 335 620" fill="none" stroke="#deedef" stroke-width="4"/>
+     <g class="arcade-pocket-flowers">
+      <path d="M314 610L299 568M311 607L321 576M312 603L286 581" fill="none" stroke="#5e9c54" stroke-width="3"/>
+      <path d="M307 592Q288 594 289 583Q301 580 307 592ZM316 591Q330 578 334 589Q330 600 316 597Z" fill="#a7c976" stroke="#5e9c54" stroke-width="1.5"/>
+      <g><use href="#arcade-hydrangea-floret" transform="translate(289 573) rotate(-15)"/><use href="#arcade-hydrangea-floret" transform="translate(303 563) rotate(15)"/><use href="#arcade-hydrangea-floret" transform="translate(319 574) rotate(35)"/><use href="#arcade-hydrangea-floret" transform="translate(303 578) rotate(-20)"/></g>
+      <path d="M298 600Q312 604 327 600L325 620Q313 628 301 620Z" fill="#eef6f8" stroke="#70b7ea" stroke-width="2.5"/>
+      <path d="M303 607L305 617Q313 622 321 617L323 607" fill="none" stroke="#b4d9eb" stroke-width="1.3" stroke-dasharray="2 3"/>
      </g>
      <circle cx="302" cy="481" r="46" fill="#fff"/>
      <path d="M331 452Q351 481 328 510" fill="none" stroke="#deedef" stroke-width="5"/>
