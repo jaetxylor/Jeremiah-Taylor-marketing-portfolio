@@ -81,7 +81,17 @@
   object-fit: contain;
 }
 .brand-art-insourceai { background: #fff; }
-.brand-art-cream img { width: 100%; height: 100%; object-fit: cover; }
+.brand-art-golden-wax { background: #f3f0e8; }
+.brand-art-golden-wax img { width: 84%; }
+.brand-art-cream { position: relative; }
+.brand-art-cream img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .commercial-card .brand-art { margin-bottom: 20px; }
 
 .tiktok-picks { grid-column: 1 / -1; }
