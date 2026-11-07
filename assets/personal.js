@@ -59,6 +59,14 @@ function followMovedSection() {
   const destination = sectionDestinations[location.hash.slice(1)];
   if (document.body.dataset.page === 'home' && destination) location.replace(destination);
 }
+function followMovedHobbySection() {
+  if (location.pathname !== '/hobby/' && location.pathname !== '/hobby/index.html') return;
+  const routes = { '#comics': '/hobby/comics/', '#running': '/hobby/running/' };
+  const destination = routes[location.hash];
+  if (destination) location.replace(destination);
+}
+followMovedHobbySection();
+window.addEventListener('hashchange', followMovedHobbySection);
 followMovedSection();
 window.addEventListener('hashchange', followMovedSection);
 

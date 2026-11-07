@@ -191,3 +191,15 @@
 @media (max-width: 520px) {
   .run-cluster, .run-timing dl { grid-template-columns: 1fr; }
 }
+
+.hobby-tabs { margin-block: 24px; }
+.hobby-tabs a[aria-current="page"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+.run-header h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 54px);
+  letter-spacing: -.045em;
+}
