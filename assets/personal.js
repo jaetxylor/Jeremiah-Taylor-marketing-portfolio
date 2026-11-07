@@ -97,39 +97,51 @@ document.querySelectorAll('img[data-logo]').forEach(img => {
   if (img.complete && !img.naturalWidth) fallback();
 });
 
-// Load TikTok only when the visitor asks; the profile link always remains available.
-const loadTikTok = document.querySelector('#load-tiktok');
-if (loadTikTok) {
-  loadTikTok.hidden = false;
-  loadTikTok.addEventListener('click', () => {
-    const container = document.querySelector('#tiktok-videos');
-    const status = document.querySelector('#tiktok-status');
-    const profile = new URL(loadTikTok.dataset.profile);
-    if (profile.origin !== 'https://www.tiktok.com' || !/^\/@[\w.]+$/.test(profile.pathname)) return;
+// TikTok's creator embed supplies recent videos directly from the profile.
+const tiktokVideos = document.querySelector('#tiktok-videos');
+if (tiktokVideos) {
+  const status = document.querySelector('#tiktok-status');
+  const profile = new URL(tiktokVideos.dataset.profile);
+  if (profile.origin === 'https://www.tiktok.com' && /^\/@[\w.]+$/.test(profile.pathname)) {
     const blockquote = document.createElement('blockquote');
     blockquote.className = 'tiktok-embed';
     blockquote.cite = profile.href;
     blockquote.dataset.uniqueId = profile.pathname.slice(2);
     blockquote.dataset.embedType = 'creator';
+    blockquote.dataset.embedFrom = 'oembed';
     const section = document.createElement('section');
     const link = document.createElement('a');
-    link.href = profile.href; link.target = '_blank'; link.rel = 'noopener noreferrer';
-    link.textContent = 'Watch on TikTok'; section.append(link); blockquote.append(section);
-    container.replaceChildren(blockquote); container.hidden = false;
-    loadTikTok.hidden = true;
-    status.textContent = 'Loading TikTok…';
+    link.href = profile.href;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = profile.pathname.slice(1);
+    section.append(link);
+    blockquote.append(section);
+    tiktokVideos.replaceChildren(blockquote);
+    tiktokVideos.hidden = false;
+    status.textContent = 'Loading the latest videos…';
+
+    let timeout;
     const observer = new MutationObserver(() => {
-      if (container.querySelector('iframe')) {
-        status.textContent = 'You can also open the videos directly on TikTok.';
-        observer.disconnect();
-      }
+      const frame = tiktokVideos.querySelector('iframe');
+      if (!frame) return;
+      frame.title = 'Recent TikTok videos from ' + profile.pathname.slice(1);
+      clearTimeout(timeout);
+      observer.disconnect();
+      status.textContent = '';
     });
-    observer.observe(container, {childList:true, subtree:true});
+    const fallback = () => {
+      clearTimeout(timeout);
+      observer.disconnect();
+      tiktokVideos.hidden = true;
+      status.textContent = 'Watch the latest videos using the TikTok link below.';
+    };
+    observer.observe(tiktokVideos, {childList:true, subtree:true});
     const script = document.createElement('script');
-    script.src = 'https://www.tiktok.com/embed.js'; script.async = true;
-    const fallback = () => { observer.disconnect(); status.textContent = 'If TikTok does not load here, use the profile link to watch.'; };
+    script.src = 'https://www.tiktok.com/embed.js';
+    script.async = true;
     script.addEventListener('error', fallback, {once:true});
+    timeout = setTimeout(fallback, 15000);
     document.body.append(script);
-    setTimeout(() => { if (!container.querySelector('iframe')) fallback(); }, 12000);
-  }, {once:true});
+  }
 }
