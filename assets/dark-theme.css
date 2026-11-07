@@ -80,7 +80,7 @@
   height: 80%;
   object-fit: contain;
 }
-.brand-art-insourceai { background: #fff; }
+.brand-art-insourceai, .official-logo { background: #303236; }
 .brand-art-golden-wax { background: #f3f0e8; }
 .brand-art-golden-wax img { width: 84%; }
 .brand-art-cream { position: relative; }
