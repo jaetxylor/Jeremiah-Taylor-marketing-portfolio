@@ -1,0 +1,112 @@
+{
+  "updated": "2026-11-08",
+  "mousehunt": {
+    "name": "Jeremiah Taylor",
+    "rank": "Viceroy",
+    "rankProgress": 8,
+    "since": "10 October 2009",
+    "years": 17,
+    "caught": 47730,
+    "breeds": [
+      818,
+      1141
+    ],
+    "eventBreeds": [
+      164,
+      165
+    ],
+    "horn": 59691,
+    "gold": 26720360,
+    "points": 2030057969
+  },
+  "mobileLegends": {
+    "name": "Court Jaester",
+    "hero": "Cecilion",
+    "heroMatches": 800,
+    "heroWinRate": 71,
+    "highestHonour": "Singapore No. 2 Cecilion",
+    "peakStars": 52,
+    "years": 10,
+    "season": {
+      "matches": 50,
+      "winRate": 76,
+      "mvp": 8,
+      "legendary": 8,
+      "tripleKills": 7,
+      "doubleKills": 34,
+      "mostKills": 17,
+      "mostAssists": 18,
+      "winStreak": 9,
+      "highestDamagePerMin": 8916,
+      "highestDamageTakenPerMin": 5921,
+      "highestGoldPerMin": 951,
+      "mvpLoss": 1
+    }
+  },
+  "pokemonGo": {
+    "level": 71,
+    "caught": 23450,
+    "walked": "1,526.0",
+    "stops": 9601,
+    "xp": 141450028,
+    "since": "2016",
+    "registered": 932,
+    "regions": [
+      [
+        "Kanto",
+        151,
+        151
+      ],
+      [
+        "Johto",
+        100,
+        100
+      ],
+      [
+        "Hoenn",
+        135,
+        135
+      ],
+      [
+        "Sinnoh",
+        104,
+        107
+      ],
+      [
+        "Unova",
+        156,
+        156
+      ],
+      [
+        "Kalos",
+        72,
+        72
+      ],
+      [
+        "Alola",
+        78,
+        86
+      ],
+      [
+        "Galar",
+        61,
+        89
+      ],
+      [
+        "Hisui",
+        6,
+        7
+      ],
+      [
+        "Paldea",
+        67,
+        120
+      ],
+      [
+        "Unidentified",
+        2,
+        2
+      ]
+    ]
+  }
+}
