@@ -1,0 +1,53 @@
+{
+  "slug": "hello-world",
+  "title": "Hello World!!!",
+  "date": "2026-11-07",
+  "category": "Site notes",
+  "excerpt": "Seven years, a marketplace idea, a Pokémon TCG store and now a little corner of the internet. Welcome to PSRMalam.",
+  "draft": false,
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Welcome to my first blog post on PSRMalam."
+    },
+    {
+      "type": "paragraph",
+      "text": "This whole idea of having my own blog has been on my mind for a while now. And ngl, it is also partly because i have been paying for the PSRMalam domain for the past (checks calendar) seven-ish years without putting it to consistent use."
+    },
+    {
+      "type": "paragraph",
+      "text": "Yes, PSRMalam started back in 2019, when i first graduated from Temasek Poly. My initial plan was to build a marketplace for curated local products, hence the name. It eventually morphed into a Pokémon TCG store in 2024 while i was tinkering around in my free time. This was not sustainable because i love ripping packs too much, and keeping sealed products near me was pretty much torture lmao."
+    },
+    {
+      "type": "paragraph",
+      "text": "So here we are, seven years on, with PSRMalam in its final iteration: a little safe corner of the internet where friends, family and you can keep up with my nonsense, whether it is about work, hobbies or just pure yapping."
+    },
+    {
+      "type": "paragraph",
+      "text": "You will probably see a mix of posts covering a few recurring themes:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "My work on InsourceAI, GoldenWax and Cream.",
+        "Tracking my comic book and Pokémon card collections.",
+        "Keeping up with my running schedule and seeing if i can eventually complete a full marathon.",
+        "Stuff i have been researching and learning about, mostly AI and the like.",
+        "Religion. Yes, surprise surprise, the prodigal son returns after ten years away from church."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Anyway, i hope to post consistently and keep things interesting. i will probably yap a lot and wander off topic once in a while, so please bear with me. i will try to stay on track, but no promises."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hope you enjoy hanging out in my little corner of the internet."
+    },
+    {
+      "type": "image",
+      "src": "assets/blog/hello-world/jae-selfie.jpeg",
+      "alt": "A playful, slightly blurry selfie of Jae wearing earbuds and a backpack."
+    }
+  ]
+}
