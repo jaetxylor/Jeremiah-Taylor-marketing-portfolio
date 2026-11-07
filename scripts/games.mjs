@@ -2,28 +2,26 @@ const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&
 const num = value => Number(value).toLocaleString('en-SG');
 const stat = (value, label) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`;
 const meter = (name,caught,total) => `<div class="game-progress"><div><span>${esc(name)}</span><strong>${num(caught)} <small>/ ${num(total)}</small></strong></div><progress value="${caught}" max="${total}" aria-label="${esc(name)}: ${caught} of ${total}">${(caught/total*100).toFixed(1)}%</progress></div>`;
-export function renderGames(data) {
+export function renderGames(data, selected) {
  const m=data.mousehunt, l=data.mobileLegends, s=l.season, p=data.pokemonGo;
  const total=p.regions.reduce((n,r)=>n+r[2],0), caught=p.regions.reduce((n,r)=>n+r[1],0), complete=p.regions.filter(r=>r[1]===r[2]).length;
  if(caught!==p.registered)throw Error('Regional Pokédex counts do not match caught total');
  for(const [,a,b] of p.regions) if(!Number.isInteger(a)||a<0||a>b)throw Error('Invalid Pokédex region');
- return `<div class="wrap games-page">
- <header class="page-top games-heading"><p class="eyebrow">Hobby / Off the clock</p><h1>Games i keep<br><em>coming back to.</em></h1><p class="intro">A long-running hunt, a Cecilion main and a Pokédex that is never quite finished.</p><p class="game-snapshot-note">My gaming stats · Updated <time datetime="${data.updated}">8 November 2026</time></p></header>
- <nav class="game-jumps" aria-label="Games"><a href="#mousehunt"><img class="game-jump-icon" src="/assets/games/mousehunt-icon.jpg" alt="" width="40" height="40">MouseHunt</a><a href="#mobile-legends"><img class="game-jump-icon" src="/assets/games/mobile-legends-icon.jpg" alt="" width="40" height="40">Mobile Legends</a><a href="#pokemon-go"><img class="game-jump-icon" src="/assets/games/pokemon-go-icon.jpg" alt="" width="40" height="40">Pokémon GO</a></nav>
- <section id="mousehunt" class="game-section game-mouse" aria-labelledby="mouse-title">
- <header class="game-section-heading"><div><p class="eyebrow">01 / The long game</p><h2 id="mouse-title"><img class="game-app-icon" src="/assets/games/mousehunt-icon.jpg" alt="" width="64" height="64">MouseHunt</h2><p>Hunting since ${esc(m.since)}.</p></div><span class="game-tenure">${m.years} years of hunting</span></header>
- <div class="mouse-layout"><div class="game-rank-panel"><p class="eyebrow">${esc(m.name)}</p><figure class="mouse-character"><img src="/assets/games/white-mouse.png" alt="White Mouse from MouseHunt, dressed in a banana costume" width="333" height="500" decoding="async"><figcaption>White Mouse</figcaption></figure><h3>${esc(m.rank)}</h3><p>${m.rankProgress}% through this rank</p><progress value="${m.rankProgress}" max="100" aria-label="Viceroy rank progress: ${m.rankProgress}%"></progress><div class="mouse-catch"><strong>${num(m.caught)}</strong><span>mice caught</span></div></div>
+ const views = {
+  "mousehunt": ` <section id="mousehunt" class="game-section game-mouse" aria-labelledby="mouse-title">
+ <header class="game-section-heading"><div><p class="eyebrow">01 / The long game</p><h1 id="mouse-title"><img class="game-app-icon" src="/assets/games/mousehunt-icon.jpg" alt="" width="64" height="64">MouseHunt</h1><p>Hunting since ${esc(m.since)}.</p></div><span class="game-tenure">${m.years} years of hunting</span></header>
+ <div class="mouse-layout"><div class="game-rank-panel"><p class="eyebrow">${esc(m.name)}</p><figure class="mouse-character"><img src="/assets/games/supreme-sensei.png" alt="Supreme Sensei Mouse from MouseHunt" width="666" height="444" decoding="async"><figcaption>Supreme Sensei Mouse</figcaption></figure><h3>${esc(m.rank)}</h3><p>${m.rankProgress}% through this rank</p><progress value="${m.rankProgress}" max="100" aria-label="Viceroy rank progress: ${m.rankProgress}%"></progress><div class="mouse-catch"><strong>${num(m.caught)}</strong><span>mice caught</span></div></div>
  <div class="mouse-stats"><dl class="game-stat-grid">${stat(num(m.horn),'Horn sounds')}${stat(num(m.gold),'Gold')}${stat(num(m.points),'Points')}</dl><div class="mouse-collections"><h3>The collection so far</h3>${meter('Mouse breeds',...m.breeds)}${meter('Event breeds',...m.eventBreeds)}</div></div></div>
- </section>
- <section id="mobile-legends" class="game-section game-ml" aria-labelledby="ml-title">
- <header class="game-section-heading"><div><p class="eyebrow">02 / One more ranked game</p><h2 id="ml-title"><img class="game-app-icon" src="/assets/games/mobile-legends-icon.jpg" alt="" width="64" height="64">Mobile Legends</h2><p>${esc(l.name)} · ${l.years} Years Together</p></div><span class="game-tenure">Peak rank: ${l.peakStars} stars</span></header>
+ </section>`,
+  "mobile-legends": ` <section id="mobile-legends" class="game-section game-ml" aria-labelledby="ml-title">
+ <header class="game-section-heading"><div><p class="eyebrow">02 / One more ranked game</p><h1 id="ml-title"><img class="game-app-icon" src="/assets/games/mobile-legends-icon.jpg" alt="" width="64" height="64">Mobile Legends</h1><p>${esc(l.name)} · ${l.years} Years Together</p></div><span class="game-tenure">Peak rank: ${l.peakStars} stars</span></header>
  <div class="cecilion-feature"><div class="cecilion-content"><div class="cecilion-copy"><p class="eyebrow">My main hero</p><h3>${esc(l.hero)}</h3><p class="cecilion-rank"><span>Highest honour</span>Singapore <strong>No. 2</strong><small>Cecilion</small></p></div><dl class="cecilion-record">${stat(num(l.heroMatches),'Matches')}${stat(l.heroWinRate+'%','Win rate')}</dl></div><figure class="cecilion-art"><img src="/assets/games/cecilion-vessel-of-gluttony.webp" alt="Cecilion wearing the Vessel of Gluttony skin" width="1280" height="719" loading="lazy" decoding="async"><figcaption>Vessel of Gluttony</figcaption></figure></div>
  <div class="season-heading"><h3>Current-season ranked</h3><span>At last update</span></div>
  <dl class="game-stat-grid season-primary">${stat(s.winRate.toFixed(0)+'%','Ranked win rate')}${stat(num(s.matches),'Ranked matches')}${stat(num(s.mvp),'MVP awards')}${stat(num(s.winStreak),'Longest win streak')}</dl>
  <dl class="game-stat-grid season-secondary">${stat(s.legendary,'Legendary')}${stat(s.tripleKills,'Triple kills')}${stat(s.doubleKills,'Double kills')}${stat(s.mostKills,'Most kills')}${stat(s.mostAssists,'Most assists')}${stat(num(s.highestDamagePerMin),'Highest damage / min')}</dl>
- </section>
- <section id="pokemon-go" class="game-section game-pogo" aria-labelledby="pogo-title">
- <header class="game-section-heading"><div><p class="eyebrow">03 / Always another one to catch</p><h2 id="pogo-title"><img class="game-app-icon" src="/assets/games/pokemon-go-icon.jpg" alt="" width="64" height="64">Pokémon GO</h2><p>Playing since ${esc(p.since)}.</p></div><span class="game-tenure">Trainer level ${p.level}</span></header>
+ </section>`,
+  "pokemon-go": ` <section id="pokemon-go" class="game-section game-pogo" aria-labelledby="pogo-title">
+ <header class="game-section-heading"><div><p class="eyebrow">03 / Always another one to catch</p><h1 id="pogo-title"><img class="game-app-icon" src="/assets/games/pokemon-go-icon.jpg" alt="" width="64" height="64">Pokémon GO</h1><p>Playing since ${esc(p.since)}.</p></div><span class="game-tenure">Trainer level ${p.level}</span></header>
  <div class="pokemon-lineup" aria-label="My featured Pokémon">
  <figure class="pokemon-partner"><svg class="pikachu-art" viewBox="70 110 145 130" role="img" aria-label="Pikachu wearing the black Fragment hat"><image href="/assets/games/pikachu-fragment.png" width="256" height="256"/></svg><figcaption><span>Fragment Hat</span>Pikachu</figcaption></figure>
  <figure class="pokemon-partner pokemon-centrepiece"><img src="/assets/games/eternatus.png" alt="Eternatus" width="630" height="630" loading="lazy" decoding="async"><figcaption><span>My collection</span>Eternatus</figcaption></figure>
@@ -34,7 +32,13 @@ export function renderGames(data) {
  <div class="dex-toolbar" data-dex-toolbar hidden><div role="group" aria-label="Filter Pokédex collections"><button type="button" data-dex-filter="all" aria-pressed="true">All ${p.regions.length}</button><button type="button" data-dex-filter="complete" aria-pressed="false">Complete ${complete}</button><button type="button" data-dex-filter="progress" aria-pressed="false">In progress ${p.regions.length-complete}</button></div><p data-dex-status role="status" aria-live="polite">Showing all ${p.regions.length} collections</p></div>
  <div class="dex-grid">${p.regions.map(([name,a,b],i)=>`<article class="dex-region" data-dex-state="${a===b?'complete':'progress'}"><div class="dex-region-head"><span>${String(i+1).padStart(2,'0')}</span><span class="dex-state">${a===b?'Complete':`${b-a} to go`}</span></div><h4>${esc(name)}</h4><p><strong>${a}</strong><span> / ${b}</span><small>${(a/b*100).toFixed(a===b?0:1)}%</small></p><progress value="${a}" max="${b}" aria-label="${esc(name)} Pokédex: ${a} of ${b}"></progress></article>`).join('')}</div>
  <p class="game-snapshot-note">Completion is based on the regional totals in my Pokédex.</p>
- </section>
- <p class="game-art-credits">Game artwork: <a href="https://mouse.rip/mice/white" target="_blank" rel="noopener noreferrer">MouseHunt / HitGrab</a> · <a href="https://mlbbdex.com/en/heroes/cecilion/skins" target="_blank" rel="noopener noreferrer">Mobile Legends / MOONTON</a> · <a href="https://pokemongolive.com/" target="_blank" rel="noopener noreferrer">Pokémon GO</a></p>
+ </section>`
+ };
+ if(!views[selected])throw Error('Unknown game: '+selected);
+ return `<div class="wrap games-page game-detail">
+ <nav class="game-detail-nav" aria-label="Game navigation"><a class="back-to-arcade" href="/hobby/games/">← Back to arcade</a><span>My gaming stats · <time datetime="${data.updated}">8 November 2026</time></span></nav>
+ ${views[selected]}
+ <a class="arcade-return" href="/hobby/games/">Choose another game <span aria-hidden="true">↗</span></a>
+ <p class="game-art-credits">Game artwork: <a href="https://mouse.rip/mice/rift-dojo-sensei" target="_blank" rel="noopener noreferrer">MouseHunt / HitGrab</a> · <a href="https://mlbbdex.com/en/heroes/cecilion/skins" target="_blank" rel="noopener noreferrer">Mobile Legends / MOONTON</a> · <a href="https://pokemongolive.com/" target="_blank" rel="noopener noreferrer">Pokémon GO</a></p>
  </div>`;
 }
