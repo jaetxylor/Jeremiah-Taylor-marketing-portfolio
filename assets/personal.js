@@ -47,9 +47,17 @@ if (filters) {
     if (count) count.textContent = `${visible} project${visible === 1 ? '' : 's'}`;
   });
 }
-// Existing homepage sections retain their original portfolio anchors.
-const legacySections = ['web', 'campaigns', 'creative', 'social', 'about', 'resume'];
-const hash = location.hash.slice(1);
-if (document.body.dataset.page === 'home' && legacySections.includes(hash) && !document.getElementById(hash)) {
-  location.replace(`portfolio.html${location.hash}`);
+// Preserve bookmarked homepage sections after moving the detailed content.
+const sectionDestinations = {
+  web: 'projects.html', campaigns: 'experience.html#campaigns',
+  creative: 'experience.html#creative', social: 'experience.html#social',
+  collaborations: 'experience.html#collaborations', personal: 'projects.html#personal',
+  about: 'about.html', resume: 'about.html#resume',
+  education: 'about.html#education', certifications: 'about.html#certifications'
+};
+function followMovedSection() {
+  const destination = sectionDestinations[location.hash.slice(1)];
+  if (document.body.dataset.page === 'home' && destination) location.replace(destination);
 }
+followMovedSection();
+window.addEventListener('hashchange', followMovedSection);
