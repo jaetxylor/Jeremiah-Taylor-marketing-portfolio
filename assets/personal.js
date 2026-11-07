@@ -49,9 +49,9 @@ if (filters) {
 }
 // Preserve bookmarked homepage sections after moving the detailed content.
 const sectionDestinations = {
-  web: '/projects/', campaigns: '/works/#campaigns',
-  creative: '/works/#creative', social: '/works/#social',
-  collaborations: '/works/#collaborations', personal: '/hobby/#pokemon',
+  web: '/projects/', campaigns: '/works/campaigns/',
+  creative: '/works/creative/', social: '/works/social/',
+  collaborations: '/works/collaborations/', personal: '/hobby/#pokemon',
   about: '/about/', resume: '/about/#resume',
   education: '/about/#education', certifications: '/about/#certifications'
 };
@@ -59,6 +59,18 @@ function followMovedSection() {
   const destination = sectionDestinations[location.hash.slice(1)];
   if (document.body.dataset.page === 'home' && destination) location.replace(destination);
 }
+function followMovedWorksSection() {
+  if (!['/works/', '/experience.html'].includes(location.pathname)) return;
+  const routes = {
+    '#web': '/works/websites/', '#campaigns': '/works/campaigns/',
+    '#social': '/works/social/', '#creative': '/works/creative/',
+    '#capabilities': '/works/creative/#capabilities', '#collaborations': '/works/collaborations/'
+  };
+  const destination = routes[location.hash];
+  if (destination) location.replace(destination);
+}
+followMovedWorksSection();
+window.addEventListener('hashchange', followMovedWorksSection);
 function followMovedHobbySection() {
   if (location.pathname !== '/hobby/' && location.pathname !== '/hobby/index.html') return;
   const routes = { '#comics': '/hobby/comics/', '#running': '/hobby/running/' };

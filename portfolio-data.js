@@ -29,8 +29,16 @@ window.PORTFOLIO_DATA = {
     { title: "Branding", description: "Visual identity and commercial presentation work connecting brand expression to practical marketing use.", items: ["Logo designs", "Marketing collateral", "Web design"], index: "C" }
   ],
   education: [
-    { school: "Singapore Management University", credential: "MSc in Communication Management", focus: "Strategic communication · branding · stakeholder engagement · business messaging" },
-    { school: "Curtin University", credential: "Bachelor of Commerce (Marketing)", focus: "Consumer behaviour · digital marketing · brand strategy · business management" }
+    { school: "Singapore Management University", credential: "MSc in Communication Management", dates: "Dec 2022 – Jul 2024", focus: "Strategic communication · branding · stakeholder engagement · business messaging" },
+    { school: "Curtin University", credential: "Bachelor of Commerce (Marketing)", dates: "2021 – 2022", focus: "Consumer behaviour · digital marketing · brand strategy · business management" },
+    { school: "Temasek Polytechnic", credential: "Diploma in Business/Commerce", dates: "2016 – 2019" }
+  ],
+  professionalDevelopment: [
+    { school: "SGInnovate × Google", credential: "Scholar", dates: "2026 – Present" },
+    { school: "Northwestern University", credential: "Exchange Programme, MS Business/Corporate Communications", dates: "Jul 2023 – Aug 2023" },
+    { school: "Singapore Management University", credential: "Graduate Diploma in Communication Management & Innovation", dates: "Jan 2022 – May 2022" },
+    { school: "Lee Kuan Yew School of Public Policy", credential: "Professional Certificate in Public Policy Administration", dates: "Nov 2021 – Feb 2022" },
+    { school: "National University of Singapore", credential: "Executive Programme, Digital Marketing & Data Analytics", dates: "2020" }
   ],
   collaborations: ["Yishion Singapore", "Meeth Global", "Gaston Luga", "Shopee", "Hide Out Place Singapore", "PA NDP Press Conference", "PA National Day Heartland Celebrations 2024 — North East", "Buangkok Community Centre Opening"],
   certifications: ["Google Analytics", "Claude Code", "Claude 101", "Meta Business Manager", "Codex", "Google Prompting"]
