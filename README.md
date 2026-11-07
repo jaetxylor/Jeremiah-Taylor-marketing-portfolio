@@ -126,3 +126,13 @@ To update the archive, obtain the passphrase from the owner, decrypt the existin
 Static encryption has no server-side rate limiting or per-person access revocation. Anyone given the passphrase can view and copy the archive; changing it protects the next vault but cannot revoke copies of earlier ciphertext or content. HTTPS is required for browser decryption.
 
 Validation: `node scripts/build.mjs && node --test scripts/ancestry.test.mjs`. Browser verification on HTTPS should cover incorrect passphrases, unlock, tree navigation/search, image zoom, explicit lock and refresh.
+
+### Blog topics
+
+Add a `tags` array to each post JSON, for example `"tags": ["AI", "Work"]`. Posts can have multiple topics. `content/blog-topics.json` controls the initial filter choices; additional tags appear automatically. Filters combine with search and can be linked as `/blog/?tag=AI`.
+
+### Guest book
+
+`/guestbook/` is an interactive book connected to the PSRMalam guest book service. Visitor submissions remain pending until approved. The **Manage entries** link opens the owner sign-in and moderation desk, with Awaiting approval, In the book and Hidden tabs. Hide and restore are reversible. The service stores entries in its database; entries do not live in this static repository.
+
+Public UI: `scripts/guestbook.mjs`, `assets/guestbook.css`, `assets/guestbook.js`. The service origin is declared in the guest book markup. Do not place credentials in this repository.

@@ -87,27 +87,46 @@ const search = document.querySelector('#post-search');
 if (search) {
   search.closest('.blog-search').hidden = false;
   const rows = [...document.querySelectorAll('.blog-list .post-row')];
+  const buttons = [...document.querySelectorAll('[data-topic]')];
   const status = document.querySelector('.search-status');
   const clear = document.querySelector('#clear-search');
-  const updateSearch = () => {
+  let topic = '';
+  const updateSearch = (writeURL = true) => {
     const query = search.value.trim().toLocaleLowerCase();
     const terms = query.split(/\s+/).filter(Boolean);
     let found = 0;
     rows.forEach(row => {
       const text = (row.dataset.search || row.textContent).toLocaleLowerCase();
-      row.hidden = !terms.every(term => text.includes(term));
+      const tags = JSON.parse(row.dataset.tags || '[]');
+      row.hidden = !terms.every(term => text.includes(term)) || Boolean(topic && !tags.some(t => t.toLocaleLowerCase() === topic.toLocaleLowerCase()));
       if (!row.hidden) found++;
     });
-    clear.hidden = !query;
-    status.textContent = query ? (found ? `${found} post${found === 1 ? '' : 's'} found` : 'No matching posts. Try another word.') : '';
-    const url = new URL(location.href);
-    if (query) url.searchParams.set('q', search.value.trim()); else url.searchParams.delete('q');
-    history.replaceState(null, '', url.pathname+url.search+url.hash);
+    buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.topic.toLocaleLowerCase() === topic.toLocaleLowerCase())));
+    clear.hidden = !query && !topic;
+    status.textContent = found ? `${found} post${found === 1 ? '' : 's'}${topic ? ` tagged ${topic}` : ''}${query ? ' found' : ''}` : topic && !query ? `No posts tagged ${topic} yet. Check back soon, or explore another topic.` : 'No matching posts. Try another word or clear the filters.';
+    if (writeURL) {
+      const url = new URL(location.href);
+      if (query) url.searchParams.set('q', search.value.trim()); else url.searchParams.delete('q');
+      if (topic) url.searchParams.set('tag', topic); else url.searchParams.delete('tag');
+      history.replaceState(null, '', url.pathname + url.search + url.hash);
+    }
   };
-  search.value = new URLSearchParams(location.search).get('q') || '';
-  search.addEventListener('input', updateSearch);
-  clear.addEventListener('click', () => { search.value = ''; updateSearch(); search.focus(); });
-  updateSearch();
+  const fromURL = () => {
+    const params = new URLSearchParams(location.search);
+    search.value = params.get('q') || '';
+    topic = params.get('tag') || '';
+    updateSearch(false);
+  };
+  search.addEventListener('input', () => updateSearch());
+  buttons.forEach(button => button.addEventListener('click', () => {
+    const url = new URL(location.href);
+    if (button.dataset.topic) url.searchParams.set('tag', button.dataset.topic); else url.searchParams.delete('tag');
+    history.pushState(null, '', url.pathname + url.search + url.hash);
+    fromURL();
+  }));
+  clear.addEventListener('click', () => { search.value = ''; topic = ''; updateSearch(); search.focus(); });
+  window.addEventListener('popstate', fromURL);
+  fromURL();
 }
 
 // Keep company names readable if an external logo is unavailable.
