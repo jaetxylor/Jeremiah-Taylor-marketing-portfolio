@@ -5,7 +5,7 @@ const esc = (s='') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;
 function logoMarkup(x, className='brand-logo'){
   const fallback = esc(x.logoText || x.shortName || x.name || x.organization || 'Brand');
   if(!x.logo) return `<div class="${className} text-logo"><span>${fallback}</span></div>`;
-  return `<div class="${className}"><img src="${esc(x.logo)}" alt="${fallback} logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><span class="logo-fallback">${fallback}</span></div>`;
+  return `<div class="${className}${x.logoTheme === 'dark' ? ' logo-dark' : ''}"><img src="${esc(x.logo)}" alt="${fallback} logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><span class="logo-fallback">${fallback}</span></div>`;
 }
 
 function renderBuilt(){

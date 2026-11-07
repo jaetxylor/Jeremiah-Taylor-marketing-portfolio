@@ -13,9 +13,33 @@ const flowers = `
 
 export const mascotMark = `<svg class="mascot-mark" viewBox="5 5 188 143" width="56" height="43" aria-hidden="true" focusable="false">${flowers}${head}</svg>`;
 
+export const mascotPeek = `<span class="mascot-peek" aria-hidden="true">
+ <svg viewBox="0 0 140 126" width="140" height="126" focusable="false">
+  <g stroke="#101719" stroke-width="3" stroke-linejoin="round">
+   <path d="M48 76C27 61 18 26 20 6C43 21 60 46 58 72Z" fill="#30383e"/>
+   <path d="M82 72C80 46 97 21 120 6C122 26 113 61 92 76Z" fill="#30383e"/>
+   <path d="M26 37Q36 39 44 30L51 41Q43 52 32 51Z" fill="#efce77" stroke="none"/>
+   <path d="M96 30Q104 39 114 37L108 51Q97 52 89 41Z" fill="#efce77" stroke="none"/>
+  </g>
+  <circle cx="70" cy="85" r="33" fill="#fff" stroke="#70b7ea" stroke-width="5"/>
+  <g fill="#0870b4"><ellipse cx="60" cy="86" rx="3.6" ry="4.5"/><ellipse cx="80" cy="86" rx="3.6" ry="4.5"/></g>
+  <path d="M65 100Q70 104 75 100" fill="none" stroke="#0870b4" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M35 121H105" stroke="#70b7ea" stroke-width="5"/>
+  <g fill="#fff" stroke="#70b7ea" stroke-width="4"><ellipse cx="42" cy="117" rx="10" ry="7"/><ellipse cx="98" cy="117" rx="10" ry="7"/></g>
+ </svg>
+</span>`;
+
 export const mascotStage = `<div class="mascot-stage" data-mascot>
  <button type="button" class="mascot-trigger" data-mascot-action="surprise" aria-label="Interact with Jae's mascot">
   <svg class="mascot-art" viewBox="0 0 286 252" width="384" height="338" aria-hidden="true" focusable="false">
+   <defs>
+    <filter id="mascot-skin-outline" x="-20%" y="-30%" width="140%" height="160%" color-interpolation-filters="sRGB">
+     <feMorphology in="SourceAlpha" operator="dilate" radius="2.5" result="outline"/>
+     <feFlood flood-color="#70b7ea"/>
+     <feComposite in2="outline" operator="in"/>
+     <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+   </defs>
 
    <g class="mascot-queen">
     <path d="M205 218V114Q231 94 259 114V218M200 173H266M207 218H265" fill="none" stroke="#ae784c" stroke-width="8" stroke-linecap="round"/>
@@ -47,16 +71,17 @@ export const mascotStage = `<div class="mascot-stage" data-mascot>
    <g class="mascot-foreground">
    <path d="M28 229Q104 210 181 228" fill="none" stroke="#64ad24" stroke-width="7" stroke-linecap="round"/>
    <g class="mascot-performer">
-    <g class="mascot-arm">
-     <path d="M128 158Q158 150 172 130" fill="none" stroke="#70b7ea" stroke-width="17" stroke-linecap="round"/>
-     <path d="M128 158Q158 150 172 130" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+    <g class="mascot-flower-arm">${flowers}</g>
+    <g filter="url(#mascot-skin-outline)" fill="#fff">
+     <g class="mascot-arm">
+      <path d="M128 158Q158 150 172 130" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+     </g>
+     <g class="mascot-flower-arm">
+      <path d="M102 147Q83 167 56 164" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+      <circle cx="56" cy="164" r="8"/>
+     </g>
+     <path d="M101 136C95 149 96 160 97 174C92 202 95 214 102 218C109 221 115 208 119 198C127 222 134 223 140 216C146 207 144 183 142 164C140 149 136 141 129 137Z"/>
     </g>
-    <g class="mascot-flower-arm">
-     <path d="M102 147Q83 167 56 164" fill="none" stroke="#70b7ea" stroke-width="19" stroke-linecap="round"/>
-     <path d="M102 147Q83 167 56 164" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
-     ${flowers}<circle cx="56" cy="164" r="8" fill="#fff" stroke="#70b7ea" stroke-width="5"/>
-    </g>
-    <path d="M100 137Q93 158 96 175Q91 207 101 218Q108 224 119 198Q128 226 139 216Q147 206 141 151L129 137Z" fill="#fff" stroke="#70b7ea" stroke-width="5" stroke-linejoin="round"/>
     ${head}
    </g>
    </g>
