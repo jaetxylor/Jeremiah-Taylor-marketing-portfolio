@@ -67,6 +67,16 @@ Set catalogue pages and exact artwork URLs are attributed to Pokellector in the 
 
 `script` modules `scripts/collection.mjs` and `assets/ex-collection.js` render and enhance the collection; styles stay in `assets/ex-collection.css`. Run the normal build after changing the data.
 
+## Comic collection
+
+The comic shelf lives at `/hobby/comics/`, with a preview on Hobby. `content/comic-collection.json` groups the inventory by franchise, series start year, and issue. Transformers appears first, followed by Star Wars. Each accession has a stable ID and an explicit quantity; issue numbers alone are not identifiers.
+
+The supplied inventory contains 48 entries and 54 physical copies: Transformers has 33 entries / 38 copies, and Star Wars has 15 entries / 16 copies. Parenthesised numbers and `*2` are treated as copy counts. Four entries remain labelled “Edition to confirm”: Energon Universe #1 (three copies), Transformers and G.I. Joe #3, and the Marvel 25th anniversary 75¢ entries #2 and #3. The two separately listed #3 entries are retained independently until the covers can be checked.
+
+The 44 identified entries have cover references and source links. Named action figure and Choose Your Destiny variants are matched by their character/cover names. Other displayed covers are labelled “Reference cover” because the owned printing or variant was not supplied. Series years distinguish, for example, Star Wars (2015) from Star Wars (2020), and Image Transformers (2023) from IDW Transformers (2019). “A Bold New Era” and “War World” are issue labels within the 2019 series.
+
+`scripts/comics.mjs` builds the gallery, Hobby preview, and `/hobby/comics/inventory.csv`; `assets/comics.js` adds search, franchise filtering and the cover viewer. Images credit public catalogues, publishers, or the linked cover source. Original inventory wording stays in each record and the export. Do not infer condition, value, printing, an additional owned variant, or a missing issue from a catalogue.
+
 ## Domain
 
 See `HOSTING.md`. The active site URL stays on GitHub Pages until the domain is connected. Then set `content/site.json` to `https://psrmalam.com` and rebuild.
