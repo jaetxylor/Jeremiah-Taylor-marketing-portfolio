@@ -80,7 +80,13 @@ function brandArt(brand) {
  if (!asset) return '';
  return `<div class="brand-art brand-art-${brand}"><img src="/assets/${asset}" alt="" loading="lazy" decoding="async"></div>`;
 }
-function projectCard(p,i,prefix=''){const category=p.slug==='insourceai'||p.slug==='cream'?'venture':p.slug==='campaigns'?'campaign':'web';return `<article class="project-card" data-category="${category}" data-reveal><a class="project-cover" href="${prefix}projects/${p.slug}/" aria-label="Explore ${e(p.name)}">${brandArt(p.slug)}<span class="cover-action">View project ${arrow}</span></a><div class="project-info"><div><p class="eyebrow">${e(p.category)} <span>/ ${e(p.status)}</span></p><h3><a href="${prefix}projects/${p.slug}/">${e(p.name)}</a></h3><p>${e(p.role)}</p></div><a class="circle-link" href="${prefix}projects/${p.slug}/" aria-label="Explore ${e(p.name)}">${arrow}</a></div></article>`;}
+function projectCard(p,i,prefix=''){
+ const category=p.slug==='insourceai'||p.slug==='cream'?'venture':p.slug==='campaigns'?'campaign':'web';
+ const website=p.links.find(link=>/^https:\/\//.test(link.url))?.url;
+ if(!website) throw new Error(`Missing project website: ${p.slug}`);
+ const visit=`href="${e(website)}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${e(p.name)} website (opens in a new tab)"`;
+ return `<article class="project-card" data-category="${category}" data-reveal><a class="project-cover" ${visit}>${brandArt(p.slug)}<span class="cover-action">Visit website ${arrow}</span></a><div class="project-info"><div><p class="eyebrow">${e(p.category)} <span>/ ${e(p.status)}</span></p><h3><a href="${prefix}projects/${p.slug}/">${e(p.name)}</a></h3><p>${e(p.role)}<br><a class="text-link" ${visit}>Visit website</a></p></div><a class="circle-link" href="${prefix}projects/${p.slug}/" aria-label="Explore ${e(p.name)}">${arrow}</a></div></article>`;
+}
 function postRow(p,prefix='',i=0){return `<a class="post-row" href="${prefix}blog/${e(p.slug)}/" data-search="${e([p.title,p.category,p.excerpt,...p.body.map(blockText)].join(' '))}" data-reveal><span class="post-number">${String(i+1).padStart(2,'0')}</span><div><p class="post-meta">${e(p.category)} <span>·</span> <time datetime="${p.date}">${dateLabel(p.date)}</time></p><h3>${e(p.title)}</h3><p class="post-excerpt">${e(p.excerpt)}</p></div><span class="circle-link" aria-hidden="true">↗</span></a>`;}
 // Reuse the original section markup while rendering its data at build time.
 const portfolioSource=fs.readFileSync(path.join(root,'portfolio.html'),'utf8');
