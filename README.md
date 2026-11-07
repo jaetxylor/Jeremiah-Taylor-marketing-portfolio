@@ -32,7 +32,9 @@ The gallery lives at `/hobby/ex-collection/` and is linked from Hobby. `content/
 
 For another screenshot batch, match each card by expansion plus number (or `catalogueId`), merge into the existing records, and update `batchesReceived` and `updatedAt`. Blue ticks are recorded as `collected`; grey ticks as `hunting`. A card outside the screenshots stays `unknown` until Jae confirms it. Never infer ownership from the catalogue. Keep Energy, Gold Stars and normal Pokémon cards outside this original ex collection.
 
-Two of three screenshot batches have been imported. The tracker now covers 10 sets and 87 original Pokémon ex cards: 41 collected and 46 still hunting, with no ownership statuses pending within these imported sets. Batch 2 added Emerald, Deoxys and Team Rocket Returns, and confirmed the previously unknown Unseen Forces entries: Rocket’s Persian ex #116 is collected; Umbreon ex #112 and Celebi ex #117 are still hunting. The three Deoxys ex cards #97, #98 and #99 remain separate records. Rocket’s Raikou ex #108 belongs to EX Deoxys.
+All three screenshot batches have been imported. The tracker covers 16 sets and 139 original Pokémon ex cards: 81 collected and 58 still hunting, with no ownership statuses pending within these imported sets. Batch 3 added FireRed & LeafGreen, Hidden Legends, Team Magma vs Team Aqua, Dragon, Sandstorm, and Ruby & Sapphire. All Pokémon ex cards in Holon Phantoms, Dragon, Sandstorm, and Ruby & Sapphire are collected.
+
+Keep separately numbered versions distinct: the three Deoxys ex cards #97, #98, and #99 are separate collected records, while FireRed & LeafGreen Mr. Mime ex #110 is collected and #111 is still hunting. Rocket’s Raikou ex #108 belongs to EX Deoxys. The gallery heading marks all three batches as added; this describes the completed import, not a completed collection.
 
 Set catalogue pages and exact artwork URLs are attributed to Pokellector in the data and gallery. Displayed scans are reference artwork, not photographs of the owner’s physical cards.
 

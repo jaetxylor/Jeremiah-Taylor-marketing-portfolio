@@ -2,7 +2,7 @@
   "title": "The EX collection",
   "description": "i have been hunting down the Pokémon ex cards from my childhood. A little nostalgia, a growing binder and a few cards still to find.",
   "updatedAt": "2026-11-07",
-  "batchesReceived": 2,
+  "batchesReceived": 3,
   "batchesExpected": 3,
   "statusSource": "Pokellector screenshots supplied by Jae. Blue tick = collected; grey tick = still hunting. Cards outside the screenshots have unknown status.",
   "sets": [
@@ -932,6 +932,559 @@
       ],
       "logoUrl": "https://den-media.pokellector.com/logos/EX-Team-Rocket-Returns.logo.58.png",
       "catalogueExCount": 11
+    },
+    {
+      "id": "firered-leafgreen",
+      "name": "EX FireRed & LeafGreen",
+      "year": 2004,
+      "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/",
+      "screenshots": [
+        "IMG_6400.jpeg",
+        "IMG_6401.jpeg"
+      ],
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "firered-leafgreen-104",
+          "number": 104,
+          "name": "Blastoise ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/57/Blastoise-ex.RG.104.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Blastoise-ex-Card-104",
+          "catalogueId": "ex6-104"
+        },
+        {
+          "id": "firered-leafgreen-105",
+          "number": 105,
+          "name": "Charizard ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/57/Charizard-ex.RG.105.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Charizard-ex-Card-105",
+          "catalogueId": "ex6-105"
+        },
+        {
+          "id": "firered-leafgreen-106",
+          "number": 106,
+          "name": "Clefable ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/57/Clefable-ex.RG.106.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Clefable-ex-Card-106",
+          "catalogueId": "ex6-106"
+        },
+        {
+          "id": "firered-leafgreen-107",
+          "number": 107,
+          "name": "Electrode ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/57/Electrode-ex.RG.107.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Electrode-ex-Card-107",
+          "catalogueId": "ex6-107"
+        },
+        {
+          "id": "firered-leafgreen-108",
+          "number": 108,
+          "name": "Gengar ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/57/Gengar-ex.RG.108.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Gengar-ex-Card-108",
+          "catalogueId": "ex6-108"
+        },
+        {
+          "id": "firered-leafgreen-109",
+          "number": 109,
+          "name": "Gyarados ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/57/Gyarados-ex.RG.109.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Gyarados-ex-Card-109",
+          "catalogueId": "ex6-109"
+        },
+        {
+          "id": "firered-leafgreen-110",
+          "number": 110,
+          "name": "Mr. Mime ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/57/Mr-Mime-ex.RG.110.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Mr-Mime-ex-Card-110",
+          "catalogueId": "ex6-110"
+        },
+        {
+          "id": "firered-leafgreen-111",
+          "number": 111,
+          "name": "Mr. Mime ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/57/Mr-Mime-ex.RG.111.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Mr-Mime-ex-Card-111",
+          "catalogueId": "ex6-111"
+        },
+        {
+          "id": "firered-leafgreen-112",
+          "number": 112,
+          "name": "Venusaur ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/57/Venusaur-ex.RG.112.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Venusaur-ex-Card-112",
+          "catalogueId": "ex6-112"
+        },
+        {
+          "id": "firered-leafgreen-114",
+          "number": 114,
+          "name": "Articuno ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/57/Articuno-ex.RG.114.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Articuno-ex-Card-114",
+          "catalogueId": "ex6-114"
+        },
+        {
+          "id": "firered-leafgreen-115",
+          "number": 115,
+          "name": "Moltres ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/57/Moltres-ex.RG.115.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Moltres-ex-Card-115",
+          "catalogueId": "ex6-115"
+        },
+        {
+          "id": "firered-leafgreen-116",
+          "number": 116,
+          "name": "Zapdos ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/57/Zapdos-ex.RG.116.png",
+          "sourceUrl": "https://www.pokellector.com/EX-FireRed-LeafGreen-Expansion/Zapdos-ex-Card-116",
+          "catalogueId": "ex6-116"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-FireRed-LeafGreen.logo.57.png",
+      "catalogueExCount": 12
+    },
+    {
+      "id": "hidden-legends",
+      "name": "EX Hidden Legends",
+      "year": 2004,
+      "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/",
+      "screenshots": [
+        "IMG_6402.jpeg"
+      ],
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "hidden-legends-93",
+          "number": 93,
+          "name": "Groudon ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/56/Groudon-ex.HL.93.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/Groudon-ex-Card-93",
+          "catalogueId": "ex5-93"
+        },
+        {
+          "id": "hidden-legends-94",
+          "number": 94,
+          "name": "Kyogre ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/56/Kyogre-ex.HL.94.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/Kyogre-ex-Card-94",
+          "catalogueId": "ex5-94"
+        },
+        {
+          "id": "hidden-legends-95",
+          "number": 95,
+          "name": "Metagross ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/56/Metagross-ex.HL.95.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/Metagross-ex-Card-95",
+          "catalogueId": "ex5-95"
+        },
+        {
+          "id": "hidden-legends-96",
+          "number": 96,
+          "name": "Ninetales ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/56/Ninetales-ex.HL.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/Ninetales-ex-Card-96",
+          "catalogueId": "ex5-96"
+        },
+        {
+          "id": "hidden-legends-97",
+          "number": 97,
+          "name": "Regice ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/56/Regice-ex.HL.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/Regice-ex-Card-97",
+          "catalogueId": "ex5-97"
+        },
+        {
+          "id": "hidden-legends-98",
+          "number": 98,
+          "name": "Regirock ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/56/Regirock-ex.HL.98.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/Regirock-ex-Card-98",
+          "catalogueId": "ex5-98"
+        },
+        {
+          "id": "hidden-legends-99",
+          "number": 99,
+          "name": "Registeel ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/56/Registeel-ex.HL.99.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/Registeel-ex-Card-99",
+          "catalogueId": "ex5-99"
+        },
+        {
+          "id": "hidden-legends-100",
+          "number": 100,
+          "name": "Vileplume ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/56/Vileplume-ex.HL.100.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/Vileplume-ex-Card-100",
+          "catalogueId": "ex5-100"
+        },
+        {
+          "id": "hidden-legends-101",
+          "number": 101,
+          "name": "Wigglytuff ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/56/Wigglytuff-ex.HL.101.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Hidden-Legends-Expansion/Wigglytuff-ex-Card-101",
+          "catalogueId": "ex5-101"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Hidden-Legends.logo.56.png",
+      "catalogueExCount": 9
+    },
+    {
+      "id": "team-magma-vs-team-aqua",
+      "name": "EX Team Magma vs Team Aqua",
+      "year": 2004,
+      "sourceUrl": "https://www.pokellector.com/EX-Team-Magma-vs-Team-Aqua-Expansion/",
+      "screenshots": [
+        "IMG_6403.jpeg"
+      ],
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "team-magma-vs-team-aqua-89",
+          "number": 89,
+          "name": "Blaziken ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/55/Blaziken-EX.MA.89.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Magma-vs-Team-Aqua-Expansion/Blaziken-EX-Card-89",
+          "catalogueId": "ex4-89"
+        },
+        {
+          "id": "team-magma-vs-team-aqua-90",
+          "number": 90,
+          "name": "Cradily ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/55/Cardily-EX.MA.90.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Magma-vs-Team-Aqua-Expansion/Cradily-ex-Card-90",
+          "catalogueId": "ex4-90"
+        },
+        {
+          "id": "team-magma-vs-team-aqua-91",
+          "number": 91,
+          "name": "Entei ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/55/Entei-EX.MA.91.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Magma-vs-Team-Aqua-Expansion/Entei-EX-Card-91",
+          "catalogueId": "ex4-91"
+        },
+        {
+          "id": "team-magma-vs-team-aqua-92",
+          "number": 92,
+          "name": "Raikou ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/55/Raikou-EX.MA.92.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Magma-vs-Team-Aqua-Expansion/Raikou-EX-Card-92",
+          "catalogueId": "ex4-92"
+        },
+        {
+          "id": "team-magma-vs-team-aqua-93",
+          "number": 93,
+          "name": "Sceptile ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/55/Sceptile-EX.MA.93.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Magma-vs-Team-Aqua-Expansion/Sceptile-EX-Card-93",
+          "catalogueId": "ex4-93"
+        },
+        {
+          "id": "team-magma-vs-team-aqua-94",
+          "number": 94,
+          "name": "Suicune ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/55/Suicune-EX.MA.94.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Magma-vs-Team-Aqua-Expansion/Suicune-EX-Card-94",
+          "catalogueId": "ex4-94"
+        },
+        {
+          "id": "team-magma-vs-team-aqua-95",
+          "number": 95,
+          "name": "Swampert ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/55/Swampert-EX.MA.95.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Team-Magma-vs-Team-Aqua-Expansion/Swampert-EX-Card-95",
+          "catalogueId": "ex4-95"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Team-Magma-vs-Team-Aqua.logo.55.png",
+      "catalogueExCount": 7
+    },
+    {
+      "id": "dragon",
+      "name": "EX Dragon",
+      "year": 2003,
+      "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/",
+      "screenshots": [
+        "IMG_6404.jpeg"
+      ],
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "dragon-89",
+          "number": 89,
+          "name": "Ampharos ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/54/Ampharos-EX.DR.89.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/Ampharos-EX-Card-89",
+          "catalogueId": "ex3-89"
+        },
+        {
+          "id": "dragon-90",
+          "number": 90,
+          "name": "Dragonite ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/54/Dragonite-EX.DR.90.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/Dragonite-EX-Card-90",
+          "catalogueId": "ex3-90"
+        },
+        {
+          "id": "dragon-91",
+          "number": 91,
+          "name": "Golem ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/54/Golem-ex.DR.91.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/Golem-ex-Card-91",
+          "catalogueId": "ex3-91"
+        },
+        {
+          "id": "dragon-92",
+          "number": 92,
+          "name": "Kingdra ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/54/Kingdra-EX.DR.92.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/Kingdra-EX-Card-92",
+          "catalogueId": "ex3-92"
+        },
+        {
+          "id": "dragon-93",
+          "number": 93,
+          "name": "Latias ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/54/Latias-EX.DR.93.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/Latias-EX-Card-93",
+          "catalogueId": "ex3-93"
+        },
+        {
+          "id": "dragon-94",
+          "number": 94,
+          "name": "Latios ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/54/Latios-EX.DR.94.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/Latios-EX-Card-94",
+          "catalogueId": "ex3-94"
+        },
+        {
+          "id": "dragon-95",
+          "number": 95,
+          "name": "Magcargo ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/54/Magcargo-EX.DR.95.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/Magcargo-EX-Card-95",
+          "catalogueId": "ex3-95"
+        },
+        {
+          "id": "dragon-96",
+          "number": 96,
+          "name": "Muk ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/54/Muk-EX.DR.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/Muk-EX-Card-96",
+          "catalogueId": "ex3-96"
+        },
+        {
+          "id": "dragon-97",
+          "number": 97,
+          "name": "Rayquaza ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/54/Rayquaza-EX.DR.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Expansion/Rayquaza-EX-Card-97",
+          "catalogueId": "ex3-97"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Dragon.logo.54.png",
+      "catalogueExCount": 9
+    },
+    {
+      "id": "sandstorm",
+      "name": "EX Sandstorm",
+      "year": 2003,
+      "sourceUrl": "https://www.pokellector.com/EX-Sandstorm-Expansion/",
+      "screenshots": [
+        "IMG_6405.jpeg"
+      ],
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "sandstorm-94",
+          "number": 94,
+          "name": "Aerodactyl ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/53/Aerodactyl-EX.SS.94.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Sandstorm-Expansion/Aerodactyl-EX-Card-94",
+          "catalogueId": "ex2-94"
+        },
+        {
+          "id": "sandstorm-95",
+          "number": 95,
+          "name": "Aggron ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/53/Aggron-EX.SS.95.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Sandstorm-Expansion/Aggron-EX-Card-95",
+          "catalogueId": "ex2-95"
+        },
+        {
+          "id": "sandstorm-96",
+          "number": 96,
+          "name": "Gardevoir ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/53/Gardevoir-EX.SS.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Sandstorm-Expansion/Gardevoir-EX-Card-96",
+          "catalogueId": "ex2-96"
+        },
+        {
+          "id": "sandstorm-97",
+          "number": 97,
+          "name": "Kabutops ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/53/Kabutops-EX.SS.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Sandstorm-Expansion/Kabutops-EX-Card-97",
+          "catalogueId": "ex2-97"
+        },
+        {
+          "id": "sandstorm-98",
+          "number": 98,
+          "name": "Raichu ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/53/Raichu-EX.SS.98.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Sandstorm-Expansion/Raichu-EX-Card-98",
+          "catalogueId": "ex2-98"
+        },
+        {
+          "id": "sandstorm-99",
+          "number": 99,
+          "name": "Typhlosion ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/53/Typhosion-EX.SS.99.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Sandstorm-Expansion/Typhlosion-EX-Card-99",
+          "catalogueId": "ex2-99"
+        },
+        {
+          "id": "sandstorm-100",
+          "number": 100,
+          "name": "Wailord ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/53/Wailord-EX.SS.100.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Sandstorm-Expansion/Wailord-EX-Card-100",
+          "catalogueId": "ex2-100"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Sandstorm.logo.53.png",
+      "catalogueExCount": 7
+    },
+    {
+      "id": "ruby-sapphire",
+      "name": "EX Ruby & Sapphire",
+      "year": 2003,
+      "sourceUrl": "https://www.pokellector.com/EX-Ruby-Sapphire-Expansion/",
+      "screenshots": [
+        "IMG_6406.jpeg"
+      ],
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "ruby-sapphire-96",
+          "number": 96,
+          "name": "Chansey ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/49/Chansey-EX.RS.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Ruby-Sapphire-Expansion/Chansey-EX-Card-96",
+          "catalogueId": "ex1-96"
+        },
+        {
+          "id": "ruby-sapphire-97",
+          "number": 97,
+          "name": "Electabuzz ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/49/Electabuzz-EX.RS.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Ruby-Sapphire-Expansion/Electabuzz-EX-Card-97",
+          "catalogueId": "ex1-97"
+        },
+        {
+          "id": "ruby-sapphire-98",
+          "number": 98,
+          "name": "Hitmonchan ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/49/Hitmonchan-EX.RS.98.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Ruby-Sapphire-Expansion/Hitmonchan-EX-Card-98",
+          "catalogueId": "ex1-98"
+        },
+        {
+          "id": "ruby-sapphire-99",
+          "number": 99,
+          "name": "Lapras ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/49/Lapras-EX.RS.99.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Ruby-Sapphire-Expansion/Lapras-EX-Card-99",
+          "catalogueId": "ex1-99"
+        },
+        {
+          "id": "ruby-sapphire-100",
+          "number": 100,
+          "name": "Magmar ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/49/Magmar-EX.RS.100.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Ruby-Sapphire-Expansion/Magmar-EX-Card-100",
+          "catalogueId": "ex1-100"
+        },
+        {
+          "id": "ruby-sapphire-101",
+          "number": 101,
+          "name": "Mewtwo ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/49/Mewtwo-EX.RS.101.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Ruby-Sapphire-Expansion/Mewtwo-EX-Card-101",
+          "catalogueId": "ex1-101"
+        },
+        {
+          "id": "ruby-sapphire-102",
+          "number": 102,
+          "name": "Scyther ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/49/Scyther-EX.RS.102.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Ruby-Sapphire-Expansion/Scyther-EX-Card-102",
+          "catalogueId": "ex1-102"
+        },
+        {
+          "id": "ruby-sapphire-103",
+          "number": 103,
+          "name": "Sneasel ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/49/Sneasel-EX.RS.103.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Ruby-Sapphire-Expansion/Sneasel-EX-Card-103",
+          "catalogueId": "ex1-103"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/Ruby-Sapphire.logo.49.png",
+      "catalogueExCount": 8
     }
   ]
 }

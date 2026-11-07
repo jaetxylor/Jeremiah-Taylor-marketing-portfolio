@@ -70,7 +70,11 @@ function formatDate(value) {
 export function renderCollection(data) {
   const stats = summary(data);
   const date = formatDate(data.updatedAt);
-  const batches = Number.isInteger(data.batchesReceived) && Number.isInteger(data.batchesExpected) && data.batchesExpected > 0 ? `Batch ${data.batchesReceived} of ${data.batchesExpected} added` : '';
+  const batches = Number.isInteger(data.batchesReceived) && Number.isInteger(data.batchesExpected) && data.batchesExpected > 0
+    ? data.batchesReceived >= data.batchesExpected
+      ? `All ${data.batchesExpected} batches added`
+      : `Batch ${data.batchesReceived} of ${data.batchesExpected} added`
+    : '';
   const filters = [['all', 'All cards', stats.total], ['collected', 'Collected', stats.collected], ['hunting', 'Still hunting', stats.hunting], ...(stats.unknown ? [['unknown', 'Awaiting update', stats.unknown]] : [])];
   return `<div class="wrap ex-collection" data-ex-collection>
     <header class="ex-heading"><a class="ex-back-link" href="/hobby/">Back to Hobby</a><p class="ex-eyebrow">Pokémon TCG / My childhood collection</p><h1>The EX <em>collection.</em></h1><p class="ex-intro">${escape(data.description || 'i am hunting down the ex cards from my childhood. A place to track the collection, and enjoy it along the way.')}</p><div class="ex-heading-note"><span>${escape(batches || 'A binder in progress')}</span>${date ? `<span>Updated <time datetime="${escape(data.updatedAt)}">${escape(date)}</time></span>` : ''}</div></header>
