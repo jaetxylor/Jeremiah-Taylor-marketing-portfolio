@@ -4,11 +4,11 @@
     "name": "InsourceAI",
     "category": "Company & product",
     "role": "Founder",
-    "status": "Building",
+    "status": "Live · In active development",
     "tone": "green",
-    "intro": "Making electronics procurement simpler.",
-    "description": "An AI procurement assistant for electronics buyers and suppliers, bringing BOMs, supplier enquiries and quotations into one workflow.",
-    "contribution": "Building the company, brand and product experience, from the public website to the procurement workspace and supplier network.",
+    "intro": "From a messy bill of materials to a clearer sourcing decision.",
+    "description": "InsourceAI is the company i founded to make electronic component procurement easier. Its Agent brings BOM preparation, supplier outreach, email replies and quotation comparison into one workspace for electronics buyers, EMS teams and suppliers.",
+    "contribution": "i lead the company, product direction and brand, translating procurement problems into workflows people can actually use. My work spans the identity and public website, product design, AI-assisted development, supplier outreach, testing and ongoing releases.",
     "tags": [
       "AI",
       "Procurement",
@@ -18,11 +18,116 @@
     "links": [
       {
         "label": "Company website",
-        "url": "https://insourceai.sg"
+        "url": "https://insourceai.sg",
+        "description": "The company, product overview and latest updates."
       },
       {
         "label": "Explore the agent",
-        "url": "https://agent.insourceai.sg"
+        "url": "https://agent.insourceai.sg",
+        "description": "Open the procurement application."
+      },
+      {
+        "label": "Crunchbase",
+        "url": "https://www.crunchbase.com/organization/insourceai",
+        "description": "Company profile and current Crunchbase information."
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/company/insourceai/",
+        "description": "Product announcements, community updates and company news."
+      }
+    ],
+    "story": "The starting point was a familiar problem from technology trading: sourcing information lives across spreadsheets, inboxes and supplier conversations. Finding a component is only part of the job. Someone still has to clean the requirements, write the enquiry, chase a reply and make sense of different prices, quantities and lead times. i wanted to connect those steps.",
+    "contributions": [
+      {
+        "title": "Product & workflow",
+        "text": "Shaping the journey from BOM upload through supplier selection, RFQ review, quotation comparison and follow-up, with clear approval points for buyers."
+      },
+      {
+        "title": "Brand & go-to-market",
+        "text": "Creating the visual identity, website and product content, developing supplier relationships, and presenting the product to startup and technology communities."
+      },
+      {
+        "title": "Building & iteration",
+        "text": "Using AI development tools to implement and refine the application, connect services, investigate user friction and test releases against real procurement scenarios."
+      }
+    ],
+    "featuresTitle": "Inside the procurement workflow",
+    "features": [
+      {
+        "title": "Prepare the BOM",
+        "text": "Import component requirements and use BOM Cleaner to organise inconsistent part information, surface issues and prepare the list for sourcing."
+      },
+      {
+        "title": "Choose suppliers & draft RFQs",
+        "text": "Work with existing supplier relationships or opt into the supplier network. Prepare supplier-specific requests with multilingual drafting and translation support."
+      },
+      {
+        "title": "Keep the conversation connected",
+        "text": "Send approved requests through Gmail or Outlook, monitor replies and retain the conversation alongside the RFQ."
+      },
+      {
+        "title": "Turn replies into comparable quotes",
+        "text": "Extract quoted prices, quantities and lead times from supplier responses and documents, then review and correct the details before comparing offers."
+      },
+      {
+        "title": "Review the next step",
+        "text": "Use Ask InsourceAI to explore quotation trade-offs, with attention notices for deadlines and quote validity. Buyers approve outreach and retain the final commercial decision."
+      }
+    ],
+    "principle": {
+      "title": "AI with a clear job to do",
+      "text": "AI helps draft, extract, translate and explain. Supplier selection rules, access controls and buyer approvals form the surrounding workflow. This is the part of the product i care about most: making the next sourcing task easier without handing over the commercial decision."
+    },
+    "stack": [
+      {
+        "layer": "Application",
+        "tools": "Next.js · React · TypeScript",
+        "purpose": "The procurement workspace, interactive interfaces and server-side application logic."
+      },
+      {
+        "layer": "AI",
+        "tools": "OpenAI Responses API",
+        "purpose": "RFQ drafting, quotation extraction, translation and conversational assistance."
+      },
+      {
+        "layer": "Data & accounts",
+        "tools": "Neon PostgreSQL · Neon Auth",
+        "purpose": "Persistent workspaces, supplier context, quotations and account access."
+      },
+      {
+        "layer": "Email",
+        "tools": "Gmail API · Microsoft Graph",
+        "purpose": "Connect existing mailboxes for approved outreach and supplier replies."
+      },
+      {
+        "layer": "Subscriptions",
+        "tools": "Stripe Billing",
+        "purpose": "Checkout, subscription plans and account billing."
+      },
+      {
+        "layer": "Delivery",
+        "tools": "Vercel · GitHub",
+        "purpose": "Application hosting, source control and ongoing releases."
+      }
+    ],
+    "milestonesTitle": "A few milestones along the way",
+    "milestones": [
+      {
+        "label": "NVIDIA Inception",
+        "text": "Accepted into the NVIDIA Inception programme in 2026."
+      },
+      {
+        "label": "Neon Startup Program",
+        "text": "Accepted into the startup programme, with credits supporting the database infrastructure."
+      },
+      {
+        "label": "Stripe Community",
+        "text": "Demonstrated InsourceAI Agent at a Stripe Community Builders meetup."
+      },
+      {
+        "label": "Web Summit Qatar 2027",
+        "text": "Accepted for the ALPHA startup programme for the upcoming event."
       }
     ]
   },
@@ -31,11 +136,11 @@
     "name": "GoldenWax",
     "category": "Website & brand",
     "role": "Website & brand development",
-    "status": "Selected work",
+    "status": "Live · 25th anniversary edition",
     "tone": "gold",
-    "intro": "A digital home for an automotive care brand.",
-    "description": "A customer-facing website for Golden Wax Car Polishing, with a distinct visual identity and clear presentation of its services.",
-    "contribution": "Created the website from scratch, including the font direction, logo work and customer-facing content.",
+    "intro": "Giving an established automotive business a new digital chapter.",
+    "description": "Golden Wax Polishing is a Singapore automotive care business established in 2002. With its 25th anniversary coming in 2027, i refreshed its website and brand presentation to show its expertise more clearly and welcome new dealership and distributor conversations.",
+    "contribution": "i created the website and shaped the visual direction, page structure and customer-facing copy. The work connects the new logo, the original Porsche-inspired font, service imagery and an anniversary film into a consistent experience.",
     "tags": [
       "Web design",
       "Branding",
@@ -44,7 +149,103 @@
     "links": [
       {
         "label": "Visit website",
-        "url": "https://www.gwcarpolish.com.sg"
+        "url": "https://www.gwcarpolish.com.sg",
+        "description": "Explore the refreshed Golden Wax website."
+      },
+      {
+        "label": "Watch the anniversary film",
+        "url": "https://www.gwcarpolish.com.sg/media/golden-wax-anniversary.mp4",
+        "description": "The 45-second film created for the 25th anniversary."
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/company/golden-wax-polishing/",
+        "description": "Golden Wax’s company presence on LinkedIn."
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/gwcarpolish/",
+        "description": "Follow the automotive care business on Facebook."
+      }
+    ],
+    "story": "The business already had a story and longstanding industry relationships; the website needed to communicate them better. The brief was to retain the distinctive automotive typography while creating a cleaner, more considered corporate presence. The audience includes potential business partners as well as car owners looking for care.",
+    "contributions": [
+      {
+        "title": "Brand direction",
+        "text": "Retaining the recognisable 911 Porscha typography and giving the new Golden Wax logo space to lead, with a restrained cream, charcoal and gold palette."
+      },
+      {
+        "title": "Website & content",
+        "text": "Designing and building the pages, organising the service offering and writing for both automotive businesses and individual enquiries."
+      },
+      {
+        "title": "Anniversary storytelling",
+        "text": "Developing the 25th anniversary presentation and a 45-second corporate film, from the opening brand treatment to service and relationship highlights."
+      }
+    ],
+    "featuresTitle": "What went into the refresh",
+    "features": [
+      {
+        "title": "A focused corporate homepage",
+        "text": "A strong opening, clear navigation and the anniversary film introduce the business, with company and service details on their own pages."
+      },
+      {
+        "title": "Four areas of expertise",
+        "text": "Dedicated imagery and descriptions explain car polishing, paint restoration, wash and grooming, and waxing and protection."
+      },
+      {
+        "title": "A path for business partnerships",
+        "text": "A dedicated partnerships page explains the conversation for distributors and dealerships, including vehicle volumes, locations and service needs."
+      },
+      {
+        "title": "An easier way to enquire",
+        "text": "WhatsApp links let visitors start a conversation directly, with service-specific enquiry prompts and LinkedIn and Facebook links for further context."
+      }
+    ],
+    "principle": {
+      "title": "A refresh that still feels like Golden Wax",
+      "text": "The distinctive font and automotive character remain central. The new structure makes the business easier to understand, while the anniversary gives its history a natural place in the story."
+    },
+    "stack": [
+      {
+        "layer": "Application",
+        "tools": "React · TypeScript · Vinext",
+        "purpose": "Reusable page components and routing for the corporate site."
+      },
+      {
+        "layer": "Build & hosting",
+        "tools": "Vite · Cloudflare Workers",
+        "purpose": "Building and serving the website through ChatGPT Sites."
+      },
+      {
+        "layer": "Visual design",
+        "tools": "Custom CSS · Self-hosted 911 Porscha fonts",
+        "purpose": "Consistent layouts, responsive styling and the retained automotive typography."
+      },
+      {
+        "layer": "Media",
+        "tools": "HTML5 video · Local image assets",
+        "purpose": "The anniversary film, transparent logo and dedicated service imagery."
+      },
+      {
+        "layer": "Enquiries",
+        "tools": "WhatsApp deep links",
+        "purpose": "A direct route from a service or partnership page to a conversation."
+      }
+    ],
+    "milestonesTitle": "The business behind the website",
+    "milestones": [
+      {
+        "label": "Since 2002",
+        "text": "An established Singapore business specialising in automotive polishing and grooming."
+      },
+      {
+        "label": "25 years in 2027",
+        "text": "The upcoming anniversary is the focus of this latest website edition."
+      },
+      {
+        "label": "Current relationships",
+        "text": "The site presents Golden Wax’s work with Borneo Motors, Inchcape, Toyota and Lexus."
       }
     ]
   },
@@ -53,11 +254,11 @@
     "name": "Cream",
     "category": "Community app",
     "role": "Creator",
-    "status": "Building",
+    "status": "Early access · In development",
     "tone": "blue",
-    "intro": "A place to connect beyond class.",
-    "description": "A community app built around campus life, meeting people and shared interests.",
-    "contribution": "Building the experience across profiles, connections, conversations and a shared campus community.",
+    "intro": "Campus life, with more reasons to say hello.",
+    "description": "Cream is a community app i am building around life beyond class, starting with the SMU community. It brings together clubs, shared interests, plans, opportunities and optional dating, with a playful identity and a personal space that feels like your own.",
+    "contribution": "i am creating the product concept, brand and user experience, and building the application with AI development tools. The work ranges from its bubbly wordmark and campus navigation to profiles, community features, matching flows, moderation and avatar customisation.",
     "tags": [
       "Community",
       "Product",
@@ -66,7 +267,102 @@
     "links": [
       {
         "label": "Explore Cream",
-        "url": "https://cream.insourceai.sg"
+        "url": "https://cream.insourceai.sg",
+        "description": "Open the early-access community app."
+      },
+      {
+        "label": "SMU Vivace directory",
+        "url": "https://vivace.smu.edu.sg/explore",
+        "description": "The official source behind the CCA directory snapshot."
+      }
+    ],
+    "story": "The idea is to make it easier to turn a shared interest into an actual connection: find a CCA, arrange a study session, join someone for an activity or discover a project opportunity. i wanted the experience to feel welcoming and social, with practical tools behind the playful surface.",
+    "contributions": [
+      {
+        "title": "Product & community design",
+        "text": "Organising campus discovery, activity plans and opportunities around clear reasons to connect, with dating available as a separate opt-in experience."
+      },
+      {
+        "title": "Brand & interaction",
+        "text": "Creating the Cream identity: rounded typography, butter-cream and navy colours, original illustrations and customisable avatars."
+      },
+      {
+        "title": "Development & testing",
+        "text": "Building account-based features, refining onboarding and profile flows, and testing connections, chat, blocking and reporting before wider adoption."
+      }
+    ],
+    "featuresTitle": "What you can explore",
+    "features": [
+      {
+        "title": "Discover campus communities",
+        "text": "Browse and filter a directory of 151 SMU Vivace 2026 listings, with original illustrations and links to the official sources. App spaces and official club membership remain separate."
+      },
+      {
+        "title": "Make a plan together",
+        "text": "Find buddies for activities and compare shared availability, with participants choosing what they share."
+      },
+      {
+        "title": "Connect around opportunities",
+        "text": "Explore workflows for study groups, projects, workshops and jobs, including employer review and student-controlled applications."
+      },
+      {
+        "title": "Meet people on your terms",
+        "text": "Separate opt-in dating preferences, mutual-match conversations and block, report and unmatch controls support the social side of the product."
+      },
+      {
+        "title": "Make the space your own",
+        "text": "Customise a profile and avatar, build a wardrobe and explore cosmetic items and rewards through the shop."
+      }
+    ],
+    "principle": {
+      "title": "Playful on the surface, thoughtful underneath",
+      "text": "The warm visual identity is paired with consent, private account data and moderation. Cream is an independent project built for the campus community; it is not an official SMU service."
+    },
+    "stack": [
+      {
+        "layer": "Application",
+        "tools": "React · TypeScript · Vinext · Vite",
+        "purpose": "Page components, server routes and the application build, alongside custom JavaScript interfaces."
+      },
+      {
+        "layer": "Interface",
+        "tools": "Custom CSS · Tailwind CSS · SVG",
+        "purpose": "The Cream visual identity, responsive layouts, icons and avatar artwork."
+      },
+      {
+        "layer": "Hosting",
+        "tools": "Cloudflare Workers",
+        "purpose": "Serving the application and its account-based API routes through ChatGPT Sites."
+      },
+      {
+        "layer": "Data & files",
+        "tools": "Cloudflare D1 · R2 · Drizzle",
+        "purpose": "Persistent community and account records, database schema and private media storage."
+      },
+      {
+        "layer": "Identity integration",
+        "tools": "Singpass / Myinfo",
+        "purpose": "Identity verification integration, with staging identities kept separate from production eligibility."
+      },
+      {
+        "layer": "Commerce integration",
+        "tools": "Stripe Checkout · Webhooks",
+        "purpose": "Coin-pack checkout and purchase handling, currently implemented in test mode."
+      }
+    ],
+    "milestonesTitle": "Where the project is now",
+    "milestones": [
+      {
+        "label": "A working early-access build",
+        "text": "The app is online and being refined through account, onboarding and social-flow testing."
+      },
+      {
+        "label": "A sourced campus directory",
+        "text": "151 Vivace 2026 listings give the discovery experience a real starting point. Illustrations are original, rather than official club logos."
+      },
+      {
+        "label": "Building towards wider use",
+        "text": "Live verification and payments depend on their production setup. Test identities and demo profiles are kept distinct from real members."
       }
     ]
   }
