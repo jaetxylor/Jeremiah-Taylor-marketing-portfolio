@@ -1,14 +1,14 @@
 window.PORTFOLIO_DATA = {
   websitesBuilt: [
-    { name: "Golden Wax Car Polishing", url: "https://www.gwcarpolish.com.sg", label: "Built from scratch", type: "Website + Brand", description: "Created the customer-facing website from the ground up, including custom font direction and logo work for the car detailing brand.", tools: ["Web Design", "Branding", "Logo", "Content"], accent: "gold" },
-    { name: "InsourceAI", url: "https://www.insourceai.sg", label: "Built from scratch", type: "Website + Product", description: "Conceptualised the brand and logo, built the web presence, and worked on the product experience around BOM ingestion, parsing, API connectors and user profiles.", tools: ["Vercel", "GitHub", "BOM Parser", "APIs", "UX"], accent: "lime" },
-    { name: "Hayma Singapore", url: "", status: "Site currently offline", label: "Built from scratch", type: "B2B Website", description: "Created the Singapore website for an electronic components distributor and shaped the digital presentation of its supply-chain services.", tools: ["Wix", "B2B", "Web Design", "Content"], accent: "blue" }
+    { name: "Golden Wax Car Polishing", brand: "golden-wax", url: "https://www.gwcarpolish.com.sg", label: "Built from scratch", type: "Website + Brand", description: "Created the customer-facing website from the ground up, including custom font direction and logo work for the car detailing brand.", tools: ["Web Design", "Branding", "Logo", "Content"], accent: "gold" },
+    { name: "InsourceAI", brand: "insourceai", url: "https://www.insourceai.sg", label: "Built from scratch", type: "Website + Product", description: "Conceptualised the brand and logo, built the web presence, and worked on the product experience around BOM ingestion, parsing, API connectors and user profiles.", tools: ["Vercel", "GitHub", "BOM Parser", "APIs", "UX"], accent: "lime" },
+    { name: "H****a", url: "", status: "Site currently offline", label: "Built from scratch", type: "B2B Website", description: "Created the Singapore website for an electronic components distributor and shaped the digital presentation of its supply-chain services.", tools: ["Wix", "B2B", "Web Design", "Content"], accent: "blue" }
   ],
   websitesManaged: [
     { name: "Singapore International Cyber Week", url: "https://www.sicw.gov.sg", platform: "Isomer", description: "Content and campaign updates for Singapore's flagship cybersecurity event.", logo: "https://www.google.com/s2/favicons?domain=sicw.gov.sg&sz=128", logoText: "SICW" },
     { name: "Constellar", url: "https://constellar.co", platform: "WordPress", description: "Corporate MICE website content management and coordination.", logo: "https://alep-p-001.sitecorecontenthub.cloud/api/public/content/249db554c2c24986b3026edaae5fcbbe?v=4be88719", logoText: "Constellar" },
     { name: "InsourceAI", url: "https://www.insourceai.sg", platform: "Vercel + GitHub", description: "Ongoing content, product and deployment management.", logo: "assets/insourceai-official-logo.svg", logoText: "InsourceAI" },
-    { name: "Hayma Singapore", url: "", status: "Site currently offline", platform: "Wix", description: "Site management, content updates and commercial positioning.", logo: "https://logo.clearbit.com/hayma.sg", logoText: "HAYMA" },
+    { name: "H****a", url: "", status: "Site currently offline", platform: "Wix", description: "Site management, content updates and commercial positioning.", logo: "", logoText: "H****a" },
     { name: "Confidential client work", url: "", status: "NDA protected", platform: "Shopify + Squarespace", description: "Additional web projects managed under NDA.", logo: "", logoText: "NDA" }
   ],
   publicCampaigns: [
@@ -19,7 +19,7 @@ window.PORTFOLIO_DATA = {
   ],
   commercialSocial: [
     { name: "InsourceAI", platform: "LinkedIn", description: "Content strategy, brand building and audience growth for a B2B technology platform." },
-    { name: "Hayma Singapore", platform: "LinkedIn", description: "B2B content and commercial communications for electronic components distribution." },
+    { name: "H****a", platform: "LinkedIn", description: "B2B content and commercial communications for electronic components distribution." },
     { name: "Singapore FinTech Festival 2018", platform: "Twitter / X", description: "Live-event and campaign social media support." },
     { name: "SITEX 2018", platform: "Twitter / X + Instagram", description: "Event social media content and community engagement." }
   ],
