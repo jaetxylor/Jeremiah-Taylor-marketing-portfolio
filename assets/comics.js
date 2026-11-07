@@ -1,19 +1,18 @@
 (() => {
   'use strict';
 
-  function observeArtwork(image) {
-    const wrapper = image.closest('[data-comic-artwork]');
-    const fallback = wrapper?.querySelector('[data-comic-image-fallback]');
-    if (!fallback) return;
-    const failed = () => { image.hidden = true; fallback.hidden = false; };
-    image.addEventListener('error', failed);
-    image.addEventListener('load', () => { image.hidden = false; fallback.hidden = true; });
-    if (image.getAttribute('src') && image.complete && image.naturalWidth === 0) failed();
+  function watchCover(image, onError) {
+    image.addEventListener('error', onError);
+    if (image.getAttribute('src') && image.complete && image.naturalWidth === 0) onError();
   }
-  for (const image of document.querySelectorAll('[data-comic-artwork] img')) observeArtwork(image);
 
   const root = document.querySelector('[data-comics-collection]');
-  if (!root) return;
+  if (!root) {
+    for (const artwork of document.querySelectorAll('[data-comic-artwork]')) {
+      watchCover(artwork.querySelector('img'), () => { artwork.hidden = true; });
+    }
+    return;
+  }
   const cards = [...root.querySelectorAll('[data-comic-card]')];
   const series = [...root.querySelectorAll('[data-comics-series]')];
   const franchises = [...root.querySelectorAll('[data-comics-franchise]')];
@@ -35,11 +34,12 @@
   const grouped = new Map([...series, ...franchises].map(group => [group, [...group.querySelectorAll('[data-comic-card]')]]));
 
   function filterCards() {
+    if (!form || !search || !franchiseSelect || !results || !empty || !clear) return;
     const query = normalize(search.value);
     const words = query.split(/\s+/).filter(Boolean);
     for (const card of cards) {
       const content = searchable.get(card);
-      card.hidden = !((franchiseSelect.value === 'all' || franchiseSelect.value === card.dataset.franchise)
+      card.hidden = card.hasAttribute('data-cover-failed') || !((franchiseSelect.value === 'all' || franchiseSelect.value === card.dataset.franchise)
         && words.every(word => /^\d+$/.test(word) ? content.numbers.includes(word) : content.text.includes(word)));
     }
     for (const group of [...series, ...franchises]) {
@@ -72,10 +72,19 @@
     filterCards();
   }
 
+  for (const card of cards) {
+    watchCover(card.querySelector('.comic-cover-image'), () => {
+      card.setAttribute('data-cover-failed', '');
+      card.hidden = true;
+      filterCards();
+    });
+  }
+
   const dialog = root.querySelector('.comics-dialog');
   if (!dialog || typeof dialog.showModal !== 'function') return;
   const image = dialog.querySelector('[data-comic-dialog-image]');
-  const fallback = dialog.querySelector('[data-comic-image-fallback]');
+  const artwork = image.closest('[data-comic-artwork]');
+  watchCover(image, () => { artwork.hidden = true; });
   const title = dialog.querySelector('#comic-dialog-title');
   const detail = dialog.querySelector('#comic-dialog-detail');
   const groupLabel = dialog.querySelector('[data-comic-dialog-group]');
@@ -92,8 +101,7 @@
   function showCard(card) {
     activeCard = card;
     const target = card.querySelector('[data-comic-open]');
-    image.hidden = false;
-    fallback.hidden = true;
+    artwork.hidden = false;
     image.alt = `${card.dataset.coverNote ? 'Reference cover' : 'Cover'} of ${card.dataset.seriesName} ${card.dataset.number}${card.dataset.variant ? `, ${card.dataset.variant}` : ''}`;
     image.src = target.dataset.image;
     title.textContent = `${card.dataset.seriesName} ${card.dataset.number}`;
