@@ -115,3 +115,14 @@ Removing a photo from the folder removes it from the next published build; remov
 `assets/travel/world.json` derives from world-atlas 2.0.2 / Natural Earth 1:50m countries (public domain), simplified with topojson-simplify at the 0.65 quantile and rounded to three decimal places. Its dots are sampled from a raster of the same boundaries. The local `assets/vendor/d3-geo.mjs` bundle uses d3-geo 3.1.1; licence notices are retained in `assets/vendor/LICENSE.txt`. There are no runtime map/CDN dependencies. All map resources load only on the travel page. The albums remain usable when JavaScript or the globe fails.
 
 Run `node --test scripts/travel.test.mjs` and `node scripts/build.mjs` to validate uploads and build all pages.
+
+
+## Private ancestry archive
+
+`/hobby/ancestry/` is an encrypted static archive. The repository and deployed assets contain only the AES-256-GCM ciphertext in `assets/ancestry.vault.json`; person records, captions and original images are all inside that payload. The key is derived from the family passphrase with PBKDF2-SHA256 (600,000 iterations and a random salt). The browser holds decrypted content in memory and clears it on lock or navigation. It does not save the passphrase or content to local storage. The page is excluded from the sitemap and marked noindex.
+
+To update the archive, obtain the passphrase from the owner, decrypt the existing vault outside the checkout, edit the private payload, and provide `{password, payload}` as JSON on stdin to `node scripts/seal-ancestry.mjs`. Never write the passphrase or plaintext to the repository, build directory, logs or a public issue. Commit only the refreshed vault and any renderer changes. Keep source captions, uncertainty, original spellings and relationship evidence when editing. A family account is distinct from documentary evidence.
+
+Static encryption has no server-side rate limiting or per-person access revocation. Anyone given the passphrase can view and copy the archive; changing it protects the next vault but cannot revoke copies of earlier ciphertext or content. HTTPS is required for browser decryption.
+
+Validation: `node scripts/build.mjs && node --test scripts/ancestry.test.mjs`. Browser verification on HTTPS should cover incorrect passphrases, unlock, tree navigation/search, image zoom, explicit lock and refresh.
