@@ -49,11 +49,11 @@ if (filters) {
 }
 // Preserve bookmarked homepage sections after moving the detailed content.
 const sectionDestinations = {
-  web: 'projects.html', campaigns: 'experience.html#campaigns',
-  creative: 'experience.html#creative', social: 'experience.html#social',
-  collaborations: 'experience.html#collaborations', personal: 'projects.html#personal',
-  about: 'about.html', resume: 'about.html#resume',
-  education: 'about.html#education', certifications: 'about.html#certifications'
+  web: '/projects/', campaigns: '/works/#campaigns',
+  creative: '/works/#creative', social: '/works/#social',
+  collaborations: '/works/#collaborations', personal: '/hobby/#pokemon',
+  about: '/about/', resume: '/about/#resume',
+  education: '/about/#education', certifications: '/about/#certifications'
 };
 function followMovedSection() {
   const destination = sectionDestinations[location.hash.slice(1)];
@@ -61,3 +61,17 @@ function followMovedSection() {
 }
 followMovedSection();
 window.addEventListener('hashchange', followMovedSection);
+
+if (location.pathname === '/index.html') history.replaceState(null, '', '/'+location.search+location.hash);
+const search = document.querySelector('#post-search');
+if (search) {
+  search.closest('.blog-search').hidden = false;
+  const rows = [...document.querySelectorAll('.blog-list .post-row')];
+  const status = document.querySelector('.search-status');
+  search.addEventListener('input', () => {
+    const query = search.value.trim().toLocaleLowerCase();
+    let found = 0;
+    rows.forEach(row => { row.hidden = !row.textContent.toLocaleLowerCase().includes(query); if (!row.hidden) found++; });
+    status.textContent = query ? (found ? `${found} post${found === 1 ? '' : 's'} found` : 'No matching posts. Try another word.') : '';
+  });
+}

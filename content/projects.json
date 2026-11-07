@@ -9,12 +9,26 @@
     "intro": "Making electronics procurement simpler.",
     "description": "An AI procurement assistant for electronics buyers and suppliers, bringing BOMs, supplier enquiries and quotations into one workflow.",
     "contribution": "Building the company, brand and product experience, from the public website to the procurement workspace and supplier network.",
-    "tags": ["AI", "Procurement", "Product", "Brand"],
-    "links": [{"label": "Company website", "url": "https://www.insourceai.sg"}, {"label": "Explore the agent", "url": "https://agent.insourceai.sg"}]
+    "tags": [
+      "AI",
+      "Procurement",
+      "Product",
+      "Brand"
+    ],
+    "links": [
+      {
+        "label": "Company website",
+        "url": "https://www.insourceai.sg"
+      },
+      {
+        "label": "Explore the agent",
+        "url": "https://agent.insourceai.sg"
+      }
+    ]
   },
   {
     "slug": "golden-wax",
-    "name": "Golden Wax",
+    "name": "GoldenWax",
     "category": "Website & brand",
     "role": "Website & brand development",
     "status": "Selected work",
@@ -22,34 +36,38 @@
     "intro": "A digital home for an automotive care brand.",
     "description": "A customer-facing website for Golden Wax Car Polishing, with a distinct visual identity and clear presentation of its services.",
     "contribution": "Created the website from scratch, including the font direction, logo work and customer-facing content.",
-    "tags": ["Web design", "Branding", "Content"],
-    "links": [{"label": "Visit website", "url": "https://www.gwcarpolish.com.sg"}]
+    "tags": [
+      "Web design",
+      "Branding",
+      "Content"
+    ],
+    "links": [
+      {
+        "label": "Visit website",
+        "url": "https://www.gwcarpolish.com.sg"
+      }
+    ]
   },
   {
-    "slug": "hayma",
-    "name": "Hayma Singapore",
-    "category": "B2B marketing & web",
-    "role": "Website, content & commercial communications",
-    "status": "Past work",
+    "slug": "cream",
+    "name": "Cream",
+    "category": "Community app",
+    "role": "Creator",
+    "status": "Building",
     "tone": "blue",
-    "intro": "Bringing a components business online.",
-    "description": "Website development and B2B communications for an electronic components distributor.",
-    "contribution": "Created the Singapore website, shaped the presentation of its supply-chain services, and worked on site content and LinkedIn communications.",
-    "tags": ["B2B", "Web design", "Social media"],
-    "links": [],
-    "note": "The original Singapore website is currently offline."
-  },
-  {
-    "slug": "campaigns",
-    "name": "Campaigns & communications",
-    "category": "Selected client work",
-    "role": "Marketing & communications",
-    "status": "Past work",
-    "tone": "rose",
-    "intro": "Work made for public attention.",
-    "description": "Selected campaign, content and social media work across Singapore International Cyber Week, Sport Singapore, the Health Promotion Board and North East CDC.",
-    "contribution": "Experience across content planning, campaign creatives, stakeholder coordination, channel management and reporting. The portfolio documents the individual projects and scope.",
-    "tags": ["Campaigns", "Communications", "Creative"],
-    "links": [{"label": "View the full portfolio", "url": "portfolio.html#campaigns"}]
+    "intro": "A place to connect beyond class.",
+    "description": "A community app built around campus life, meeting people and shared interests.",
+    "contribution": "Building the experience across profiles, connections, conversations and a shared campus community.",
+    "tags": [
+      "Community",
+      "Product",
+      "Campus life"
+    ],
+    "links": [
+      {
+        "label": "Explore Cream",
+        "url": "https://cream.insourceai.sg"
+      }
+    ]
   }
 ]

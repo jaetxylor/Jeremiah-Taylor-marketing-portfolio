@@ -52,3 +52,29 @@
  [data-page=experience] .section-space{padding-top:46px;padding-bottom:46px}
 }
 @media(max-width:360px){[data-page=about] .page-top h1{font-size:36px}}
+
+.brand small{font-size:11px;font-weight:500;color:var(--muted);margin-left:5px}
+.nook-projects{grid-template-columns:repeat(3,minmax(0,1fr))}
+.nook-projects .web-browser-logo{font-size:24px}
+.nook-links{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:35px}
+.nook-links>a,.hobby-card,.tiktok-profile{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:30px}
+.nook-links h2,.hobby-card h2{font-size:30px;line-height:1.1;letter-spacing:-.04em;margin:18px 0}
+.nook-links p,.hobby-card p,.hobby-feature p{font-size:16px;color:var(--muted);line-height:1.7}
+.nook-links .eyebrow,.hobby-card .eyebrow{font-size:10px}
+.nook-links>a:hover{border-color:var(--ink)}
+.hobby-feature{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:30px 0 60px}
+.hobby-feature h2{font-size:58px;letter-spacing:-.05em;line-height:1.05;margin:20px 0}
+.hobby-feature h2 em{font-weight:400}
+.hobby-feature .button{margin-top:20px}
+.tiktok-profile h3{font-size:30px;letter-spacing:-.04em;overflow-wrap:anywhere}
+.hobby-stat strong{display:block;color:var(--ink);font-size:40px;letter-spacing:-.05em}
+.hobby-stat span{font-size:12px}
+.hobby-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-bottom:60px}
+.blog-search{margin-bottom:30px;max-width:620px}
+.blog-search label{display:block;font-size:12px;margin-bottom:12px}
+.blog-search input{width:100%;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 18px}
+.blog-search input:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.search-status{font-size:13px;color:var(--muted);min-height:20px}
+[data-page=hobby] section[id]{scroll-margin-top:24px}
+@media(max-width:820px){.nook-projects{grid-template-columns:1fr}.nook-links,.hobby-grid,.hobby-feature{grid-template-columns:1fr}.hobby-feature{gap:25px}.hobby-feature h2{font-size:45px}.nook-links{gap:18px}.brand small{font-size:10px}}
+@media(max-width:620px){.nook-links>a,.hobby-card,.tiktok-profile{padding:24px}.nook-links h2,.hobby-card h2{font-size:28px}.hobby-feature{padding-top:5px;padding-bottom:35px}.hobby-grid{gap:18px;padding-bottom:35px}.tiktok-profile h3{font-size:27px}}
