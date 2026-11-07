@@ -87,7 +87,7 @@
       },
       {
         "layer": "AI",
-        "tools": "OpenAI Responses API",
+        "tools": "Language model integration",
         "purpose": "RFQ drafting, quotation extraction, translation and conversational assistance."
       },
       {
@@ -215,7 +215,7 @@
       {
         "layer": "Build & hosting",
         "tools": "Vite · Cloudflare Workers",
-        "purpose": "Building and serving the website through ChatGPT Sites."
+        "purpose": "Building and serving the corporate website."
       },
       {
         "layer": "Visual design",
@@ -332,7 +332,7 @@
       {
         "layer": "Hosting",
         "tools": "Cloudflare Workers",
-        "purpose": "Serving the application and its account-based API routes through ChatGPT Sites."
+        "purpose": "Serving the application and its account-based API routes."
       },
       {
         "layer": "Data & files",
