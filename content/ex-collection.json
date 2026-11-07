@@ -1,0 +1,600 @@
+{
+  "title": "The EX collection",
+  "description": "i have been hunting down the Pokémon ex cards from my childhood. A little nostalgia, a growing binder and a few cards still to find.",
+  "updatedAt": "2026-11-07",
+  "batchesReceived": 1,
+  "batchesExpected": 3,
+  "statusSource": "Pokellector screenshots supplied by Jae. Blue tick = collected; grey tick = still hunting. Cards outside the screenshots have unknown status.",
+  "sets": [
+    {
+      "id": "power-keepers",
+      "name": "EX Power Keepers",
+      "year": 2007,
+      "sourceUrl": "https://www.pokellector.com/EX-Power-Keepers-Expansion/",
+      "screenshot": "IMG_6385(1).jpeg",
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "power-keepers-92",
+          "number": 92,
+          "name": "Absol ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/67/Absol-ex.PK.92.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Power-Keepers-Expansion/Absol-ex-Card-92",
+          "catalogueId": "ex16-92"
+        },
+        {
+          "id": "power-keepers-93",
+          "number": 93,
+          "name": "Claydol ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/67/Claydol-ex.PK.93.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Power-Keepers-Expansion/Claydol-ex-Card-93",
+          "catalogueId": "ex16-93"
+        },
+        {
+          "id": "power-keepers-94",
+          "number": 94,
+          "name": "Flygon ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/67/Flygon-ex.PK.94.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Power-Keepers-Expansion/Flygon-ex-Card-94",
+          "catalogueId": "ex16-94"
+        },
+        {
+          "id": "power-keepers-95",
+          "number": 95,
+          "name": "Metagross ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/67/Metagross-ex.PK.95.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Power-Keepers-Expansion/Metagross-ex-Card-95",
+          "catalogueId": "ex16-95"
+        },
+        {
+          "id": "power-keepers-96",
+          "number": 96,
+          "name": "Salamence ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/67/Salamence-ex.PK.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Power-Keepers-Expansion/Salamence-ex-Card-96",
+          "catalogueId": "ex16-96"
+        },
+        {
+          "id": "power-keepers-97",
+          "number": 97,
+          "name": "Shiftry ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/67/Shiftry-ex.PK.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Power-Keepers-Expansion/Shiftry-ex-Card-97",
+          "catalogueId": "ex16-97"
+        },
+        {
+          "id": "power-keepers-98",
+          "number": 98,
+          "name": "Skarmory ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/67/Skarmory-ex.PK.98.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Power-Keepers-Expansion/Skarmory-ex-Card-98",
+          "catalogueId": "ex16-98"
+        },
+        {
+          "id": "power-keepers-99",
+          "number": 99,
+          "name": "Walrein ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/67/Walrein-ex.PK.99.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Power-Keepers-Expansion/Walrein-ex-Card-99",
+          "catalogueId": "ex16-99"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Power-Keepers.logo.67.png",
+      "catalogueExCount": 8
+    },
+    {
+      "id": "dragon-frontiers",
+      "name": "EX Dragon Frontiers",
+      "year": 2006,
+      "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/",
+      "screenshot": "IMG_6387(1).jpeg",
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "dragon-frontiers-90",
+          "number": 90,
+          "name": "Altaria ex",
+          "variant": "Delta Species",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/66/Altaria-ex-.DF.90.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Altaria-ex-delta-species-Card-90",
+          "catalogueId": "ex15-90"
+        },
+        {
+          "id": "dragon-frontiers-91",
+          "number": 91,
+          "name": "Dragonite ex",
+          "variant": "Delta Species",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/66/Dragonite-ex-delta-species.DF.91.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Dragonite-ex-delta-species-Card-91",
+          "catalogueId": "ex15-91"
+        },
+        {
+          "id": "dragon-frontiers-92",
+          "number": 92,
+          "name": "Flygon ex",
+          "variant": "Delta Species",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/66/Flygon-ex-delta-species.DF.92.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Flygon-ex-delta-species-Card-92",
+          "catalogueId": "ex15-92"
+        },
+        {
+          "id": "dragon-frontiers-93",
+          "number": 93,
+          "name": "Gardevoir ex",
+          "variant": "Delta Species",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/66/Gardevoir-ex-delta-species.DF.93.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Gardevoir-ex-delta-species-Card-93",
+          "catalogueId": "ex15-93"
+        },
+        {
+          "id": "dragon-frontiers-94",
+          "number": 94,
+          "name": "Kingdra ex",
+          "variant": "Delta Species",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/66/Kingdra-ex-delta-species.DF.94.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Kingdra-ex-delta-species-Card-94",
+          "catalogueId": "ex15-94"
+        },
+        {
+          "id": "dragon-frontiers-95",
+          "number": 95,
+          "name": "Latias ex",
+          "variant": "Delta Species",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/66/Latias-ex-.DF.95.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Latias-ex-delta-species-Card-95",
+          "catalogueId": "ex15-95"
+        },
+        {
+          "id": "dragon-frontiers-96",
+          "number": 96,
+          "name": "Latios ex",
+          "variant": "Delta Species",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/66/Latios-ex-.DF.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Latios-ex-delta-species-Card-96",
+          "catalogueId": "ex15-96"
+        },
+        {
+          "id": "dragon-frontiers-97",
+          "number": 97,
+          "name": "Rayquaza ex",
+          "variant": "Delta Species",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/66/Rayquaza-ex-delta-species.DF.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Rayquaza-ex-delta-species-Card-97",
+          "catalogueId": "ex15-97"
+        },
+        {
+          "id": "dragon-frontiers-98",
+          "number": 98,
+          "name": "Salamence ex",
+          "variant": "Delta Species",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/66/Salamence-ex-delta-species.DF.98.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Salamence-ex-delta-species-Card-98",
+          "catalogueId": "ex15-98"
+        },
+        {
+          "id": "dragon-frontiers-99",
+          "number": 99,
+          "name": "Tyranitar ex",
+          "variant": "Delta Species",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/66/Tyranitar-ex-delta-species.DF.99.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Dragon-Frontiers-Expansion/Tyranitar-ex-delta-species-Card-99",
+          "catalogueId": "ex15-99"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Dragon-Frontiers.logo.66.png",
+      "catalogueExCount": 10
+    },
+    {
+      "id": "crystal-guardians",
+      "name": "EX Crystal Guardians",
+      "year": 2006,
+      "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/",
+      "screenshot": "IMG_6388(1).jpeg",
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "crystal-guardians-89",
+          "number": 89,
+          "name": "Aggron ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/65/Aggron-ex.CG.89.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Aggron-ex-Card-89",
+          "catalogueId": "ex14-89"
+        },
+        {
+          "id": "crystal-guardians-90",
+          "number": 90,
+          "name": "Blaziken ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/65/Blaziken-ex.CG.90.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Blaziken-ex-Card-90",
+          "catalogueId": "ex14-90"
+        },
+        {
+          "id": "crystal-guardians-91",
+          "number": 91,
+          "name": "Delcatty ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/65/Delcatty-ex.CG.91.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Delcatty-ex-Card-91",
+          "catalogueId": "ex14-91"
+        },
+        {
+          "id": "crystal-guardians-92",
+          "number": 92,
+          "name": "Exploud ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/65/Exploud-ex.CG.92.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Exploud-ex-Card-92",
+          "catalogueId": "ex14-92"
+        },
+        {
+          "id": "crystal-guardians-93",
+          "number": 93,
+          "name": "Groudon ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/65/Groudon-ex.CG.93.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Groudon-ex-Card-93",
+          "catalogueId": "ex14-93"
+        },
+        {
+          "id": "crystal-guardians-94",
+          "number": 94,
+          "name": "Jirachi ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/65/Jirachi-ex.CG.94.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Jirachi-ex-Card-94",
+          "catalogueId": "ex14-94"
+        },
+        {
+          "id": "crystal-guardians-95",
+          "number": 95,
+          "name": "Kyogre ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/65/Kyogre-ex.CG.95.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Kyogre-ex-Card-95",
+          "catalogueId": "ex14-95"
+        },
+        {
+          "id": "crystal-guardians-96",
+          "number": 96,
+          "name": "Sceptile ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/65/Sceptile-ex.CG.96.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Sceptile-ex-Card-96",
+          "catalogueId": "ex14-96",
+          "variant": "Delta Species"
+        },
+        {
+          "id": "crystal-guardians-97",
+          "number": 97,
+          "name": "Shiftry ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/65/Shiftry-ex.CG.97.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Shiftry-ex-Card-97",
+          "catalogueId": "ex14-97"
+        },
+        {
+          "id": "crystal-guardians-98",
+          "number": 98,
+          "name": "Swampert ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/65/Swampert-ex.CG.98.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Crystal-Guardians-Expansion/Swampert-ex-Card-98",
+          "catalogueId": "ex14-98"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Crystal-Guardians.logo.65.png",
+      "catalogueExCount": 10
+    },
+    {
+      "id": "holon-phantoms",
+      "name": "EX Holon Phantoms",
+      "year": 2006,
+      "sourceUrl": "https://www.pokellector.com/EX-Holon-Phantoms-Expansion/",
+      "screenshot": "IMG_6389(1).jpeg",
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "holon-phantoms-99",
+          "number": 99,
+          "name": "Crawdaunt ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/64/Crawdaunt-ex.HP.99.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Holon-Phantoms-Expansion/Crawdaunt-ex-Card-99",
+          "catalogueId": "ex13-99"
+        },
+        {
+          "id": "holon-phantoms-100",
+          "number": 100,
+          "name": "Mew ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/64/Mew-ex.HP.100.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Holon-Phantoms-Expansion/Mew-ex-Card-100",
+          "catalogueId": "ex13-100"
+        },
+        {
+          "id": "holon-phantoms-101",
+          "number": 101,
+          "name": "Mightyena ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/64/Mightyena-ex.HP.101.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Holon-Phantoms-Expansion/Mightyena-ex-Card-101",
+          "catalogueId": "ex13-101"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Holon-Phantoms.logo.64.png",
+      "catalogueExCount": 3
+    },
+    {
+      "id": "legend-maker",
+      "name": "EX Legend Maker",
+      "year": 2006,
+      "sourceUrl": "https://www.pokellector.com/EX-Legend-Maker-Expansion/",
+      "screenshot": "IMG_6390(1).jpeg",
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "legend-maker-83",
+          "number": 83,
+          "name": "Arcanine ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/63/Arcanine-ex.LM.83.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Legend-Maker-Expansion/Arcanine-ex-Card-83",
+          "catalogueId": "ex12-83"
+        },
+        {
+          "id": "legend-maker-84",
+          "number": 84,
+          "name": "Armaldo ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/63/Armaldo-ex.LM.84.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Legend-Maker-Expansion/Armaldo-ex-Card-84",
+          "catalogueId": "ex12-84"
+        },
+        {
+          "id": "legend-maker-85",
+          "number": 85,
+          "name": "Banette ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/63/Banette-ex.LM.85.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Legend-Maker-Expansion/Banette-ex-Card-85",
+          "catalogueId": "ex12-85"
+        },
+        {
+          "id": "legend-maker-86",
+          "number": 86,
+          "name": "Dustox ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/63/Dustox-ex.LM.86.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Legend-Maker-Expansion/Dustox-ex-Card-86",
+          "catalogueId": "ex12-86"
+        },
+        {
+          "id": "legend-maker-87",
+          "number": 87,
+          "name": "Flygon ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/63/Flygon-ex.LM.87.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Legend-Maker-Expansion/Flygon-ex-Card-87",
+          "catalogueId": "ex12-87"
+        },
+        {
+          "id": "legend-maker-88",
+          "number": 88,
+          "name": "Mew ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/63/Mew-ex.LM.88.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Legend-Maker-Expansion/Mew-ex-Card-88",
+          "catalogueId": "ex12-88"
+        },
+        {
+          "id": "legend-maker-89",
+          "number": 89,
+          "name": "Walrein ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/63/Walrein-ex.LM.89.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Legend-Maker-Expansion/Walrein-ex-Card-89",
+          "catalogueId": "ex12-89"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Legend-Maker.logo.63.png",
+      "catalogueExCount": 7
+    },
+    {
+      "id": "delta-species",
+      "name": "EX Delta Species",
+      "year": 2005,
+      "sourceUrl": "https://www.pokellector.com/EX-Delta-Species-Expansion/",
+      "screenshot": "IMG_6391(1).jpeg",
+      "completeScreenshot": true,
+      "cards": [
+        {
+          "id": "delta-species-108",
+          "number": 108,
+          "name": "Flareon ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/62/Flareon-ex.DS.108.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Delta-Species-Expansion/Flareon-ex-Card-108",
+          "catalogueId": "ex11-108"
+        },
+        {
+          "id": "delta-species-109",
+          "number": 109,
+          "name": "Jolteon ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/62/Jolteon-ex.DS.109.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Delta-Species-Expansion/Jolteon-ex-Card-109",
+          "catalogueId": "ex11-109"
+        },
+        {
+          "id": "delta-species-110",
+          "number": 110,
+          "name": "Vaporeon ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/62/Vaporeon-ex.DS.110.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Delta-Species-Expansion/Vaporeon-ex-Card-110",
+          "catalogueId": "ex11-110"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Delta-Species.logo.62.png",
+      "catalogueExCount": 3
+    },
+    {
+      "id": "unseen-forces",
+      "name": "EX Unseen Forces",
+      "year": 2005,
+      "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/",
+      "screenshot": "IMG_6392(1).jpeg",
+      "completeScreenshot": false,
+      "cards": [
+        {
+          "id": "unseen-forces-101",
+          "number": 101,
+          "name": "Blissey ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/61/Blissey-ex.UF.101.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Blissey-ex-Card-101",
+          "catalogueId": "ex10-101"
+        },
+        {
+          "id": "unseen-forces-102",
+          "number": 102,
+          "name": "Espeon ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/61/Espeon-ex.UF.102.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Espeon-ex-Card-102",
+          "catalogueId": "ex10-102"
+        },
+        {
+          "id": "unseen-forces-103",
+          "number": 103,
+          "name": "Feraligatr ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/61/Feraligatr-ex.UF.103.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Feraligatr-ex-Card-103",
+          "catalogueId": "ex10-103"
+        },
+        {
+          "id": "unseen-forces-104",
+          "number": 104,
+          "name": "Ho-Oh ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/61/Ho-Oh-ex.UF.104.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Ho-Oh-ex-Card-104",
+          "catalogueId": "ex10-104"
+        },
+        {
+          "id": "unseen-forces-105",
+          "number": 105,
+          "name": "Lugia ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/61/Lugia-ex.UF.105.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Lugia-ex-Card-105",
+          "catalogueId": "ex10-105"
+        },
+        {
+          "id": "unseen-forces-106",
+          "number": 106,
+          "name": "Meganium ex",
+          "status": "collected",
+          "imageUrl": "https://den-cards.pokellector.com/61/Meganium-ex.UF.106.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Meganium-ex-Card-106",
+          "catalogueId": "ex10-106"
+        },
+        {
+          "id": "unseen-forces-107",
+          "number": 107,
+          "name": "Politoed ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/61/Politoed-ex.UF.107.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Politoed-ex-Card-107",
+          "catalogueId": "ex10-107"
+        },
+        {
+          "id": "unseen-forces-108",
+          "number": 108,
+          "name": "Scizor ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/61/Scizor-ex.UF.108.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Scizor-ex-Card-108",
+          "catalogueId": "ex10-108"
+        },
+        {
+          "id": "unseen-forces-109",
+          "number": 109,
+          "name": "Steelix ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/61/Steelix-ex.UF.109.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Steelix-ex-Card-109",
+          "catalogueId": "ex10-109"
+        },
+        {
+          "id": "unseen-forces-110",
+          "number": 110,
+          "name": "Typhlosion ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/61/Typhlosion-ex.UF.110.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Typhlosion-ex-Card-110",
+          "catalogueId": "ex10-110"
+        },
+        {
+          "id": "unseen-forces-111",
+          "number": 111,
+          "name": "Tyranitar ex",
+          "status": "hunting",
+          "imageUrl": "https://den-cards.pokellector.com/61/Tyranitar-ex.UF.111.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Tyranitar-ex-Card-111",
+          "catalogueId": "ex10-111"
+        },
+        {
+          "id": "unseen-forces-112",
+          "number": 112,
+          "name": "Umbreon ex",
+          "status": "unknown",
+          "imageUrl": "https://den-cards.pokellector.com/61/Umbreon-ex.UF.112.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Umbreon-ex-Card-112",
+          "catalogueId": "ex10-112"
+        },
+        {
+          "id": "unseen-forces-116",
+          "number": 116,
+          "name": "Rocket’s Persian ex",
+          "status": "unknown",
+          "imageUrl": "https://den-cards.pokellector.com/61/Rockets-Persian-ex.UF.116.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Rockets-Persian-ex-Card-116",
+          "catalogueId": "ex10-116"
+        },
+        {
+          "id": "unseen-forces-117",
+          "number": 117,
+          "name": "Celebi ex",
+          "status": "unknown",
+          "imageUrl": "https://den-cards.pokellector.com/61/Celebi-ex.UF.117.png",
+          "sourceUrl": "https://www.pokellector.com/EX-Unseen-Forces-Expansion/Celebi-ex-Card-117",
+          "catalogueId": "ex10-117"
+        }
+      ],
+      "logoUrl": "https://den-media.pokellector.com/logos/EX-Unseen-Forces.logo.61.png",
+      "catalogueExCount": 14
+    }
+  ]
+}
