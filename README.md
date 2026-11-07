@@ -1,24 +1,35 @@
-# Jeremiah Leow — Marketing & Digital Portfolio
+# psrmalam — Jeremiah Leow
 
-Portable static portfolio for Jeremiah Leow.
+Personal site: home, projects and companies, blog, about/CV, and the original marketing portfolio.
 
-## Structure
-- `index.html` — page structure
-- `styles.css` — visual system and responsive layout
-- `portfolio-data.js` — editable project/campaign/certification content
-- `script.js` — rendering and reveal interactions
-- `assets/` — favicon and lightweight static assets
+## Build and publish
 
-## Updating the portfolio
-Most portfolio content lives in `portfolio-data.js`. Add a new website, campaign, collaboration or certification there and it will render automatically.
+Run `node scripts/build.mjs` (Node 18+; no packages required). The generated website is in `dist/`. Pushes to `main` build and publish that directory to GitHub Pages.
 
-## Hosting
-The site is plain HTML/CSS/JS and has no Vercel dependency. A GitHub Pages deployment workflow is included as the current no-custom-domain host. The same codebase remains portable to ChatGPT/Codex Sites, Cloudflare Pages, Netlify, or another static host later.
+## Content
 
-## Privacy / NDA
-Confidential Shopify and Squarespace work is intentionally referenced generically. Do not add client names or assets without approval.
+- `content/site.json`: author, contact details and active site URL.
+- `content/projects.json`: project summaries, actual roles, contributions and links.
+- `content/posts/*.json`: dated blog posts.
+- `scripts/build.mjs`: page templates, static generation, RSS and sitemap.
+- `assets/personal.css` and `assets/personal.js`: design and mobile navigation.
+- `portfolio.html`, `portfolio-data.js`, `styles.css`, `overrides.css`, `script.js`: original marketing portfolio.
+- `assets/`: original portrait, résumé, favicon and unmodified InsourceAI logo.
 
-## Reference portfolio deck
-The original PDF portfolio is reference material only and is intentionally not included, linked, or distributed from this repository.
+## Publish a blog post
 
-<!-- deployment refresh -->
+Add a JSON file under `content/posts/`, following the welcome post. Required fields: `slug`, `title`, `date` (YYYY-MM-DD, Singapore), `category`, `excerpt`, `draft` (boolean), and `body`.
+
+Body blocks support `paragraph`, `heading` and `quote` with a `text` string, or `list` with an `items` array of strings. Text is escaped; raw HTML is not executed. Published posts get individual URLs and appear on the blog, homepage, RSS feed and sitemap after a build.
+
+Keep `draft: true` until ready, then change it to `false` and commit. Future-dated posts are excluded until a build runs on or after that date. Scheduled publication is not configured; run the deployment manually when needed. **This repository is public: drafts are omitted from the website but remain readable on GitHub. Keep private notes outside the repository.**
+
+There is no website admin login or database. Update content on GitHub or ask the assistant to prepare and publish a post.
+
+## Domain
+
+See `HOSTING.md`. The active site URL stays on GitHub Pages until the domain is connected. Then set `content/site.json` to `https://psrmalam.com` and rebuild.
+
+## Existing work
+
+The original CV page is preserved at `portfolio.html`. Old section hashes redirect there from the homepage; the résumé file path is unchanged. Confidential Shopify and Squarespace client work stays unnamed. Do not add client names or assets without approval. The original reference portfolio deck is not distributed.

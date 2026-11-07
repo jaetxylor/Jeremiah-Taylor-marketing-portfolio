@@ -1,4 +1,4 @@
-name: Deploy portfolio to GitHub Pages
+name: Deploy psrmalam to GitHub Pages
 
 on:
   push:
@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Build personal site and blog
+        run: node scripts/build.mjs
       - name: Configure and enable Pages
         uses: actions/configure-pages@v5
         with:
@@ -30,7 +32,7 @@ jobs:
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

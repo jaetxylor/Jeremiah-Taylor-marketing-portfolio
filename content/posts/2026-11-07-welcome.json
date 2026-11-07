@@ -1,0 +1,16 @@
+{
+  "slug": "a-home-for-work-and-ideas",
+  "title": "A home for work, projects and everything in between.",
+  "date": "2026-11-07",
+  "category": "Site notes",
+  "excerpt": "Introducing psrmalam: a place for the things i build, the work i do and the ideas i want to explore.",
+  "draft": false,
+  "body": [
+    {"type": "paragraph", "text": "Welcome to psrmalam. This is my personal corner of the internet: a place to bring together the companies and projects i am working on, my past work, and a growing collection of notes."},
+    {"type": "heading", "text": "What lives here"},
+    {"type": "paragraph", "text": "Projects brings together work across AI, websites, brands and communications. That includes InsourceAI, Golden Wax and selected projects from my marketing portfolio. Each entry explains what the project is and my role in it."},
+    {"type": "paragraph", "text": "The blog gives me somewhere to write about AI, marketing, building businesses and other things that catch my attention. About holds my background and résumé, while the full portfolio keeps the detail of my earlier work in one place."},
+    {"type": "heading", "text": "Room to grow"},
+    {"type": "paragraph", "text": "This is the starting point. As projects develop and new ideas take shape, there will be more to share here."}
+  ]
+}
