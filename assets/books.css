@@ -1,0 +1,10 @@
+.books-page{padding-bottom:55px}.books-page .page-top{padding-bottom:30px}
+.reading-empty{border:1px solid var(--line);border-radius:20px;padding:44px 24px;text-align:center;background:var(--card)}
+.reading-empty svg{display:block;margin:0 auto 22px;color:#bed9ff}
+.reading-empty h2{font-size:clamp(24px,3.4vw,36px);letter-spacing:-.035em;margin:0 0 12px}
+.reading-empty p{font-size:15px;color:var(--muted);line-height:1.7;margin:0}
+.reading-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.reading-list li{display:grid;grid-template-columns:45px minmax(0,1fr);gap:20px;padding:28px 0;border-bottom:1px solid var(--line)}
+.reading-number{font:12px/2 ui-monospace,monospace;color:var(--muted)}
+.reading-list h2{font-size:clamp(24px,3vw,36px);letter-spacing:-.035em;margin:0;overflow-wrap:anywhere}
+.reading-author{color:var(--muted);font-size:14px;margin:8px 0 0}.reading-note{font-size:16px;line-height:1.75;max-width:720px;white-space:pre-line}

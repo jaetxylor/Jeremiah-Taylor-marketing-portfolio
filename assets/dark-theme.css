@@ -412,3 +412,15 @@ body[data-page="about"] #resume { margin-top: clamp(32px, 6vw, 72px); }
 }
 .mascot-foreground { transform: translateX(42px); }
 .mascot-stage[data-reaction="dance"] .mascot-foreground { transform: none; }
+
+/* Reuse pose 4 and the running bounce from the original intro animation. */
+.run-header{display:grid;grid-template-columns:minmax(0,1fr) 154px;gap:12px 18px;align-items:center}
+.run-header .run-eyebrow{grid-column:1/-1;margin:0}
+.run-heading-copy{min-width:0}.run-header .run-source{margin-top:20px;font-size:15px;line-height:1.7}
+.running-character{position:relative;width:154px;height:154px;pointer-events:none}
+.runner-sprite{display:block;width:100%;height:100%;background-image:url('/assets/hero/jae-sprites.png');background-size:300% 200%;background-position:50% 100%;background-repeat:no-repeat;animation:jae-run-bounce .78s linear infinite;transform-origin:50% 80%}
+.runner-trail{position:absolute;left:4%;bottom:22%;width:15%;height:2px;border-radius:2px;background:#70b7ea;box-shadow:-6px -6px 0 #70b7ea;animation:jae-run-trail .78s linear infinite}
+@keyframes jae-run-bounce{0%,50%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-5px) rotate(2deg)}75%{transform:translateY(-5px) rotate(-2deg)}}
+@keyframes jae-run-trail{0%{opacity:0;transform:translateX(3px)}35%{opacity:.6}100%{opacity:0;transform:translateX(-9px)}}
+@media(max-width:600px){.run-header{grid-template-columns:minmax(0,1fr) 112px;gap:10px}.running-character{width:112px;height:112px}.run-header h1{font-size:clamp(26px,7.2vw,32px);line-height:1.1}.run-header .run-source{font-size:13px;margin-top:18px}.run-header .run-eyebrow{font-size:9px;letter-spacing:.07em}}
+@media(prefers-reduced-motion:reduce){.runner-sprite,.runner-trail{animation:none}.runner-trail{display:none}}

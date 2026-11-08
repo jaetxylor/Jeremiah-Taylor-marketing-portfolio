@@ -136,3 +136,7 @@ Add a `tags` array to each post JSON, for example `"tags": ["AI", "Work"]`. Post
 `/guestbook/` is an interactive book connected to the PSRMalam guest book service. Visitor submissions remain pending until approved. The **Manage entries** link opens the owner sign-in and moderation desk, with Awaiting approval, In the book and Hidden tabs. Hide and restore are reversible. The service stores entries in its database; entries do not live in this static repository.
 
 Public UI: `scripts/guestbook.mjs`, `assets/guestbook.css`, `assets/guestbook.js`. The service origin is declared in the guest book markup. Do not place credentials in this repository.
+
+### Reading list
+
+The Books tab at `/hobby/books/` reads `content/books.json`. Keep `year` set to the reading year and add completed books to `books` in display order, with `title`, `author`, and optional `notes`. An empty list displays a coming-soon message without implying that no books have been read.
