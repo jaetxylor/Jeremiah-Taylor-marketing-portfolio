@@ -1,7 +1,7 @@
 import { mascotMark } from './mascot.mjs';
 
 export function renderGuestbook() {
-  return `<section class="wrap guestbook-intro"><p class="eyebrow">A little hello, kept here</p><h1>The guest book.</h1><p class="intro">You were here. Leave your name, a memory or a little nonsense.<br>i would love to hear from you.</p><div class="guestbook-intro-links"><a class="text-link" href="#sign-book">Sign the book</a><a class="guestbook-admin-link" href="https://psrmalam-guestbook.jaetxylor.chatgpt.site/admin">Admin · Manage entries</a></div></section>
+  return `<section class="wrap guestbook-intro"><p class="eyebrow">A little hello, kept here</p><h1>The guest book.</h1><p class="intro">You were here. Leave your name, a memory or a little nonsense.<br>i would love to hear from you.</p><div class="guestbook-intro-links"><a class="text-link" href="#sign-book">Sign the book</a></div></section>
 <section class="wrap book-section" aria-label="Read the guest book" data-guestbook data-api="https://psrmalam-guestbook.jaetxylor.chatgpt.site">
   <div class="book-stage" tabindex="0" aria-label="Guest book. Use the left and right arrow keys to turn pages.">
     <div class="guest-book is-closed">
@@ -15,7 +15,7 @@ export function renderGuestbook() {
   <div class="book-feedback"><p data-book-status role="status"></p><button type="button" data-book-retry hidden>Try again</button></div>
   <noscript><p>Turn on JavaScript to open the book and leave a message.</p></noscript>
 </section>
-<section class="wrap sign-book" id="sign-book"><div><p class="eyebrow">Make yourself at home</p><h2>Leave a little<br><em>something.</em></h2><p>Just your name and a note. Messages appear in the book after i approve them.</p><a class="guestbook-manage" href="https://psrmalam-guestbook.jaetxylor.chatgpt.site/admin">Manage entries</a></div>
+<section class="wrap sign-book" id="sign-book"><div><p class="eyebrow">Make yourself at home</p><h2>Leave a little<br><em>something.</em></h2><p>Just your name and a note. Messages appear in the book after i approve them.</p></div>
   <form class="guestbook-form"><label for="guest-name">Your name</label><input id="guest-name" name="name" autocomplete="name" maxlength="60" required placeholder="What should i call you?">
   <label for="guest-message">Your message</label><textarea id="guest-message" name="message" maxlength="600" rows="6" required placeholder="A hello, a memory, a recommendation…"></textarea><p class="message-count"><span data-message-count>0</span> / 600</p>
   <div class="guestbook-trap" aria-hidden="true"><label for="guest-website">Leave this field empty</label><input id="guest-website" name="website" tabindex="-1" autocomplete="off"></div>

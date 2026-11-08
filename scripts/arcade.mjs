@@ -7,7 +7,7 @@ const games = [
 export function renderArcade() {
  return `<div class="wrap games-page arcade-page" data-arcade>
  <div class="arcade-layout">
-  <header class="arcade-intro"><p class="eyebrow">Hobby / Player one</p><h1>Welcome to <br><em>my arcade.</em></h1><p>A long-running hunt. A Cecilion main.<br>A Pokédex that is never quite finished.</p><p class="arcade-instruction"><span aria-hidden="true">↗</span> Pick a game on the screen<br>to see my stats and collection.</p><button class="arcade-motion" type="button" data-arcade-motion aria-pressed="false" hidden>Pause animation</button></header>
+  <header class="arcade-intro"><p class="eyebrow">Hobby / Player one</p><h1>Welcome to <br><em>my arcade.</em></h1><p>A long-running hunt. A Cecilion main.<br>A Pokédex that is never quite finished.</p><p class="arcade-instruction"><span aria-hidden="true">↗</span> Pick a game on the screen <br>to see my stats and collection.</p></header>
   <div class="arcade-scene">
    <svg class="arcade-cabinet" viewBox="0 0 720 760" role="img" aria-label="Jae’s cartoon character, seen from behind in his red jester hat with blue hydrangeas tucked into his back pocket, playing at an arcade machine." focusable="false">
     <defs>

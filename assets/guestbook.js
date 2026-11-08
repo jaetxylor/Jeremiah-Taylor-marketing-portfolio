@@ -13,7 +13,7 @@
   const retry = root.querySelector('[data-book-retry]');
   const mobile = matchMedia('(max-width:640px)');
   const reduced = matchMedia('(prefers-reduced-motion:reduce)');
-  let current = 0, total = 0, totalPages = 1, busy = false;
+  let current = 0, total = 0, totalPages = 1, busy = false, retryTarget = 1;
   const maxView = () => mobile.matches ? Math.max(1, total) : totalPages;
   async function request(path, options = {}) {
     const controller = new AbortController();
@@ -54,6 +54,7 @@
   async function turn(target, animate = true) {
     if (busy) return;
     if (target === 0) { current = 0; book.classList.add('is-closed'); controls(); return; }
+    retryTarget = target;
     busy = true; status.textContent = ''; retry.hidden = true; controls();
     try {
       const apiPage = mobile.matches ? Math.ceil(target / 2) : target;
@@ -77,7 +78,7 @@
   cover.addEventListener('click',()=>turn(1));
   next.addEventListener('click',()=>turn(current+1));
   prev.addEventListener('click',()=>turn(Math.max(0,current-1)));
-  retry.addEventListener('click',()=>turn(current || 1));
+  retry.addEventListener('click',()=>turn(retryTarget));
   stage.addEventListener('keydown',event=>{
     if (event.key === 'ArrowRight' && !next.disabled) {event.preventDefault();turn(current+1);}
     if (event.key === 'ArrowLeft' && !prev.disabled) {event.preventDefault();turn(current-1);}
@@ -104,7 +105,7 @@
     return tokenRequest;
   }
   form.addEventListener('focusin',()=>{challenge().catch(()=>{});});
-  message.addEventListener('input',()=>{count.textContent=String([...message.value].length);});
+  message.addEventListener('input',()=>{count.textContent=String(message.value.length);});
   form.addEventListener('submit',async event=>{
     event.preventDefault(); if (submit.disabled || !form.reportValidity()) return;
     submit.disabled = true; submit.textContent = 'Sending your note…';

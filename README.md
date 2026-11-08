@@ -133,7 +133,7 @@ Add a `tags` array to each post JSON, for example `"tags": ["AI", "Work"]`. Post
 
 ### Guest book
 
-`/guestbook/` is an interactive book connected to the PSRMalam guest book service. Visitor submissions remain pending until approved. The **Manage entries** link opens the owner sign-in and moderation desk, with Awaiting approval, In the book and Hidden tabs. Hide and restore are reversible. The service stores entries in its database; entries do not live in this static repository.
+`/guestbook/` is an interactive book connected to the PSRMalam guest book service. Visitor submissions remain pending until approved. The **admin** link in the footer opens the owner sign-in and moderation desk, with Awaiting approval, In the book and Hidden tabs. Hide and restore are reversible. The service stores entries in its database; entries do not live in this static repository.
 
 Public UI: `scripts/guestbook.mjs`, `assets/guestbook.css`, `assets/guestbook.js`. The service origin is declared in the guest book markup. Do not place credentials in this repository.
 
