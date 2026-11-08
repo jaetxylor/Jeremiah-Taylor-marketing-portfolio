@@ -151,3 +151,23 @@
 .comics-heading-foot .comics-updated{margin:0;padding-bottom:16px}
 .comics-costume{display:block;width:112px;height:112px;flex-shrink:0;align-self:flex-end}
 @media(max-width:680px){.comics-heading-foot{padding-right:18%;gap:8px}.comics-costume{width:90px;height:90px}.comics-heading-foot .comics-updated{font-size:10px}}
+
+/* A quiet, tap-to-discover transformation; the footprint never changes. */
+button.comics-costume{padding:0;border:0;background:transparent;border-radius:12px;line-height:0;color:inherit;touch-action:manipulation;-webkit-tap-highlight-color:transparent;cursor:pointer}
+button.comics-costume:disabled{cursor:default}
+.comics-costume svg{display:block;width:100%;height:100%;overflow:visible}
+.comics-costume:focus-visible{outline:2px solid #bed9ff;outline-offset:6px}
+.optimus-head{transform-origin:90px 110px;transition:transform .38s .26s ease,opacity .25s .28s ease}
+.optimus-left-arm{transform-origin:50px 116px;transition:transform .4s .2s ease,opacity .25s .25s ease}
+.optimus-right-arm{transform-origin:130px 116px;transition:transform .4s .2s ease,opacity .25s .25s ease}
+.optimus-chest{transform-origin:90px 170px;transition:transform .4s .13s ease,opacity .3s .13s ease}
+.optimus-truck{opacity:0;transform:translate(8px,12px) scale(.72);transform-origin:90px 166px;transition:transform .45s ease,opacity .2s ease;pointer-events:none}
+[data-mode=truck] .optimus-head{transform:translateY(58px) scale(.35);opacity:0;transition-delay:0s}
+[data-mode=truck] .optimus-left-arm{transform:translate(20px,10px) rotate(-65deg);opacity:0;transition-delay:.07s}
+[data-mode=truck] .optimus-right-arm{transform:translate(-20px,10px) rotate(65deg);opacity:0;transition-delay:.07s}
+[data-mode=truck] .optimus-chest{transform:translateY(4px) scale(.85,.5);opacity:0;transition-delay:.18s}
+[data-mode=truck] .optimus-truck{opacity:1;transform:translate(0,0) scale(1);transition-delay:.35s}
+.optimus-wheel-spokes{transform-box:fill-box;transform-origin:center}
+[data-mode=truck] .optimus-wheel-spokes{animation:optimus-roll .65s .55s linear 2}
+@keyframes optimus-roll{to{transform:rotate(-360deg)}}
+@media(prefers-reduced-motion:reduce){.comics-costume svg *{transition:none!important;animation:none!important}}

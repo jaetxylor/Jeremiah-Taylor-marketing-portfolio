@@ -27,3 +27,15 @@
 .travel-rocket{display:block;width:170px;height:auto}
 .travel-heading-side .travel-count{margin-right:8px}
 @media(max-width:680px){.travel-heading:has(.travel-heading-side){display:grid;grid-template-columns:minmax(0,1fr) 128px;gap:12px;align-items:end}.travel-heading-side{gap:12px;padding-bottom:0}.travel-heading-side .travel-count{margin-right:0}.travel-rocket{width:128px}.travel-heading:has(.travel-heading-side) h1{font-size:clamp(30px,9vw,37px)}}
+
+.travel-rocket{overflow:visible}
+.rocket-flight{transform-origin:170px 108px;animation:rocket-cruise 3.8s ease-in-out infinite}
+.rocket-flame{transform-origin:65px 110px;animation:rocket-thrust .38s ease-in-out infinite alternate}
+.rocket-eyes{transform-box:fill-box;transform-origin:center;animation:rocket-blink 5.4s ease-in-out infinite}
+.rocket-trails path{animation:rocket-trail 1.3s ease-out infinite}
+.rocket-trails path:nth-child(2){animation-delay:-.45s}.rocket-trails path:nth-child(3){animation-delay:-.9s}
+@keyframes rocket-cruise{0%,100%{transform:translate(-2px,2px) rotate(0deg)}50%{transform:translate(3px,-5px) rotate(-2deg)}}
+@keyframes rocket-thrust{from{transform:scale(.8,.88);opacity:.75}to{transform:scale(1.08,1.04);opacity:1}}
+@keyframes rocket-trail{0%{transform:translateX(9px);opacity:0}25%{opacity:.8}100%{transform:translateX(-5px);opacity:0}}
+@keyframes rocket-blink{0%,43%,47%,100%{transform:scaleY(1)}45%{transform:scaleY(.12)}}
+@media(prefers-reduced-motion:reduce){.travel-rocket *{animation:none!important}}

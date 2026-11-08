@@ -13,6 +13,16 @@
     }
     return;
   }
+  const optimus = root.querySelector('[data-optimus-toggle]');
+  if (optimus) {
+    optimus.disabled = false;
+    optimus.addEventListener('click', () => {
+      const truck = optimus.dataset.mode !== 'truck';
+      optimus.dataset.mode = truck ? 'truck' : 'robot';
+      optimus.setAttribute('aria-pressed', String(truck));
+      optimus.setAttribute('aria-label', truck ? 'Transform Optimus Prime back into Jae' : 'Transform Jae into G1 Optimus Prime truck mode');
+    });
+  }
   const cards = [...root.querySelectorAll('[data-comic-card]')];
   const series = [...root.querySelectorAll('[data-comics-series]')];
   const franchises = [...root.querySelectorAll('[data-comics-franchise]')];
