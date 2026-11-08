@@ -52,7 +52,7 @@ const poses = {projects:['board',board],experience:['laptop',laptop],blog:['writ
 export function sectionMascot(section) {
  const pose = poses[section];
  if (!pose) return '';
- return `<div class="section-mascot" data-section-mascot="${pose[0]}"><svg class="section-mascot-art" viewBox="0 0 290 250" width="290" height="250" aria-hidden="true" focusable="false">${pose[1]}</svg><button class="section-mascot-toggle" type="button" aria-label="Pause character animation" title="Pause character animation" aria-pressed="false" hidden><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path class="mascot-pause-icon" d="M8 5V19M16 5V19" fill="none" stroke="currentColor" stroke-width="3"/><path class="mascot-play-icon" d="M8 5L19 12L8 19Z" fill="currentColor"/></svg></button></div>`;
+ return `<div class="section-mascot" data-section-mascot="${pose[0]}"><svg class="section-mascot-art" viewBox="0 0 290 250" width="290" height="250" aria-hidden="true" focusable="false">${pose[1]}</svg></div>`;
 }
 
 export function addSectionMascot(body, section) {
