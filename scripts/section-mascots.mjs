@@ -60,6 +60,11 @@ export function addSectionMascot(body, section) {
  const pattern = section === 'experience'
    ? /(<(?:div|header)\b[^>]*class=")([^"]*\bsection-head(?:ing)?\b[^"]*)("[^>]*>)/
    : /(<header\b[^>]*class=")([^"]*\b(?:page-top|article-header)\b[^"]*)("[^>]*>)/;
- if (!pattern.test(body)) throw new Error(`Missing mascot heading for ${section}`);
- return body.replace(pattern,(_,start,classes,end)=>`${start}${classes} section-mascot-host${end}${sectionMascot(section)}`);
+ const host = pattern.exec(body);
+ if (!host) throw new Error(`Missing mascot heading for ${section}`);
+ const prefix = body.slice(0, host.index) + `${host[1]}${host[2]} section-mascot-host${host[3]}`;
+ const contents = body.slice(host.index + host[0].length);
+ const heading = /<h([12])\b[^>]*>[\s\S]*?<\/h\1>/;
+ if (!heading.test(contents)) throw new Error(`Missing title for ${section}`);
+ return prefix + contents.replace(heading, title => `<div class="section-heading-row">${title}${sectionMascot(section)}</div>`);
 }

@@ -1,14 +1,17 @@
-/* Reserve real space beside the heading: the character never overlays copy. */
-.section-mascot-host{position:relative;padding-right:310px;min-height:310px}
-.section-mascot{position:absolute;right:0;top:48px;width:270px;line-height:0;isolation:isolate}
+/* Every pose shares a compact size and sits beside the actual heading. */
+.section-mascot-host{--section-mascot-width:176px}
+.section-heading-row{display:grid;grid-template-columns:minmax(0,1fr) var(--section-mascot-width);align-items:center;gap:28px;width:100%}
+.section-mascot-host .section-heading-row>:is(h1,h2){min-width:0;margin:0;overflow-wrap:anywhere}
+.page-top.section-mascot-host .section-heading-row,.article-header.section-mascot-host .section-heading-row{margin-top:18px}
+.article-header.section-mascot-host .section-heading-row{margin-bottom:24px}
+:is(.section-head,.section-heading).section-mascot-host{display:block}
+.section-heading.section-mascot-host .section-heading-row{margin-top:18px}
+:is(.section-head,.section-heading).section-mascot-host>p{margin-top:20px;max-width:670px}
+.section-mascot{position:relative;width:var(--section-mascot-width);line-height:0;isolation:isolate;justify-self:end;align-self:center}
 .section-mascot-art{display:block;width:100%;height:auto;overflow:visible}
-:is(.section-head,.section-heading).section-mascot-host{min-height:250px;padding-right:300px}
-:is(.section-head,.section-heading).section-mascot-host>.section-mascot{top:0}
-.article-header.section-mascot-host{padding-right:240px;min-height:235px}
-.article-header>.section-mascot{width:210px;top:4px}
 .blog-intro.section-mascot-host{display:block}
 .blog-intro.section-mascot-host>.text-link{display:inline-block;margin-top:22px}
-.section-mascot-toggle{position:absolute;right:6px;bottom:-12px;display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;background:var(--bg);color:var(--muted);padding:0;cursor:pointer;line-height:1}
+.section-mascot-toggle{position:absolute;right:0;bottom:-8px;display:grid;place-items:center;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;background:var(--bg);color:var(--muted);padding:0;cursor:pointer;line-height:1}
 .section-mascot-toggle:hover{color:var(--ink);border-color:var(--muted)}
 .section-mascot-toggle:focus-visible{outline:2px solid #bed9ff;outline-offset:4px}
 .mascot-play-icon{display:none}
@@ -28,15 +31,13 @@
 @keyframes mascot-ink{0%,12%{stroke-dashoffset:24;opacity:0}22%{opacity:1}72%,90%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
 @keyframes mascot-concentrate{0%,100%{transform:rotate(0deg)}50%{transform:rotate(1.5deg)}}
 @keyframes mascot-blink{0%,43%,47%,100%{transform:scaleY(1)}45%{transform:scaleY(.12)}}
-@media(min-width:721px) and (max-width:1050px){.section-mascot-host{padding-right:235px}.section-mascot{width:215px}:is(.section-head,.section-heading).section-mascot-host{padding-right:235px}.article-header.section-mascot-host{padding-right:210px}.article-header>.section-mascot{width:190px}}
+
 @media(max-width:720px){
- .section-mascot-host,:is(.section-head,.section-heading).section-mascot-host,.article-header.section-mascot-host{padding-right:0;padding-top:160px;min-height:0}
- .section-mascot-host>.section-mascot,:is(.section-head,.section-heading).section-mascot-host>.section-mascot,.article-header>.section-mascot{top:8px;right:0;width:160px}
- .section-mascot-host>.eyebrow,.section-mascot-host>div:not(.section-mascot)>.eyebrow{position:absolute;left:0;top:73px;max-width:calc(100% - 178px);line-height:1.7}
- .section-mascot-host>.back-link{position:absolute;top:24px;left:0;max-width:calc(100% - 175px);margin:0}
- .section-mascot-host .section-mascot-toggle{width:28px;height:28px;right:0;bottom:-3px}
- :is(.section-head,.section-heading).section-mascot-host{gap:20px}
+ .section-mascot-host{--section-mascot-width:96px}
+ .section-heading-row{gap:12px}
+ .section-mascot-host .section-heading-row>:is(h1,h2){font-size:clamp(32px,10vw,42px);line-height:1.06;letter-spacing:-.055em}
+ .section-mascot-toggle{width:24px;height:24px;bottom:-8px}
+ .section-mascot-toggle svg{width:12px;height:12px}
  .blog-intro.section-mascot-host>.text-link{margin-top:20px}
- .article-header.section-mascot-host h1{margin-top:16px}
 }
 @media(prefers-reduced-motion:reduce){.section-mascot-art *{animation:none!important}.section-mascot-toggle{display:none!important}.pose-ink{stroke-dashoffset:0}}
