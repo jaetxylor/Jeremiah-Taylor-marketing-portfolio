@@ -144,3 +144,10 @@
 @media (prefers-reduced-motion: reduce) { .comic-cover-image { transition: none; } }
 
 .hobby-grid > .hobby-card:only-child { grid-column: 1 / -1; }
+
+/* Jae peeks over the collection divider, as on the TCG page. */
+.comics-heading{max-width:none;padding-bottom:0}
+.comics-heading-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:12px;padding-right:18%}
+.comics-heading-foot .comics-updated{margin:0;padding-bottom:16px}
+.comics-costume{display:block;width:112px;height:112px;flex-shrink:0;align-self:flex-end}
+@media(max-width:680px){.comics-heading-foot{padding-right:18%;gap:8px}.comics-costume{width:90px;height:90px}.comics-heading-foot .comics-updated{font-size:10px}}

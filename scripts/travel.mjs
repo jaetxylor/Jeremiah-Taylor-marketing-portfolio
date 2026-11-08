@@ -33,7 +33,7 @@ export function loadTravel(root) {
 export function renderTravel(destinations) {
   const home = destinations.find(d=>d.home) || destinations[0];
   return `<div class="wrap travel-page">
-    <header class="travel-heading"><div><p class="eyebrow">Hobby / Travelling</p><h1>A world of <em>memories.</em></h1><p>Places i have been. Little moments i brought home.</p></div><div class="travel-count"><strong>${destinations.length}</strong><span>places visited</span></div></header>
+    <header class="travel-heading"><div><p class="eyebrow">Hobby / Travelling</p><h1>A world of <em>memories.</em></h1><p>Places i have been. Little moments i brought home.</p></div><div class="travel-heading-side"><div class="travel-count"><strong>${destinations.length}</strong><span>places visited</span></div><img class="travel-rocket" src="/assets/hobby-characters/rocket-jae.svg" width="310" height="170" alt="Jae flying in a horizontal rocket ship"></div></header>
     <section class="travel-explorer" aria-label="Explore my travels">
       <div class="globe-area">
         <div class="globe-topline"><span>JAE’S TRAVEL ATLAS</span><span class="globe-live">● &nbsp; Based in Singapore</span></div>
