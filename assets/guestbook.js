@@ -34,7 +34,11 @@
   function renderPage(page, entry, number) {
     page.replaceChildren(textElement('p','page-kicker','Notes from friends'));
     if (entry) {
-      page.append(textElement('p','entry-message',entry.message),textElement('p','entry-signature',entry.name));
+      const message = textElement('p','entry-message',entry.message);
+      const signature = textElement('p','entry-signature',entry.name);
+      const color = /^#[0-9a-f]{6}$/i.test(entry.fontColor || '') ? entry.fontColor : '#39352b';
+      message.style.color = color; signature.style.color = color;
+      page.append(message,signature);
       const time = textElement('time','entry-date',new Date(entry.createdAt).toLocaleDateString('en-SG',{day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Singapore'}));
       time.dateTime = new Date(entry.createdAt).toISOString(); page.append(time);
     } else {
@@ -98,6 +102,17 @@
   const submit = form.querySelector('[type="submit"]');
   const formStatus = form.querySelector('.form-status');
   const count = form.querySelector('[data-message-count]');
+  const inkPreview = form.querySelector('.guestbook-note-preview');
+  const previewMessage = form.querySelector('[data-ink-preview-message]');
+  const previewName = form.querySelector('[data-ink-preview-name]');
+  function updatePreview() {
+    inkPreview.style.color = form.elements.fontColor.value;
+    previewMessage.textContent = message.value.trim() || 'Your note will look like this.';
+    previewName.textContent = form.elements.name.value.trim() || 'Your name';
+  }
+  form.addEventListener('input', updatePreview);
+  form.addEventListener('change', updatePreview);
+  updatePreview();
   let token = '', issued = 0, tokenRequest;
   async function challenge() {
     if (token && Date.now()-issued<25*60*1000) return token;
@@ -114,8 +129,8 @@
       const signedToken = await challenge();
       const wait = Math.max(0,1700-(Date.now()-issued));
       if(wait) await new Promise(resolve=>setTimeout(resolve,wait));
-      const data = await request('/api/entries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:form.elements.name.value,message:message.value,website:form.elements.website.value,token:signedToken})});
-      form.reset(); count.textContent = '0'; token = ''; issued = 0;
+      const data = await request('/api/entries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:form.elements.name.value,message:message.value,fontColor:form.elements.fontColor.value,website:form.elements.website.value,token:signedToken})});
+      form.reset(); updatePreview(); count.textContent = '0'; token = ''; issued = 0;
       formStatus.textContent = data.message || 'Thank you. Your note is waiting for Jae’s approval.';
     } catch (error) {
       if(error.refreshToken){token='';issued=0;}

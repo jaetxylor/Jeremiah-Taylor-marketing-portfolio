@@ -5,7 +5,7 @@ import vm from 'node:vm';
 
 function guestbook() {
   class Element {
-    children = []; events = {}; dataset = {}; value = ''; textContent = ''; hidden = false;
+    children = []; events = {}; dataset = {}; style = {}; value = ''; textContent = ''; hidden = false;
     classList = {add() {}, remove() {}, toggle() {}};
     addEventListener(type, fn) { this.events[type] = fn; }
     setAttribute() {}
@@ -25,7 +25,7 @@ function guestbook() {
   root.querySelectorAll = () => pages;
   const form = get('.guestbook-form');
   form.querySelector = get;
-  form.elements = {message: new Element(), name: new Element(), website: new Element()};
+  form.elements = {message: new Element(), name: new Element(), website: new Element(), fontColor: Object.assign(new Element(), {value:'#39352b'})};
   const calls = [];
   let fail = false;
   vm.runInNewContext(fs.readFileSync(new URL('../assets/guestbook.js', import.meta.url), 'utf8'), {
@@ -36,7 +36,7 @@ function guestbook() {
       calls.push(url);
       if (fail) { fail = false; return {ok:false, json:async()=>({error:'Temporary failure'})}; }
       const page = Number(new URL(url).searchParams.get('page'));
-      return {ok:true, json:async()=>({total:6,pages:3,entries:[0,1].map(i=>({name:'Visitor',message:`Note ${page*2-1+i}`,createdAt:'2026-11-08T00:00:00Z'}))})};
+      return {ok:true, json:async()=>({total:6,pages:3,entries:[0,1].map(i=>({name:'Visitor',message:`Note ${page*2-1+i}`,createdAt:'2026-11-08T00:00:00Z',fontColor:i?'invalid; color:red':'#69428c'}))})};
     }
   });
   return {get, form, calls, pages, failNext() {fail = true;}};
@@ -61,4 +61,24 @@ test('guest book character count follows the textarea limit for emoji', () => {
   app.form.elements.message.value = '👋'.repeat(300);
   app.form.elements.message.fire('input');
   assert.equal(app.get('[data-message-count]').textContent, '600');
+});
+
+
+test('published notes retain their selected ink and reject invalid CSS colours', async () => {
+  const app = guestbook();
+  await app.get('.book-cover').fire('click');
+  assert.equal(app.pages[0].children[1].style.color, '#69428c');
+  assert.equal(app.pages[0].children[2].style.color, '#69428c');
+  assert.equal(app.pages[1].children[1].style.color, '#39352b');
+});
+
+test('the live preview follows the selected colour, message and signature', () => {
+  const app = guestbook();
+  app.form.elements.fontColor.value = '#245a93';
+  app.form.elements.message.value = 'A blue hello';
+  app.form.elements.name.value = 'Visitor';
+  app.form.fire('input');
+  assert.equal(app.get('.guestbook-note-preview').style.color, '#245a93');
+  assert.equal(app.get('[data-ink-preview-message]').textContent, 'A blue hello');
+  assert.equal(app.get('[data-ink-preview-name]').textContent, 'Visitor');
 });
