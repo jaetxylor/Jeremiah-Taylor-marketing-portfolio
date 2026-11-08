@@ -56,14 +56,17 @@ const reading = `${ground}${vase}
   <path d="M94 154Q78 160 76 180M137 154Q153 163 153 180" fill="none" stroke="${ink}" stroke-width="18" stroke-linecap="round"/>
   <path d="M94 154Q78 160 76 180M137 154Q153 163 153 180" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
   <g class="pose-reading-book" stroke-linejoin="round">
-   <path d="M65 151Q91 145 114 159Q138 145 164 151L163 195Q139 191 114 204Q89 191 66 195Z" fill="#98c8ec" stroke="#087bdb" stroke-width="5"/>
-   <path d="M69 148Q94 146 114 159Q136 146 160 148V189Q136 188 114 201Q92 188 69 189Z" fill="#fffdf4" stroke="${ink}" stroke-width="3"/>
-   <path d="M114 160V199M79 161Q92 161 103 168M79 172Q92 173 103 179M125 168Q138 161 150 161M125 179Q138 173 150 172" fill="none" stroke="${ink}" stroke-width="2.5" stroke-linecap="round"/>
-   <path class="pose-reading-page" d="M114 159Q136 146 160 148V189Q136 188 114 201Z" fill="#fffdf4" stroke="${ink}" stroke-width="2.5"/>
+   <!-- The outside covers face us; the open pages face Jae. -->
+   <path d="M69 155L114 143L160 155L114 151Z" fill="#fffdf4" stroke="${ink}" stroke-width="2.5"/>
+   <path class="pose-reading-page" d="M114 147Q135 131 158 153L114 152Z" fill="#fffdf4" stroke="${ink}" stroke-width="2"/>
+   <path d="M65 157L114 149L164 157V194L114 204L65 194Z" fill="#509bd1" stroke="#087bdb" stroke-width="5"/>
+   <path d="M114 150L163 157V194L114 204Z" fill="#347cad"/>
+   <path d="M114 151V202" fill="none" stroke="#0870b4" stroke-width="4" stroke-linecap="round"/>
+   <path d="M74 163L105 158M74 188L105 194M123 158L155 163M123 194L155 188" fill="none" stroke="#a9d5f3" stroke-width="2" stroke-linecap="round"/>
   </g>
   <ellipse cx="70" cy="179" rx="8" ry="10" fill="#fff" stroke="${ink}" stroke-width="4"/>
   <ellipse cx="159" cy="179" rx="8" ry="10" fill="#fff" stroke="${ink}" stroke-width="4"/>
-  ${head}
+  ${head.replaceAll('cy="105"', 'cy="113"')}
  </g>`;
 
 const poses = {books:['reading',reading],projects:['board',board],experience:['laptop',laptop],blog:['writing',writing]};
