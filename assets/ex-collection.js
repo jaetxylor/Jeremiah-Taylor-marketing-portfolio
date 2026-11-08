@@ -1,5 +1,6 @@
-(() => {
+(async () => {
   'use strict';
+  await window.psrContentReady;
   const root = document.querySelector('[data-ex-collection]');
   if (!root) return;
   const cards = [...root.querySelectorAll('[data-ex-card]')];

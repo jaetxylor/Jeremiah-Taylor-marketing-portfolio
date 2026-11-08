@@ -1,5 +1,6 @@
-(() => {
+(async () => {
   'use strict';
+  await window.psrContentReady;
 
   function watchCover(image, onError) {
     image.addEventListener('error', onError);

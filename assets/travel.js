@@ -1,5 +1,6 @@
 import {geoOrthographic, geoPath, geoContains, geoDistance, geoCentroid, geoGraticule10} from './vendor/d3-geo.mjs';
 
+await window.psrContentReady;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const canvas = document.querySelector('[data-travel-globe]');
 if (canvas) initGlobe().catch(error => {
@@ -11,6 +12,7 @@ if (canvas) initGlobe().catch(error => {
 
 async function initGlobe() {
   const [world, albums] = await Promise.all(['/assets/travel/world.json','/assets/travel/albums.json'].map(async url => {
+    if(url.endsWith('/albums.json')&&window.psrTravelAlbums)return window.psrTravelAlbums;
     const response = await fetch(url);
     if (!response.ok) throw new Error(`Could not load ${url}`);
     return response.json();

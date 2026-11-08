@@ -27,7 +27,7 @@ test('folder uploads become public photos in natural order with safe URLs and ca
     const album=loadTravel(temp).find(d=>d.slug==='japan');
     assert.equal(album.photos.length,2);assert.equal(album.photos[0].src,'/assets/travel/japan/trip%202.png');
     const html=renderTravelAlbum(album);assert.match(html,/Tokyo &amp; friends/);assert.match(html,/&lt;script&gt;alert/);assert.doesNotMatch(html,/<script>alert/);
-    assert.match(html,/upload\/main\/assets\/travel\/japan/);assert.match(html,/data-travel-photo="1"/);
+    assert.doesNotMatch(html,/Manage this album|upload\/main\/assets\/travel/);assert.match(html,/data-travel-photo="1"/);
     fs.writeFileSync(path.join(folder,'phone.HEIC'),'test');assert.throws(()=>loadTravel(temp),/Convert HEIC/);
     fs.unlinkSync(path.join(folder,'phone.HEIC'));fs.unlinkSync(path.join(folder,'trip 2.png'));assert.throws(()=>loadTravel(temp),/missing image/);
   }finally{fs.rmSync(temp,{recursive:true,force:true});}

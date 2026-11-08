@@ -1,4 +1,6 @@
 // Keep the original link usable with JavaScript disabled or embeds blocked.
+(async () => {
+await window.psrContentReady;
 document.querySelectorAll('[data-video-src]').forEach(container => {
   const button = container.querySelector('button');
   if (!button) return;
@@ -19,3 +21,5 @@ document.querySelectorAll('[data-video-src]').forEach(container => {
     frame.focus();
   }, {once:true});
 });
+
+})();

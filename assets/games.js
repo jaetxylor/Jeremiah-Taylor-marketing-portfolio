@@ -1,4 +1,5 @@
-(() => {
+(async () => {
+ await window.psrContentReady;
  const arcade=document.querySelector('[data-arcade]');
  if(arcade){
   const destinations={mousehunt:'mousehunt','mobile-legends':'mobile-legends','pokemon-go':'pokemon-go'};

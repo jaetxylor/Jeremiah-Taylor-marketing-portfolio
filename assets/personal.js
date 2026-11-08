@@ -26,6 +26,8 @@ if (toggle && nav) {
     if(event.matches) closeMenu();
   });
 }
+(async () => {
+await window.psrContentReady;
 const filters = document.querySelector('.filter-controls');
 if (filters) {
   const cards = [...document.querySelectorAll('.all-projects .project-card')];
@@ -164,3 +166,5 @@ if (mascot) {
     reset = setTimeout(() => { delete mascot.dataset.reaction; }, 2300);
   });
 }
+
+})();
