@@ -8,9 +8,9 @@ import {loadTravel,renderTravelAlbum} from './travel.mjs';
 import {geoContains} from '../assets/vendor/d3-geo.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 
-test('all 16 visited destinations have distinct map boundaries and album folders',()=>{
+test('all 15 visited destinations have distinct map boundaries and album folders',()=>{
   const albums=loadTravel(root), world=JSON.parse(fs.readFileSync(path.join(root,'assets/travel/world.json')));
-  assert.equal(albums.length,16);
+  assert.equal(albums.length,15);
   assert.deepEqual(albums.filter(d=>d.home).map(d=>d.name),['Singapore']);
   for(const album of albums){assert.ok(world.features.some(f=>f.id===album.id),album.name);assert.ok(fs.statSync(path.join(root,'assets/travel',album.slug)).isDirectory());}
   for(const [id,point] of [['840',[-100,40]],['156',[110,35]],['392',[139.7,35.7]],['250',[2.3,48.8]]]) assert.ok(geoContains(world.features.find(f=>f.id===id),point),id);
