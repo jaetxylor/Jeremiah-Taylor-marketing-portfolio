@@ -7,6 +7,11 @@ const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp
 const images = /\.(?:jpe?g|png|webp|avif|gif)$/i;
 export const albumURL = destination => `/hobby/travelling/${destination.slug}/`;
 
+function loadingShell({heading,eyebrow,copy,backLink=''}) {
+  const title=`<header class="travel-heading"><div><p class="eyebrow">${eyebrow}</p><h1>${heading}</h1><p>${copy}</p></div></header>`;
+  return `<section class="wrap travel-page travel-loading-shell">${backLink}${title}<div class="travel-loading-state" data-cms-loading role="status" aria-live="polite">Loading the latest photos and videos…</div></section><noscript><style>.travel-loading-shell{display:none}</style><section class="wrap travel-page">${backLink||'<a class="back-link" href="/hobby/">Back to hobbies</a>'}${title}<p>Please enable JavaScript to view the latest travel albums, photos and videos.</p></section></noscript>`;
+}
+
 export function loadTravel(root) {
   const {destinations} = JSON.parse(fs.readFileSync(path.join(root, 'content/travel.json'), 'utf8'));
   if (!Array.isArray(destinations)) throw new Error('Missing travel destinations');
@@ -32,7 +37,8 @@ export function loadTravel(root) {
   });
 }
 
-export function renderTravel(destinations) {
+export function renderTravel(destinations,{loading=false}={}) {
+  if(loading)return loadingShell({heading:'A world of <em>memories.</em>',eyebrow:'Hobby / Travelling',copy:'Places i have been. Little moments i brought home.'});
   const home = destinations.find(d=>d.home) || destinations[0];
   return `<div class="wrap travel-page">
     <header class="travel-heading"><div><p class="eyebrow">Hobby / Travelling</p><h1>A world of <em>memories.</em></h1><p>Places i have been. Little moments i brought home.</p></div><div class="travel-heading-side"><div class="travel-count"><strong>${destinations.length}</strong><span>places visited</span></div>${rocketArt}</div></header>
@@ -62,7 +68,8 @@ export function renderTravel(destinations) {
   </div>`;
 }
 
-export function renderTravelAlbum(destination) {
+export function renderTravelAlbum(destination,{loading=false}={}) {
+  if(loading)return loadingShell({heading:`${escape(destination.name)}<em>.</em>`,eyebrow:'Hobby / Travelling',copy:'A few moments from my travels.',backLink:`<a class="back-link" href="/hobby/travelling/?country=${escape(destination.id)}">Back to the globe</a>`});
   const {name, slug, home, photos} = destination;
   return `<article class="wrap travel-page travel-album"><a class="back-link" href="/hobby/travelling/?country=${destination.id}">Back to the globe</a>
     <header class="travel-heading"><div><p class="eyebrow">Travelling / ${home?'Home':'Visited'}</p><h1>${escape(name)}<em>.</em></h1><p>${home?'The place i call home.':'A few moments from my time here.'}</p></div><div class="travel-count"><strong>${photos.length}</strong><span>photo${photos.length===1?'':'s'}</span></div></header>

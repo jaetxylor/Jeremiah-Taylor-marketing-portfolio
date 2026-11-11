@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {loadTravel,renderTravelAlbum} from './travel.mjs';
+import {loadTravel,renderTravel,renderTravelAlbum} from './travel.mjs';
 import {geoContains} from '../assets/vendor/d3-geo.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 
@@ -31,4 +31,19 @@ test('folder uploads become public photos in natural order with safe URLs and ca
     fs.writeFileSync(path.join(folder,'phone.HEIC'),'test');assert.throws(()=>loadTravel(temp),/Convert HEIC/);
     fs.unlinkSync(path.join(folder,'phone.HEIC'));fs.unlinkSync(path.join(folder,'trip 2.png'));assert.throws(()=>loadTravel(temp),/missing image/);
   }finally{fs.rmSync(temp,{recursive:true,force:true});}
+});
+
+test('CMS travel pages start with a neutral loader and an honest no-script message',()=>{
+  const destination={id:'702',slug:'singapore',name:'Singapore',home:true,center:[103.8,1.3],photos:[]};
+  for(const html of [renderTravel([destination],{loading:true}),renderTravelAlbum(destination,{loading:true})]){
+    const visible=html.replace(/<noscript>[\s\S]*?<\/noscript>/g,'');
+    assert.match(visible,/data-cms-loading role="status" aria-live="polite"/);
+    assert.doesNotMatch(html,/0 photos|Album coming soon|Been here\. Loved it\.|Photos to come|data-travel-photo|data-travel-globe/);
+    assert.equal((html.match(/<noscript>/g)||[]).length,1);assert.equal((html.match(/<\/noscript>/g)||[]).length,1);
+    assert.match(html,/<noscript><style>\.travel-loading-shell\{display:none\}<\/style>/);
+    assert.match(html,/<noscript>[\s\S]*Please enable JavaScript to view the latest travel albums, photos and videos\./);
+  }
+  const index=renderTravel([destination],{loading:true});assert.match(index,/<noscript>[\s\S]*href="\/hobby\/">Back to hobbies/);
+  const album=renderTravelAlbum(destination,{loading:true});assert.match(album,/<noscript>[\s\S]*href="\/hobby\/travelling\/\?country=702">Back to the globe/);
+  assert.match(renderTravelAlbum(destination),/Been here\. Loved it\./);
 });
