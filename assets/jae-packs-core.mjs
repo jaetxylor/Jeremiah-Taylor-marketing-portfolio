@@ -48,9 +48,15 @@ export const CARDS = [
  ['Jae Prime','robot','More than meets the jester.'],
  ['Jae Prime: Roll Out','truck','Same heart. Alternate form.'],
  ['Celestial Jester','crown','Some stars only appear when you least expect them.'],
- ['Eternal Hydrangea','eternal','The rarest bloom in this little corner.']
-].map(([name,art,quote],i)=>({id:i+1,name,art,quote,rarity:i<24?'common':i<38?'uncommon':i<46?'rare':i<48?'super':'secret'}));
-export const LABELS={common:'Common',uncommon:'Uncommon',rare:'Rare',super:'Super rare',secret:'Secret rare'};
+ ['Eternal Hydrangea','eternal','The rarest bloom in this little corner.'],
+ ['After Hours at the Arcade','arcade','The last game of the night.'],
+ ['Somewhere Beyond the Stars','rocket','There is always another world to discover.'],
+ ['One Last Chapter','reading','The lamp stays on a little longer.'],
+ ['From One Generation to Another','ancestry','Every family has a story.'],
+ ['The Long Way Home','run','Every mile brings a different view.'],
+ ['Jae Prime at Dawn','robot','The city wakes. Jae rolls out.']
+].map(([name,art,quote],i)=>({id:i+1,name,art,quote,rarity:i<24?'common':i<38?'uncommon':i<46?'rare':i<48?'super':i<50?'secret':'full'}));
+export const LABELS={common:'Common',uncommon:'Uncommon',rare:'Rare',super:'Super rare',secret:'Secret rare',full:'Full art'};
 export const KEY='psrmalam-jae-packs-v1';
 export function random(){ const v=new Uint32Array(1);crypto.getRandomValues(v);return v[0]/4294967296; }
 function choose(rarity,rng,used){const pool=CARDS.filter(c=>c.rarity===rarity&&!used.has(c.id));const card=pool[Math.floor(rng()*pool.length)];used.add(card.id);return card.id;}
@@ -59,16 +65,19 @@ export function rollPack(rng=random){
  for(let i=0;i<3;i++)ids.push(choose('common',rng,used));
  ids.push(choose('uncommon',rng,used));
  const r=rng();
- // One chase slot per pack: 0.05% secret, 0.5% super, 80% rare, 19.45% uncommon.
- ids.push(choose(r<.0005?'secret':r<.0055?'super':r<.8055?'rare':'uncommon',rng,used));
+ // One chase slot per pack: 0.05% secret, 0.5% super, 2% full art, 80% rare, 17.45% uncommon.
+ ids.push(choose(r<.0005?'secret':r<.0055?'super':r<.0255?'full':r<.8255?'rare':'uncommon',rng,used));
  return ids;
 }
-export const emptySave=()=>({version:1,counts:{},packs:0,last:[],revealed:0});
+export const emptySave=()=>({version:1,counts:{},packs:0,last:[],revealed:[]});
 export function parseSave(raw){
  try {const s=JSON.parse(raw);if(s?.version!==1)return emptySave();
  const counts={};for(const c of CARDS){const n=s.counts?.[c.id];if(Number.isSafeInteger(n)&&n>0)counts[c.id]=n;}
- const last=Array.isArray(s.last)&&s.last.length===5&&s.last.every(id=>Number.isInteger(id)&&id>=1&&id<=50)?s.last:[];
- return {version:1,counts,packs:Number.isSafeInteger(s.packs)&&s.packs>=0?s.packs:0,last,revealed:last.length?Math.max(0,Math.min(5,Number.isInteger(s.revealed)?s.revealed:0)):0};
+ const last=Array.isArray(s.last)&&s.last.length===5&&s.last.every(id=>Number.isInteger(id)&&id>=1&&id<=CARDS.length)?s.last:[];
+ // Older saves recorded how many cards were revealed from left to right.
+ const slots=Array.isArray(s.revealed) ? s.revealed : [0,1,2,3,4].slice(0,Math.max(0,Number.isInteger(s.revealed)?s.revealed:0));
+ const revealed=last.length ? [...new Set(slots.filter(slot=>Number.isInteger(slot)&&slot>=0&&slot<5))] : [];
+ return {version:1,counts,packs:Number.isSafeInteger(s.packs)&&s.packs>=0?s.packs:0,last,revealed};
  }catch{return emptySave();}
 }
-export function addPack(save,ids){const counts={...save.counts};for(const id of ids)counts[id]=(counts[id]||0)+1;return {...save,counts,packs:save.packs+1,last:ids,revealed:0};}
+export function addPack(save,ids){const counts={...save.counts};for(const id of ids)counts[id]=(counts[id]||0)+1;return {...save,counts,packs:save.packs+1,last:ids,revealed:[]};}

@@ -1,6 +1,8 @@
 // Extend the site's existing SVG mascot family, keeping the artwork crisp at card size.
 import fs from 'node:fs';
 import {CARDS} from '../assets/jae-packs-core.mjs';
+import {renderArcade} from './arcade.mjs';
+import {mascotPeek} from './mascot.mjs';
 import {sectionMascot} from './section-mascots.mjs';
 const head=`<path d="M105 79Q85 54 65 61Q75 29 105 44Q121 18 160 19Q145 31 143 55Q178 60 181 88Q160 70 145 77" fill="none" stroke="#fa2724" stroke-width="8"/><g fill="#fa2724" stroke="none"><circle cx="65" cy="61" r="9"/><circle cx="160" cy="19" r="9"/><circle cx="181" cy="88" r="9"/></g><circle cx="115" cy="107" r="35" fill="white" stroke="#70b7ea" stroke-width="5"/><g fill="#0870b4" stroke="none"><ellipse cx="105" cy="108" rx="4" ry="5"/><ellipse cx="125" cy="108" rx="4" ry="5"/></g>`;
 const flower=`<path d="M0 20V-13" stroke="#6bab48" stroke-width="5"/><path d="M0 -10C-15 -30 -28 -9 -12 -4C-32 9 -11 23 -4 9C1 32 22 17 12 4C34 2 22 -21 9 -11C17 -32 -8 -35 -8 -17Z" fill="#f7fbff" stroke="#268bd8" stroke-width="4"/>`;
@@ -44,20 +46,54 @@ const props={
  crown:'<path d="M66 68L62 37L91 49L115 22L138 49L168 37L163 68Z" fill="#e8c573"/><path d="M109 48L115 39L122 48L115 58Z" fill="#bca5ed"/>',
  eternal:`<g transform="translate(177 158) scale(1.35)">${flower}</g><circle cx="177" cy="147" r="44" fill="none" stroke="#e4c982" stroke-width="2"/>`
 };
+const sectionPoses = {laptop:'experience',writing:'blog',reading:'books',board:'projects'};
+const reuse = {3:'reading',5:'board',6:'reading',12:'writing',13:'peek',14:'rocket',15:'ancestry',18:'run',19:'run',23:'peek',24:'writing',32:'arcade',35:'peek',37:'rocket',38:'robot',40:'laptop',42:'run'};
+const arcade = renderArcade().match(/<svg[^>]*>([\s\S]*?)<\/svg>/)[1];
+function artFigure(card) {
+ const pose = reuse[card.id] || card.art;
+ if(sectionPoses[pose])return sectionMascot(sectionPoses[pose]).match(/<svg[^>]*>([\s\S]*?)<\/svg>/)[1];
+ if(pose==='arcade')return `<g transform="translate(27 0) scale(.32)">${arcade}</g>`;
+ if(pose==='peek')return `<g transform="translate(55 30) scale(1.25)">${mascotPeek.match(/<svg[^>]*>([\s\S]*?)<\/svg>/)[1]}</g>`;
+ if(pose==='run')return '';
+ if(['robot','truck','rocket','ancestry'].includes(pose)){
+  const file=pose==='rocket'||pose==='ancestry'?pose:'optimus';
+  let svg=fs.readFileSync(new URL(`../assets/hobby-characters/${file}-jae.svg`,import.meta.url),'utf8');
+  if(pose==='truck')svg=svg.replace('class="optimus-robot"','class="optimus-robot" opacity="0"').replace('class="optimus-truck" opacity="0"','class="optimus-truck" opacity="1"');
+  const transform={rocket:'translate(8 55) scale(.88)',ancestry:'translate(0 48) scale(.48)'}[pose] || 'translate(45 25) scale(1.12)';
+  return `<g transform="${transform}" fill="none" stroke-linecap="round" stroke-linejoin="round">${svg.replace(/<svg[^>]*>/,'').replace('</svg>','')}</g>`;
+ }
+ const bodies=[
+  'M98 138Q86 148 85 179L87 212Q99 227 113 199Q128 229 141 213L140 165Q139 146 131 138Z',
+  'M98 138Q79 160 87 189Q69 203 78 215Q94 227 113 210Q131 228 150 216Q158 202 140 186Q142 153 130 138Z',
+  'M99 137Q84 156 93 178L74 202Q69 216 86 214L117 193L137 214Q151 221 150 204L139 169Q142 151 129 138Z',
+  'M97 138Q88 158 95 181L92 213Q106 225 117 200L131 214Q145 222 147 205L137 179Q147 156 130 138Z'
+ ];
+ const arms=[
+  'M96 153Q75 165 68 188M135 153Q157 177 174 175',
+  'M96 153Q73 177 92 192M134 154Q157 150 173 165',
+  'M96 153Q78 147 68 123M135 153Q157 177 174 175',
+  'M96 153Q82 177 105 180M134 151Q154 167 174 175'
+ ];
+ const variant=card.id%4;
+ return `<g stroke="#70b7ea" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="${bodies[variant]}" fill="white"/><path d="${arms[variant]}" fill="none" stroke-width="15"/><path d="${arms[variant]}" fill="none" stroke="white" stroke-width="7"/>${head}${props[card.art]||props.flower}</g>`;
+}
+const scenes = {
+ arcade:'<path d="M0 240H290M0 274H290M0 320H290M145 215L-70 420M145 215L80 420M145 215L220 420M145 215L360 420" stroke="#e46dce" opacity=".4" fill="none"/>',
+ rocket:'<ellipse cx="237" cy="71" rx="48" ry="36" fill="#c6b0eb" opacity=".55"/><path d="M184 88Q248 87 276 54" fill="none" stroke="#f3d4fb" stroke-width="4"/>',
+ reading:'<path d="M0 15H290V93H0Z" fill="#5b3b35"/><path d="M20 21V89M38 24V89M55 18V89M73 32V89M224 31V89M248 23V89M269 18V89" stroke="#d79a67" stroke-width="12"/>',
+ ancestry:'<path d="M0 230Q65 155 140 230Q214 155 290 230V400H0Z" fill="#5a7666"/><circle cx="150" cy="68" r="38" fill="#f1cb8b"/>',
+ run:'<path d="M0 204L45 126L88 165L145 88L205 157L252 102L290 172V400H0Z" fill="#556b80"/><path d="M140 227L203 227L290 400H0Z" fill="#353d52"/><path d="M170 232L145 400" stroke="#eddab0" stroke-dasharray="15 14" stroke-width="4"/>',
+ robot:'<path d="M0 240V160H36V190H69V135H108V202H151V162H189V195H215V143H252V180H290V360H0Z" fill="#253342"/><circle cx="172" cy="115" r="66" fill="#eda875" opacity=".7"/>'
+};
 export function writeCardArt(out){fs.mkdirSync(out,{recursive:true});
  for(const c of CARDS){
- let figure;
- if(['laptop','writing','reading'].includes(c.art))figure=sectionMascot({laptop:'experience',writing:'blog',reading:'books'}[c.art]).match(/<svg[^>]*>([\s\S]*?)<\/svg>/)[1];
- else if(['robot','truck','rocket'].includes(c.art)){
-   const file=c.art==='rocket'?'rocket':'optimus';let svg=fs.readFileSync(new URL(`../assets/hobby-characters/${file}-jae.svg`,import.meta.url),'utf8');
-   if(c.art==='truck')svg=svg.replace('class="optimus-robot"','class="optimus-robot" opacity="0"').replace('class="optimus-truck" opacity="0"','class="optimus-truck" opacity="1"');
-   figure=`<g transform="${c.art==='rocket'?'translate(8 55) scale(.88)':'translate(45 25) scale(1.12)'}">${svg.replace(/<svg[^>]*>/,'').replace('</svg>','')}</g>`;
- } else figure=`<g stroke="#70b7ea" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M98 138Q87 147 85 179L87 212Q99 227 113 199Q128 229 141 213L140 165Q139 146 131 138Z" fill="white"/><path d="M96 153Q75 165 68 188M135 153Q157 177 174 175" fill="none" stroke="#70b7ea" stroke-width="15"/><path d="M96 153Q75 165 68 188M135 153Q157 177 174 175" fill="none" stroke="white" stroke-width="7"/>${head}${props[c.art]||props.flower}</g>`;
+ const figure=artFigure(c);
+ const full=c.rarity==='full';
+ const height=full?420:250;
  const hue=(c.id*27+190)%360;
- const special=['rare','super','secret'].includes(c.rarity);
+ const special=['rare','super','secret','full'].includes(c.rarity);
  const sky=Array.from({length:special?22:7},(_,i)=>{const x=(i*73+c.id*11)%280+10,y=(i*41+c.id*7)%210+10;return `<path d="M${x-3} ${y}h6M${x} ${y-3}v6" stroke="#fff" opacity="${special?.55:.2}" stroke-width="1.5"/>`;}).join('');
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 250"><defs><linearGradient id="sky" x2="1" y2="1"><stop stop-color="hsl(${hue},${special?50:26}%,${special?22:29}%)"/><stop offset="1" stop-color="#172432"/></linearGradient><radialGradient id="halo"><stop stop-color="hsl(${hue},70%,72%)" stop-opacity=".45"/><stop offset="1" stop-color="hsl(${hue},70%,72%)" stop-opacity="0"/></radialGradient></defs><rect width="290" height="250" fill="url(#sky)"/><circle cx="145" cy="120" r="135" fill="url(#halo)"/>${sky}<circle cx="145" cy="128" r="90" fill="none" stroke="hsl(${hue},45%,70%)" opacity=".25"/><path d="M0 227Q80 203 160 226T290 220V250H0Z" fill="#13242d" opacity=".6"/>${figure}</svg>`;
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 ${height}"><defs><linearGradient id="sky" x2="1" y2="1"><stop stop-color="hsl(${hue},${special?50:26}%,${special?22:29}%)"/><stop offset="1" stop-color="#172432"/></linearGradient><radialGradient id="halo"><stop stop-color="hsl(${hue},70%,72%)" stop-opacity=".45"/><stop offset="1" stop-color="hsl(${hue},70%,72%)" stop-opacity="0"/></radialGradient></defs><rect width="290" height="${height}" fill="url(#sky)"/><circle cx="145" cy="120" r="135" fill="url(#halo)"/>${full?scenes[c.art]:''}${sky}<circle cx="145" cy="128" r="90" fill="none" stroke="hsl(${hue},45%,70%)" opacity=".25"/><path d="M0 227Q80 203 160 226T290 220V250H0Z" fill="#13242d" opacity=".6"/><g transform="translate(0 ${full?44:0})">${figure}</g></svg>`;
  fs.writeFileSync(`${out}/${String(c.id).padStart(2,'0')}.svg`,svg);
  }
 }
-writeCardArt(new URL('../assets/jae-cards',import.meta.url).pathname);
