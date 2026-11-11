@@ -16,3 +16,19 @@
 
 .jp-run-pose{position:absolute;width:76%;aspect-ratio:1;left:12%;top:50%;transform:translateY(-50%);background:url(/assets/hero/jae-sprites.png) 50% 100% / 300% 200% no-repeat}
 .jp-full .jp-run-pose{top:47%;width:92%;left:4%}
+
+.jp-pack { touch-action: pan-y; user-select: none; }
+.jp-pack img { pointer-events: none; -webkit-user-drag: none; }
+.jp-pack-seal { position: relative; }
+.jp-pack-seal::after {
+ content: ""; position: absolute; left: 0; bottom: -5px; width: var(--jp-tear, 0%);
+ border-bottom: 2px dashed #fff3c8; filter: drop-shadow(0 0 4px #fff3c8);
+}
+.jp-tearing-left .jp-pack-seal::after { left: auto; right: 0; }
+.jp-ripping .jp-pack-seal { animation: jp-seal-away .48s ease-out both; }
+@keyframes jp-seal-away {
+ to { transform: translate(24px, -26px) rotate(13deg); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .jp-ripping .jp-pack-seal { animation: none; }
+}
