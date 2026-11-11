@@ -4,6 +4,8 @@ const head = `
  <circle cx="115" cy="107" r="35" fill="#fff" stroke="#70b7ea" stroke-width="5"/>
  <g fill="#0870b4"><ellipse cx="105" cy="105" rx="4" ry="5"/><ellipse cx="125" cy="105" rx="4" ry="5"/></g>`;
 
+export { head as mascotHead };
+
 const flowers = `
  <path d="M55 178L40 136" fill="none" stroke="#64ad24" stroke-width="7" stroke-linecap="round"/>
  <g fill="#fff" stroke="#087bdb" stroke-width="4">

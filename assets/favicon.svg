@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="32" fill="#151515"/><text x="32" y="39" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="white">JL</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="48 2 150 150"><title>Jae’s cartoon headshot</title>
+ <path d="M105 79Q85 54 65 61Q75 29 105 44Q121 18 160 19Q145 31 143 55Q178 60 181 88Q160 70 145 77" fill="none" stroke="#fa2724" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+ <g fill="#fa2724"><circle cx="65" cy="61" r="9"/><circle cx="160" cy="19" r="9"/><circle cx="181" cy="88" r="9"/></g>
+ <circle cx="115" cy="107" r="35" fill="#fff" stroke="#70b7ea" stroke-width="5"/>
+ <g fill="#0870b4"><ellipse cx="105" cy="105" rx="4" ry="5"/><ellipse cx="125" cy="105" rx="4" ry="5"/></g></svg>
