@@ -13,7 +13,7 @@
  mascot.replaceWith(button);let game;
  button.addEventListener('click',async()=>{
    button.disabled=true;
-   try{game ||= await import('/assets/jae-packs.mjs?v=3');game.openGame(button);}
+   try{game ||= await import('/assets/jae-packs.mjs?v=4');game.openGame(button);}
    catch{button.setAttribute('aria-label','Could not open the surprise. Tap to retry.');}
    finally{button.disabled=false;}
  });
