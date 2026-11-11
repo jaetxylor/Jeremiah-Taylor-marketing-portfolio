@@ -29,12 +29,12 @@ test('YouTube and TikTok links resolve only exact allowed hosts and valid IDs', 
   assert.equal(videoSource('https://cdn.example.com/clip.webm?signature=123').kind,'file');
 });
 
-test('photos and video metadata are escaped and fallback links always remain', () => {
+test('photos escape metadata without open links; videos retain fallbacks', () => {
   const html=renderBlock({type:'image',src:'https://example.com/image.jpg?a=1&b=2',alt:'A "photo"',caption:'<script>alert(1)</script>'});
   assert.match(html,/alt="A &quot;photo&quot;"/);
   assert.match(html,/&lt;script&gt;/);
   assert.doesNotMatch(html,/<script>/);
-  assert.match(html,/Open photo/);
+  assert.doesNotMatch(html,/Open photo|<a /);
   const clip=renderBlock({type:'video',src:'https://example.com/clip.mp4',title:'My video',poster:'https://example.com/poster.jpg'});
   assert.match(clip,/<video controls playsinline preload="none"/);
   assert.match(clip,/Open video/);

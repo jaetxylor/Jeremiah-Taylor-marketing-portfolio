@@ -69,7 +69,7 @@ export function renderBlock(block) {
   const src = mediaURL(block.src);
   const caption = block.caption ? `<figcaption>${escape(block.caption)}</figcaption>` : '';
   const link = (label) => `<a class="post-media-link" href="${escape(src)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
-  if (block.type === 'image') return `<figure class="post-media post-photo"><a href="${escape(src)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(`Open photo: ${block.alt}`)}"><img src="${escape(src)}" alt="${escape(block.alt)}" loading="lazy" decoding="async"></a>${caption}${link('Open photo')}</figure>`;
+  if (block.type === 'image') return `<figure class="post-media post-photo"><img src="${escape(src)}" alt="${escape(block.alt)}" loading="lazy" decoding="async">${caption}</figure>`;
   const video = videoSource(src);
   const portrait = block.portrait ?? video.portrait;
   if (video.kind === 'file') return `<figure class="post-media${portrait?' post-media-portrait':''}"><video controls playsinline preload="none" src="${escape(src)}" aria-label="${escape(block.title)}"${block.poster?` poster="${escape(mediaURL(block.poster))}"`:''}>Your browser cannot play this video. ${link('Open video')}</video>${caption}${link('Open video')}</figure>`;

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 250"><defs><linearGradient id="sky" x2="1" y2="1"><stop stop-color="hsl(19,50%,22%)"/><stop offset="1" stop-color="#172432"/></linearGradient><radialGradient id="halo"><stop stop-color="hsl(19,70%,72%)" stop-opacity=".45"/><stop offset="1" stop-color="hsl(19,70%,72%)" stop-opacity="0"/></radialGradient></defs><rect width="290" height="250" fill="url(#sky)"/><circle cx="145" cy="120" r="135" fill="url(#halo)"/><path d="M244 129h6M247 126v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M37 170h6M40 167v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M110 211h6M113 208v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M183 42h6M186 39v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M256 83h6M259 80v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M49 124h6M52 121v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M122 165h6M125 162v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M195 206h6M198 203v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M268 37h6M271 34v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M61 78h6M64 75v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M134 119h6M137 116v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M207 160h6M210 157v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M280 201h6M283 198v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M73 32h6M76 29v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M146 73h6M149 70v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M219 114h6M222 111v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M12 155h6M15 152v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M85 196h6M88 193v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M158 27h6M161 24v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M231 68h6M234 65v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M24 109h6M27 106v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><path d="M97 150h6M100 147v6" stroke="#fff" opacity="0.55" stroke-width="1.5"/><circle cx="145" cy="128" r="90" fill="none" stroke="hsl(19,45%,70%)" opacity=".25"/><path d="M0 227Q80 203 160 226T290 220V250H0Z" fill="#13242d" opacity=".6"/><g transform="translate(45 25) scale(1.12)">
+<g class="optimus-robot" stroke="#70b7ea" stroke-width="4">
+ <g class="optimus-left-arm"><path d="M48 116L30 125L25 168H49L58 139" fill="#ef3435"/><path d="M33 120V91" stroke="#b6cfde" stroke-width="7"/><ellipse cx="45" cy="168" rx="14" ry="9" fill="white"/></g>
+ <g class="optimus-right-arm"><path d="M132 116L150 125L155 168H131L122 139" fill="#ef3435"/><path d="M147 120V91" stroke="#b6cfde" stroke-width="7"/><ellipse cx="135" cy="168" rx="14" ry="9" fill="white"/></g>
+ <g class="optimus-chest"><path d="M50 112H130L139 171H41Z" fill="#ed3437"/><path d="M57 119H85V139H55ZM95 119H123L125 139H95Z" fill="#c5ebff"/><path d="M64 146H116V170H64Z" fill="#d9e4eb"/><path d="M72 152H108M72 159H108M72 166H108" stroke="#6b8eab" stroke-width="3"/></g>
+ <g class="optimus-head"><path d="M45 49L45 16L57 27L62 48Q90 31 118 48L123 27L135 16V103H45Z" fill="#1766af"/><circle cx="90" cy="78" r="34" fill="white"/><path d="M56 59V90L45 103V55L66 41H114L135 55V103L124 90V59L103 51H77Z" fill="#1766af"/><path d="M82 39V22H98V39" fill="#d9e4eb"/><path d="M65 92L90 100L115 92V107L90 116L65 107Z" fill="#d9e4eb"/><path d="M73 102L89 107L107 102" stroke="#8ba9be" stroke-width="2"/><g fill="#0870b4" stroke="none"><ellipse cx="80" cy="77" rx="4" ry="5"/><ellipse cx="100" cy="77" rx="4" ry="5"/></g></g>
+</g>
+<g class="optimus-truck" opacity="0">
+ <g transform="translate(1 39) scale(.75)" stroke="#70b7ea" stroke-width="4">
+  <!-- Classic G1 cab-over tractor: red cab, silver grille and blue rear chassis. -->
+  <path d="M12 162H230" stroke="#70b7ea" stroke-opacity=".25"/>
+  <path d="M81 116H215L228 132L219 145H79Z" fill="#1766af"/>
+  <path d="M121 116H208V125H121Z" fill="#3b485b"/>
+  <path d="M184 112H213V118H184Z" fill="#d9e4eb" stroke-width="3"/>
+  <path d="M111 119V32H121V119M25 65V35H34V65" fill="#d9e4eb" stroke="#94afc6" stroke-width="3"/>
+  <path d="M110 33H122M24 36H35" stroke="#f5f8fb" stroke-width="3"/>
+  <path d="M13 61L47 48H109V137L80 151H13Z" fill="#ed3437"/>
+  <path d="M13 61L47 48H109L77 63Z" fill="#ff6060"/>
+  <path d="M77 63L109 49V137L77 151Z" fill="#bd292e"/>
+  <path d="M21 70H43V95H21ZM50 70H69V95H50Z" fill="#c5ebff"/>
+  <path d="M85 71L101 64V91L85 99Z" fill="#9ad6f3"/>
+  <path d="M26 73L31 73M55 73H60M21 101H69M85 105L101 99" stroke="#f4faff" stroke-width="3"/>
+  <path d="M14 107H76L109 94V106L77 119H14Z" fill="#d9e4eb" stroke-width="2"/>
+  <path d="M22 113H68V139H22Z" fill="#d9e4eb" stroke="#94afc6" stroke-width="3"/>
+  <path d="M28 118H62M28 124H62M28 130H62M28 136H62" stroke="#506a83" stroke-width="2"/>
+  <path d="M84 112L100 106M85 125L97 119" stroke="#d9e4eb" stroke-width="3"/>
+  <path d="M10 140H76L90 151H11Z" fill="#d9e4eb"/>
+  <path d="M16 133H21M70 133H75" stroke="#fff2b1" stroke-width="5"/>
+  <path d="M78 145V135Q78 115 95 115Q113 115 113 137V145" fill="#1766af"/>
+  <g fill="#242a34" stroke="#70b7ea" stroke-width="3"><circle cx="95" cy="142" r="19"/><circle cx="173" cy="144" r="17"/><circle cx="214" cy="144" r="17"/></g>
+  <g class="optimus-wheel" transform="translate(95 142)"><circle r="9" fill="#d9e4eb" stroke="#94afc6" stroke-width="2"/><path class="optimus-wheel-spokes" d="M-6 0H6M0-6V6" stroke="#506a83" stroke-width="2"/></g>
+  <g class="optimus-wheel" transform="translate(173 144)"><circle r="8" fill="#d9e4eb" stroke="#94afc6" stroke-width="2"/><path class="optimus-wheel-spokes" d="M-5 0H5M0-5V5" stroke="#506a83" stroke-width="2"/></g>
+  <g class="optimus-wheel" transform="translate(214 144)"><circle r="8" fill="#d9e4eb" stroke="#94afc6" stroke-width="2"/><path class="optimus-wheel-spokes" d="M-5 0H5M0-5V5" stroke="#506a83" stroke-width="2"/></g>
+ </g>
+</g>
+
+</g></svg>

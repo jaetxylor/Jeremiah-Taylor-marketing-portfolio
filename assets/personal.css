@@ -103,4 +103,6 @@
 .post-row[hidden]{display:none!important}
 .article-header .post-tags{margin-top:24px}
 
-footer{flex-wrap:wrap;gap:12px 24px}footer .footer-admin{text-transform:none;display:inline-flex;align-items:center;min-height:44px;text-underline-offset:4px}footer .footer-admin:hover{text-decoration:underline}
+footer{flex-wrap:wrap;gap:12px 24px;align-items:center}footer .footer-admin{text-transform:none;display:inline-flex;align-items:center;min-height:44px;text-underline-offset:4px}footer .footer-admin:hover{text-decoration:underline}
+
+footer>span,footer .footer-admin{line-height:1.5} @media(max-width:720px){footer{align-items:flex-start}}

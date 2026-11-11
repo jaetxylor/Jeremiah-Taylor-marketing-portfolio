@@ -15,6 +15,9 @@ window.psrContentReady = (async () => {
     if(!response.ok)throw Error('Published content is unavailable.');
     const data = await response.json();
     if(typeof data.html!=='string')throw Error('Invalid content response.');
+    // Retire the old photo action in posts served by the editing desk too.
+    if(view==='post') data.html=data.html.replace(/<figure\b([^>]*class="[^"]*\bpost-photo\b[^"]*"[^>]*)>([\s\S]*?)<\/figure>/g, (_,attrs,body)=>
+      `<figure${attrs}>${body.replace(/<a\b[^>]*>([\s\S]*?)<\/a>/g,(_,content)=>content.includes('<img')?content:'')}</figure>`);
     if(data.albums)window.psrTravelAlbums=data.albums;
     const target = document.querySelector(view==='home'?'.home-latest':view==='hobby'?'.ex-teaser':'#main');
     if(!target)return;
