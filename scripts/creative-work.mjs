@@ -21,7 +21,7 @@ export function renderStaticWorks(groups, { root, e }) {
       <p class="eyebrow">${e(group.format)}</p>
       <h2 id="static-${e(group.id)}">${e(group.title)}</h2>
       <p>${e(group.description)}</p>
-      <div class="static-work-grid${group.layout === 'posters' ? ' static-work-grid-posters' : ''}">
+      <div class="static-work-grid${group.id === 'necdc' ? ' static-work-carousel' : ''}${group.layout === 'posters' ? ' static-work-grid-posters' : ''}">
         ${group.items.map((item, index) => `<figure class="static-work-item">
           <a class="static-work-open" href="${e(item.src)}" data-static-work data-gallery="${e(group.id)}" data-title="${e(item.title)}" aria-label="View ${e(item.title)}">
             <img src="${e(item.src)}" alt="${e(item.alt)}" width="${item.width}" height="${item.height}" loading="lazy" decoding="async">
@@ -29,6 +29,7 @@ export function renderStaticWorks(groups, { root, e }) {
           <figcaption><span class="static-work-number">${String(index + 1).padStart(2, '0')}</span><span class="static-work-title">${e(item.title)}</span></figcaption>
         </figure>`).join('')}
       </div>
+      ${group.id === 'necdc' ? '<div class="static-carousel-controls"><button type="button" data-carousel-prev aria-label="Previous comic panel">← Previous</button><span data-carousel-count aria-live="polite">1 / 5</span><button type="button" data-carousel-next aria-label="Next comic panel">Next →</button></div>' : ''}
     </section>`).join('')}
   </div>
   <dialog class="static-work-viewer" aria-labelledby="static-work-viewer-title" data-static-viewer>
