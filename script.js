@@ -25,7 +25,7 @@ function renderCampaigns(){
 }
 
 function renderCreative(){
-  document.getElementById('creative-grid').innerHTML=D.creativeExecution.map((x,i)=>`<article class="creative-card reveal" data-delay="${i*60}"><div class="creative-card-top"><span class="creative-index">${esc(x.index)}</span><span class="creative-type">Selected discipline</span></div><h3>${esc(x.title)}</h3><p>${esc(x.description)}</p><div class="creative-list">${x.items.map(item=>`<span>${esc(item)}</span>`).join('')}</div></article>`).join('');
+  document.getElementById('creative-grid').innerHTML=D.creativeExecution.map((x,i)=>`<${x.href ? `a href="${esc(x.href)}"` : 'article'} class="creative-card reveal${x.href ? ' creative-card-link' : ''}" data-delay="${i*60}"><div class="creative-card-top"><span class="creative-index">${esc(x.index)}</span><span class="creative-type">Selected discipline</span></div><h3>${esc(x.title)}</h3><p>${esc(x.description)}</p><div class="creative-list">${x.items.map(item=>`<span>${esc(item)}</span>`).join('')}</div>${x.href ? `<span class="creative-card-action">${esc(x.action)}</span>` : ''}</${x.href ? 'a' : 'article'}>`).join('');
 }
 
 function renderEducation(){

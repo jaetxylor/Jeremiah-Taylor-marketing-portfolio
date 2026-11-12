@@ -1,0 +1,230 @@
+/* Creative work links and the full-image Static Works gallery. */
+.creative-card-link {
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.creative-card-link:hover {
+  border-color: var(--ink);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.creative-card-link:focus-visible {
+  outline: 2px solid var(--blue, #b8d8ff);
+  outline-offset: 6px;
+}
+.creative-card-action {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  margin-top: 24px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid currentColor;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.static-work-page { padding-bottom: 80px; }
+.static-work-heading { display: block; margin-bottom: 0; padding: 48px 0 45px; }
+.static-work-heading .back-link { margin-bottom: 30px; }
+.static-work-heading .eyebrow { margin: 0; color: var(--muted); }
+.static-work-heading h1 {
+  margin: 18px 0 0;
+  font-size: clamp(44px, 6.3vw, 80px);
+  line-height: 1.03;
+  letter-spacing: -.055em;
+}
+.static-work-heading .intro { max-width: 730px; }
+.static-work-group {
+  padding: 32px 0 44px;
+  border-top: 1px solid var(--line);
+}
+.static-work-group h2 {
+  margin: 0 0 12px;
+  font-size: clamp(25px, 3.2vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+.static-work-group > p {
+  max-width: 750px;
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.static-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.static-work-grid-posters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.static-work-item { min-width: 0; margin: 0; }
+.static-work-open {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  cursor: zoom-in;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.static-work-open:hover {
+  border-color: var(--ink);
+  box-shadow: var(--shadow);
+}
+.static-work-open:focus-visible {
+  outline: 3px solid var(--blue, #b8d8ff);
+  outline-offset: 5px;
+}
+.static-work-open img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.static-work-item figcaption {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 14px 2px 0;
+  line-height: 1.5;
+}
+.static-work-number {
+  flex-shrink: 0;
+  color: var(--muted);
+  font: 11px/1.5 ui-monospace, monospace;
+}
+.static-work-title { font-size: 14px; font-weight: 600; }
+.static-work-viewer {
+  box-sizing: border-box;
+  width: min(1100px, calc(100vw - 32px));
+  height: min(1060px, calc(100vh - 32px));
+  height: min(1060px, calc(100dvh - 32px));
+  max-width: none;
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #1d1d1d;
+  color: var(--ink);
+  box-shadow: 0 20px 80px #0008;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.static-work-viewer:not([open]) { display: none; }
+.static-work-viewer[open] { display: flex; flex-direction: column; gap: 14px; }
+.static-work-viewer::backdrop { background: rgba(0, 0, 0, .86); }
+.static-work-viewer-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 20px;
+}
+.static-work-viewer-toolbar h2 {
+  min-width: 0;
+  margin: 0;
+  font-size: clamp(16px, 2.4vw, 22px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -.02em;
+}
+.static-work-viewer button {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid #656565;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.3;
+  cursor: pointer;
+}
+.static-work-viewer button:hover:not(:disabled) { border-color: var(--ink); }
+.static-work-viewer button:disabled { opacity: .4; cursor: default; }
+.static-work-viewer :is(button, a):focus-visible {
+  outline: 2px solid var(--blue, #b8d8ff);
+  outline-offset: 3px;
+}
+.static-work-viewer-image {
+  display: grid;
+  place-items: center;
+  flex: 1 1 auto;
+  min-height: 100px;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #141414;
+  touch-action: pan-y pinch-zoom;
+}
+.static-work-viewer-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.static-work-viewer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 12px;
+}
+.static-work-viewer-footer p {
+  margin: 0;
+  color: var(--muted);
+  font: 12px/1.5 ui-monospace, monospace;
+  text-align: center;
+}
+.static-work-viewer [data-static-original] {
+  align-self: center;
+  flex-shrink: 0;
+  padding: 4px 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.static-work-viewer [data-static-original]:hover { color: var(--ink); }
+@media (max-width: 980px) {
+  .static-work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+}
+@media (max-width: 620px) {
+  .static-work-page { padding-bottom: 40px; }
+  .static-work-heading { padding: 32px 0; }
+  .static-work-heading .back-link { margin-bottom: 24px; }
+  .static-work-heading h1 { font-size: clamp(40px, 11vw, 58px); }
+  .static-work-heading .intro { font-size: 16px; }
+  .static-work-group { padding: 26px 0 34px; }
+  .static-work-group > p { font-size: 14px; }
+  .static-work-grid { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .static-work-open { border-radius: 12px; }
+  .static-work-viewer {
+    width: calc(100vw - 16px);
+    height: calc(100vh - 16px);
+    height: calc(100dvh - 16px);
+    max-height: calc(100vh - 16px);
+    max-height: calc(100dvh - 16px);
+    padding: 12px;
+    border-radius: 14px;
+  }
+  .static-work-viewer[open] { gap: 12px; }
+  .static-work-viewer-toolbar { gap: 10px; }
+  .static-work-viewer button { padding-inline: 12px; font-size: 12px; }
+  .static-work-viewer-footer { gap: 8px; }
+  .static-work-viewer-footer p { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .creative-card-link, .static-work-open { transition: none; }
+  .creative-card-link:hover { transform: none; }
+}

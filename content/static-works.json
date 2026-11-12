@@ -1,0 +1,68 @@
+[
+  {
+    "id": "necdc",
+    "title": "North East CDC — Growth Fund & STARS",
+    "description": "A five-part illustrated story following Lisa and her family, from everyday challenges to community support.",
+    "format": "Illustrated campaign · 5 panels",
+    "items": [
+      {
+        "title": "Meet Lisa and her family",
+        "src": "/assets/works/static/necdc-01-meet-lisa.jpeg",
+        "alt": "Illustrated introduction to Lisa, a housewife, with her five-year-old son and seven-year-old daughter.",
+        "width": 1206,
+        "height": 1197
+      },
+      {
+        "title": "The family’s sole breadwinner",
+        "src": "/assets/works/static/necdc-02-breadwinner.jpeg",
+        "alt": "Illustration of Lisa’s husband driving a tow truck, identifying him as the family’s sole breadwinner.",
+        "width": 1206,
+        "height": 1182
+      },
+      {
+        "title": "Everyday essentials",
+        "src": "/assets/works/static/necdc-03-everyday-essentials.jpeg",
+        "alt": "Lisa and her children worry about household expenses, including milk powder, diapers and school transport fares.",
+        "width": 1206,
+        "height": 1194
+      },
+      {
+        "title": "Support from North East CDC",
+        "src": "/assets/works/static/necdc-04-community-support.jpeg",
+        "alt": "Lisa outside North East CDC, receiving support through the Growth Fund and STARS, illustrated with vouchers and a transport subsidy.",
+        "width": 1206,
+        "height": 1194
+      },
+      {
+        "title": "Make a difference today",
+        "src": "/assets/works/static/necdc-05-make-a-difference.jpeg",
+        "alt": "Lisa’s family in front of a pink heart, with a call to support low-income families through the Growth Fund and STARS.",
+        "width": 1206,
+        "height": 1193
+      }
+    ]
+  },
+  {
+    "id": "usf",
+    "title": "USF Festival",
+    "description": "Event promotion posters highlighting the festival lineup and a weekend of fitness and sport.",
+    "format": "Event posters · 2 pieces",
+    "layout": "posters",
+    "items": [
+      {
+        "title": "Event lineup",
+        "src": "/assets/works/static/usf-event-lineup.jpeg",
+        "alt": "USF Festival event lineup poster featuring One Flow Battle parkour and Operation Broken Wing functional fitness.",
+        "width": 1206,
+        "height": 1197
+      },
+      {
+        "title": "Must-hit events · 2024",
+        "src": "/assets/works/static/usf-2024-must-hit-events.jpeg",
+        "alt": "USF Festival Singapore 2024 poster listing eight fitness and sporting events for 31 August to 1 September at Singapore Expo.",
+        "width": 1206,
+        "height": 1179
+      }
+    ]
+  }
+]

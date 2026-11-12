@@ -17,9 +17,9 @@ window.PORTFOLIO_DATA = {
     { organization: "North East Community Development Council", shortName: "NECDC", platform: "Instagram · 2024", logo: "https://www.google.com/s2/favicons?domain=northeast.cdc.gov.sg&sz=128", campaigns: ["Healthier Together", "Shaping Hearts", "ArtsEverywhere", "Heart Bakers", "CDC Vouchers", "Jobs & Skills Fair", "NECDC Growth Fund"], scope: "Social calendar · campaign content · creative coordination · management · reporting" }
   ],
   creativeExecution: [
-    { title: "Static works", description: "Content and campaign assets designed to communicate quickly and clearly across social and campaign touchpoints.", items: ["Copywriting", "Static posters", "Comic illustration", "Photoshoots"], index: "A" },
+    { title: "Static works", description: "Content and campaign assets designed to communicate quickly and clearly across social and campaign touchpoints.", items: ["Copywriting", "Static posters", "Comic illustration", "Photoshoots"], index: "A", href: "/works/creative/static/", action: "View static works" },
     { title: "Video works", description: "Short-form and social-first video formats spanning lifestyle, community and platform-optimised content.", items: ["Lifestyle content", "Community content", "TikTok-optimised content"], index: "B" },
-    { title: "Branding", description: "Visual identity and commercial presentation work connecting brand expression to practical marketing use.", items: ["Logo designs", "Marketing collateral", "Web design"], index: "C" }
+    { title: "Branding", description: "Visual identity and commercial presentation work connecting brand expression to practical marketing use.", items: ["Logo designs", "Marketing collateral", "Web design"], index: "C", href: "/works/", action: "View websites & brands" }
   ],
   education: [
     { school: "Singapore Management University", credential: "MSc in Communication Management", dates: "Dec 2022 – Jul 2024", focus: "Strategic communication · branding · stakeholder engagement · business messaging" },
