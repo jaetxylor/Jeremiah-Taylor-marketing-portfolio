@@ -18,7 +18,7 @@ window.PORTFOLIO_DATA = {
   ],
   creativeExecution: [
     { title: "Static works", description: "Content and campaign assets designed to communicate quickly and clearly across social and campaign touchpoints.", items: ["Copywriting", "Static posters", "Comic illustration", "Photoshoots"], index: "A", href: "/works/creative/static/", action: "View static works" },
-    { title: "Video works", description: "Short-form and social-first video formats spanning lifestyle, community and platform-optimised content.", items: ["Lifestyle content", "Community content", "TikTok-optimised content"], index: "B" },
+    { title: "Video works", href: "/works/creative/video/", action: "View video works", description: "Short-form and social-first video formats spanning lifestyle, community and platform-optimised content.", items: ["Lifestyle content", "Community content", "TikTok-optimised content"], index: "B" },
     { title: "Branding", description: "Visual identity and commercial presentation work connecting brand expression to practical marketing use.", items: ["Logo designs", "Marketing collateral", "Web design"], index: "C", href: "/works/", action: "View websites & brands" }
   ],
   education: [
