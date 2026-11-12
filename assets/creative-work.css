@@ -228,3 +228,15 @@
   .creative-card-link, .static-work-open { transition: none; }
   .creative-card-link:hover { transform: none; }
 }
+
+
+/* Five-panel comic: one panel at a time, without expanding the page. */
+.static-work-carousel {display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;max-width:580px;margin-inline:auto;overscroll-behavior-x:contain}
+.static-work-carousel::-webkit-scrollbar{display:none}
+.static-work-carousel .static-work-item{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always}
+.static-work-carousel .static-work-open img{max-height:min(65vh,580px);object-fit:contain}
+.static-carousel-controls{display:flex;align-items:center;justify-content:center;gap:22px;margin:18px auto 0}
+.static-carousel-controls button{border:1px solid var(--line);border-radius:999px;padding:10px 16px;background:var(--card);color:var(--ink);font:inherit;cursor:pointer}
+.static-carousel-controls button:disabled{opacity:.35;cursor:default}
+.static-carousel-controls [data-carousel-count]{font:13px ui-monospace,monospace;color:var(--muted)}
+@media(max-width:620px){.static-work-carousel{max-width:100%}.static-work-carousel .static-work-item{width:100%}}
