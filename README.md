@@ -139,4 +139,6 @@ Public UI: `scripts/guestbook.mjs`, `assets/guestbook.css`, `assets/guestbook.js
 
 ### Reading list
 
-The Books tab at `/hobby/books/` reads `content/books.json`. Keep `year` set to the reading year and add completed books to `books` in display order, with `title`, `author`, and optional `notes`. An empty list displays a coming-soon message without implying that no books have been read.
+The Books tab at `/hobby/books/` shows a cover gallery from `content/books.json`, refreshed by the live editing desk. Keep `year` set to the reading year and add completed books to `books` in display order, with `title`, `author`, and optional `notes`, `imageUrl`, `sourceUrl` (HTTPS), and `rating` (1–5). A cover or **Read review** opens the full review; reviews stay collapsed in the gallery and remain readable without JavaScript. The editing desk preserves and edits the cover, rating, link and review. Keep its renderer and seed data aligned with the static fallback. An empty list displays a coming-soon message without implying that no books have been read.
+
+The Reclaiming Masculinity cover is the publisher’s reference cover from [The Good Book Company](https://www.thegoodbook.com/reclaiming-masculinity), stored at `assets/books/reclaiming-masculinity.webp`.
