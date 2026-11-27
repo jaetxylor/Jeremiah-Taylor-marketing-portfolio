@@ -15,6 +15,17 @@ window.psrContentReady = (async () => {
     // Also cover cached pages generated before the loading shell was added.
     if(!target.querySelector('[data-cms-loading]'))target.innerHTML='<section class="wrap travel-page travel-loading-shell"><div class="travel-loading-state" data-cms-loading role="status" aria-live="polite">Loading the latest travels…</div></section>';
   }
+  // Only explicitly published repository posts survive a CMS response without them.
+  const repositoryRows = (view==='blog'||view==='home') && target
+    ? Array.from(target.querySelectorAll('[data-repository-post]')) : [];
+  const postSlug = row => {
+    const href = row.querySelector('h3 a')?.getAttribute('href');
+    if (!href) return null;
+    const url = new URL(href, location.href);
+    return url.pathname === '/blog/read/' ? url.searchParams.get('post')
+      : url.pathname.match(/^\/blog\/([^/]+)\/?$/)?.[1];
+  };
+  const postDate = row => row?.querySelector('time')?.getAttribute('datetime') || '';
   const controller = new AbortController(), timer = setTimeout(()=>controller.abort(), 7000);
   try {
     const url = new URL(service+'/api/site/page');url.searchParams.set('view',view);if(slug)url.searchParams.set('slug',slug);
@@ -31,7 +42,38 @@ window.psrContentReady = (async () => {
       `<figure${attrs}>${body.replace(/<a\b[^>]*>([\s\S]*?)<\/a>/g,(_,content)=>content.includes('<img')?content:'')}</figure>`);
     if(data.albums)window.psrTravelAlbums=data.albums;
     if(!target)return;
+    if(view==='post' && data.notFound && target.querySelector('[data-repository-published]')) return;
     if(view==='home'||view==='hobby')target.outerHTML=data.html;else target.innerHTML=data.html;
+    if(view==='blog' && repositoryRows.length){
+      const list=target.querySelector('.blog-list');
+      if(list){
+        const rows=Array.from(list.querySelectorAll('.post-row'));
+        const existing=new Set(rows.map(postSlug));
+        for(const row of repositoryRows){
+          if(existing.has(row.dataset.repositoryPost))continue;
+          if(!rows.length)list.replaceChildren();
+          const next=rows.find(item=>postDate(item)<postDate(row));
+          row.classList.add('is-visible');
+          list.insertBefore(row,next||null);
+          if(next)rows.splice(rows.indexOf(next),0,row);else rows.push(row);
+          existing.add(row.dataset.repositoryPost);
+        }
+        rows.forEach((row,i)=>{
+          const number=row.querySelector('.post-number');
+          if(number)number.textContent=String(i+1).padStart(2,'0');
+        });
+      }
+    }
+    if(view==='home' && repositoryRows.length){
+      const latest=document.querySelector('.home-latest');
+      const current=latest?.querySelector('.post-row');
+      const candidate=repositoryRows[0];
+      if(latest && postDate(candidate)>postDate(current)){
+        candidate.classList.add('is-visible');
+        if(current)current.replaceWith(candidate);
+        else {latest.querySelector(':scope > p')?.remove();latest.append(candidate);}
+      }
+    }
     if(data.title)document.title=data.title+' · psrmalam';
     if(data.notFound)document.querySelector('meta[name=robots]')?.setAttribute('content','noindex');
   } catch {
