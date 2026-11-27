@@ -50,6 +50,7 @@ export function validateBlock(block, root) {
       break;
     case 'link':
       text('text');
+      if (block.explicitLink !== undefined && typeof block.explicitLink !== 'boolean') throw new Error('explicitLink must be true or false');
       if (!/^https:\/\//i.test(block.url || '')) throw new Error('Links must use HTTPS');
       mediaURL(block.url); break;
     default: throw new Error(`Unsupported content block: ${block.type}`);
@@ -65,7 +66,7 @@ export function renderBlock(block) {
   if (block.type === 'heading') return `<h2>${escape(block.text)}</h2>`;
   if (block.type === 'quote') return `<blockquote><p>${escape(block.text)}</p></blockquote>`;
   if (block.type === 'list') return `<ul>${block.items.map(item => `<li>${escape(item)}</li>`).join('')}</ul>`;
-  if (block.type === 'link') return `<p><a href="${escape(mediaURL(block.url))}" target="_blank" rel="noopener noreferrer">${escape(block.text)}</a></p>`;
+  if (block.type === 'link') return `<p>${block.explicitLink===true?'Link: ':''}<a href="${escape(mediaURL(block.url))}" target="_blank" rel="noopener noreferrer"${block.explicitLink===true?' style="text-decoration-line: underline; text-underline-offset: .17em"':''}>${escape(block.text)}</a></p>`;
   const src = mediaURL(block.src);
   const caption = block.caption ? `<figcaption>${escape(block.caption)}</figcaption>` : '';
   const link = (label) => `<a class="post-media-link" href="${escape(src)}" target="_blank" rel="noopener noreferrer">${label}</a>`;

@@ -27,6 +27,7 @@
     {
       "type": "link",
       "text": "Prof Qin",
+      "explicitLink": true,
       "url": "https://cde.nus.edu.sg/isem/staff/qin-hanzhang/"
     },
     {
@@ -60,6 +61,7 @@
     {
       "type": "link",
       "text": "Singapore FinTech Festival on 19 November",
+      "explicitLink": true,
       "url": "https://www.mas.gov.sg/news/speeches/2026/keynote-address-by-md-at-the-singapore-fintech-festival-2026"
     },
     {
@@ -77,6 +79,7 @@
     {
       "type": "link",
       "text": "NVIDIA Research",
+      "explicitLink": true,
       "url": "https://research.nvidia.com/labs/lpr/slm-agents/"
     },
     {
