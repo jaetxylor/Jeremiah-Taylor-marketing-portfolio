@@ -1,0 +1,98 @@
+{
+  "slug": "three-ai-ideas",
+  "title": "Three AI ideas i cannot stop thinking about",
+  "date": "2026-11-26",
+  "category": "AI",
+  "excerpt": "Coffee, a failed marathon attempt, and three ideas that changed how i build InsourceAI.",
+  "draft": false,
+  "tags": [
+    "AI",
+    "Work",
+    "Life"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "26 November!!! Kinda crazy that it has been almost five months since i reworked InsourceAI from scratch, went down the AI rabbit hole and started building Cream. Also, we are less than 30 days out from Christmas. Definitely something to look forward to fr."
+    },
+    {
+      "type": "paragraph",
+      "text": "i am writing this over coffee and a choc muffin at The Signature Patisserie, with “Sex on Fire” by Kings of Leon playing. i am in a decent mood now that i have had my morning coffee HAHA. My plan for a casual 42.2 km morning jog died when Strava glitched and my shoes decided to give way. RIP to my trusty Valentine’s Day UBs. You will be missed fr."
+    },
+    {
+      "type": "paragraph",
+      "text": "It has been a pretty eventful week. i visited Google’s Singapore office, then met Prof Qin at NUS. Solid fella, btw. He studied at Tsinghua and MIT, and i always enjoy sitting down with people like him and figuring out how they think. Anyway, here are three AI ideas i have not been able to leave alone."
+    },
+    {
+      "type": "link",
+      "text": "Prof Qin",
+      "url": "https://cde.nus.edu.sg/isem/staff/qin-hanzhang/"
+    },
+    {
+      "type": "heading",
+      "text": "1. The brain, heart and soul"
+    },
+    {
+      "type": "paragraph",
+      "text": "i have been using a brain–heart–soul framework to think about InsourceAI. Shoutout to NVIDIA for getting me thinking about how to split up the jobs an agent does instead of handing them all to one giant brain."
+    },
+    {
+      "type": "paragraph",
+      "text": "The brain is the knowledge side. There is RAG, which lets the agent pull in relevant material like research and engineering references as it answers, and there is memory for things it needs to carry forward. i also run simulated sourcing scenarios to see where the agent gets confused or jumps to conclusions. Think locking your 12-year-old self in a Kumon centre with unlimited test papers. BIG RIP FR. The simulations help me spot what to improve; they do not magically retrain the model every time i run one."
+    },
+    {
+      "type": "paragraph",
+      "text": "The heart is the time-sensitive stuff: follow-ups, outstanding orders, shipping updates and reminders. The soul is the bit i have been tinkering with lately. It is how the agent uses what it knows, decides what is worth bringing up and talks to the person on the other end. The MF started as a secretary. Now i am testing whether it can help buyers compare messy quotes and help engineers look up specs or flag a possible alternate for review. Mad stuff."
+    },
+    {
+      "type": "heading",
+      "text": "2. Keep a human in the loop"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is probably the idea i love working on the most. The thought of a small team getting 10× more done in the right workflow is exciting, especially on our smol lil island. An agent can pull together material for finance, legal, HR or marketing without the founder having to start every task from a blank page. But if there is a payment, a commitment or a decision someone has to answer for later, i want an actual person in that loop."
+    },
+    {
+      "type": "paragraph",
+      "text": "Kai: At the Singapore FinTech Festival on 19 November, MAS managing director Chia Der Jiun cautioned against giving personal AI agents the login credentials to financial accounts. He also described a planned sandbox for testing agent-led payments and treasury tasks with clear permissions and controls. The practical distinction: asking an agent to prepare a payment for review is different from handing it your banking login and letting it decide what to do."
+    },
+    {
+      "type": "link",
+      "text": "Singapore FinTech Festival on 19 November",
+      "url": "https://www.mas.gov.sg/news/speeches/2026/keynote-address-by-md-at-the-singapore-fintech-festival-2026"
+    },
+    {
+      "type": "heading",
+      "text": "3. Small models for small jobs"
+    },
+    {
+      "type": "paragraph",
+      "text": "At an SFF pre-event mixer, i met an ex-Google engineer who is now building a tiny language model startup in India. He got me thinking about “kernels” and TLMs or SLMs: tiny or small language models instead of large ones. My extremely technical summary at the time was “siloing your LLM” LOL. Over to Kai."
+    },
+    {
+      "type": "paragraph",
+      "text": "Kai: One way to read the “kernel” idea here is as a small, specialised unit of work. A lightweight model might turn a supplier email into structured fields for price, quantity and lead time. If two replies disagree about which terms are current, the workflow could send the evidence to a stronger model for the harder reasoning, or ask the buyer to confirm. You do not have to chop a big model into pieces to do this. You route each job to the smallest tool that can do it reliably. NVIDIA Research makes a similar case for mixing small and large models in agent workflows."
+    },
+    {
+      "type": "link",
+      "text": "NVIDIA Research",
+      "url": "https://research.nvidia.com/labs/lpr/slm-agents/"
+    },
+    {
+      "type": "heading",
+      "text": "Cream, and a little bit of good news"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cream has honestly been my stress reliever through all of this HAHA. i have been building the community app and testing the Singpass Myinfo integration in its sandbox. It is genuinely cool seeing a test user go through the QR flow and watching the dummy profile data come back into the app. Still working through the review, but i have enjoyed the process more than i expected."
+    },
+    {
+      "type": "paragraph",
+      "text": "Since starting this post, i also got the news that InsourceAI was offered a spot in the ACE.SG incubation programme. Five months ago i was tearing the thing down and starting over. i am grateful i get to keep building it and meeting people who make me rethink how i do things."
+    },
+    {
+      "type": "paragraph",
+      "text": "Till next time!"
+    }
+  ]
+}
